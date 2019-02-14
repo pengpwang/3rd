@@ -1,0 +1,26 @@
+{
+  "首页":"index",
+  "商品列表":"productList",
+  "订单确认": "acknowledgementOfOrder",
+  "地址管理": "addressManagement",
+  "个人资料": "personalData",
+  "个人中心": "personalCenter",
+  "规格参数": "specificationParameter",
+  "商品分类": "commodityClassification",
+  "积分商城": "integralMall",
+  "我的收藏": "myCollection",
+
+  "商品收藏": "commodityCollection",
+  "普通商品详情": "commodityDetails",
+  "商品详情商品评价": "commodityDetailsCommodityEvaluation",
+  "添加购物车": "addShoppingCart",
+  "购物车": "shoppingCart",
+  "我的订单": "mineOrder",
+  "结算中心": "settlementCenter",
+  "财务信息": "financialInformation",
+  "收入流水": "revenueStream",
+  "我的分销": "myDistribution",
+  
+  "我的推广": "myPromotion",
+  "浏览记录": "browseRecord",
+}

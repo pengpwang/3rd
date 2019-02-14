@@ -1,0 +1,64 @@
+/**app.wxss**/
+page{
+  background: #fff;
+}
+/* 按钮点击透明 */
+.opacity:active{
+  opacity: .8
+}
+
+/* 盒子合并 */
+swiper-item{
+  box-sizing: border-box;
+}
+scroll-view{
+  box-sizing: border-box;
+}
+input{
+  box-sizing: border-box;
+}
+view{
+  box-sizing: border-box;
+}
+cover-view{
+  box-sizing: border-box;
+}
+
+/*超出多少行省略*/
+.overflow1{
+  overflow: hidden;
+  white-space: nowrap;
+  text-overflow: ellipsis;
+}
+.overflow2{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:2;
+}
+.overflow3{
+  overflow:hidden;
+  text-overflow:ellipsis;
+  display:-webkit-box;
+  -webkit-box-orient:vertical;
+  -webkit-line-clamp:3;
+}
+
+/*遮罩层*/
+.ceng{
+  position: fixed;
+  top: 0;
+  left: 0;
+  background: rgba(0,0,0,0.3);
+  width: 100%;
+  height: 100%;
+  z-index: 8888
+}
+
+/*flex默认布局*/
+.flex{
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}

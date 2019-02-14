@@ -1,0 +1,48 @@
+{
+  "pages":[
+    "pages/index/index",
+    "pages/commodityClassification/commodityClassification",
+    "pages/shoppingCart/shoppingCart",
+    "pages/personalCenter/personalCenter"
+  ],
+  "window": {
+    "backgroundColor": "#f9f9f9",
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "#fff",
+    "navigationBarBackgroundColor": "#FF4648",
+    "navigationBarTitleText": "通程微购",
+    "navigationBarTextStyle": "#fff"
+  },
+  "tabBar": {
+    "color": "#828282",
+    "selectedColor": "#FF4648",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "#f4f4f4",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/index/index1_1.png",
+        "selectedIconPath": "/images/index/index1_2.png"
+      },
+      {
+        "pagePath": "pages/commodityClassification/commodityClassification",
+        "text": "分类",
+        "iconPath": "/images/index/index2_1.png",
+        "selectedIconPath": "/images/index/index2_2.png"
+      },
+      {
+        "pagePath": "pages/shoppingCart/shoppingCart",
+        "text": "购物车",
+        "iconPath": "/images/index/index3_1.png",
+        "selectedIconPath": "/images/index/index3_2.png"
+      },
+      {
+        "pagePath": "pages/personalCenter/personalCenter",
+        "text": "我的",
+        "iconPath": "/images/index/index4_1.png",
+        "selectedIconPath": "/images/index/index4_2.png"
+      }
+    ]
+  }
+}
