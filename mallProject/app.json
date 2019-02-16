@@ -1,9 +1,9 @@
 {
   "pages":[
+    "pages/personalCenter/personalCenter",
     "pages/index/index",
     "pages/commodityClassification/commodityClassification",
-    "pages/shoppingCart/shoppingCart",
-    "pages/personalCenter/personalCenter"
+    "pages/shoppingCart/shoppingCart"
   ],
   "window": {
     "backgroundColor": "#f9f9f9",
