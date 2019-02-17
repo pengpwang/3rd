@@ -8,9 +8,9 @@
   "规格参数": "specificationParameter",
   "商品分类": "commodityClassification",
   "积分商城": "integralMall",
-  "--与商品收藏合为一个--我的收藏": "myCollection",
+  "ok--与商品收藏合为一个--我的收藏": "myCollection",
 
-  "----商品收藏": "commodityCollection",
+  "ok--XXX--商品收藏": "commodityCollection",
   "普通商品详情": "commodityDetails",
   "商品详情商品评价": "commodityDetailsCommodityEvaluation",
   "添加购物车": "addShoppingCart",
@@ -22,5 +22,5 @@
   "我的分销": "myDistribution",
   
   "我的推广": "myPromotion",
-  "浏览记录": "browseRecord"
+  "ok----浏览记录": "browseRecord"
 }
