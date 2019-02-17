@@ -21,6 +21,6 @@
   "收入流水": "revenueStream",
   "我的分销": "myDistribution",
   
-  "我的推广": "myPromotion",
-  "ok----浏览记录": "browseRecord"
+  "ok-------我的推广": "myPromotion",
+  "ok-------浏览记录": "browseRecord"
 }

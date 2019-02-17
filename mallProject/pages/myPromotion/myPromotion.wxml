@@ -1,0 +1,21 @@
+<view class="container">
+  <view class="query-wrap">
+    <view class="query-item">
+      <view class="query-item-txt">购买用户</view>
+      <input value="{{ inputVal }}" class="query-item-input" placeholder-class="input-query" type="text" placeholder="请输入用户名" />
+    </view>
+    <view class="query-btn-wrap">
+      <view class="query-btn-query" bind:tap="onQuery">查询</view>
+      <view class="query-btn-reset" bind:tap="onReset">重置</view>
+    </view>
+  </view>
+  <view class="query-result">
+    <view class="q-r-item" wx:for="{{ queryResultArr }}" wx:key="unique">
+      <view class="q-r-item-info">
+        <view class="q-r-item-person"><view class="q-r-item-person-s">购买人：</view><text class="q-r-item-person-name">{{ item.name }}</text></view>
+        <view class="q-r-if">是否推荐人：{{ item.isPerson ? '是' : '否' }}</view>
+      </view>
+      <view class="q-r-item-time"><view class="q-r-item-person-s">注册时间：</view><text class="q-r-item-time-info">{{ item.time }}</text></view>
+    </view>
+  </view>
+</view>

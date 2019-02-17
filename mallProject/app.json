@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/myPromotion/myPromotion",
     "pages/browseRecord/browseRecord",
     "pages/myCollection/myCollection",
     "pages/personalData/personalData",
