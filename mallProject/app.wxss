@@ -62,3 +62,9 @@ cover-view{
   justify-content: space-between;
   align-items: center;
 }
+
+
+/* wpp新增 */
+.hover-opacity{
+  opacity: .8;
+}

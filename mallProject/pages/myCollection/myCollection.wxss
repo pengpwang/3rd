@@ -1,0 +1,154 @@
+page{
+  background: #f5f6fb;
+  font-family:PingFang-SC-Medium;
+}
+
+.tab-wrap{
+  height: 108rpx;
+  background: #fff;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  margin-bottom: 22rpx;
+}
+
+.tab{
+  width: 200rpx;
+  height: 60rpx;
+  border: 1px solid #EA2831;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 30rpx;
+  color: #EA2831;
+}
+
+.tab-shop{
+  border-right: none;
+  border-top-left-radius: 30rpx;
+  border-bottom-left-radius: 30rpx;
+}
+
+.tab-goods{
+  border-top-right-radius: 30rpx;
+  border-bottom-right-radius: 30rpx;
+}
+
+.tab-active{
+  background: #FF4648;
+  color: #fff;
+}
+
+.shop-item{
+  height: 120rpx;
+  padding-left: 40rpx;
+  padding-right: 27rpx;
+  margin-bottom: 1px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  background: #fff;
+}
+
+.shop-info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.shop-logo{
+  width: 90rpx;
+  height: 90rpx;
+  border-radius: 50%;
+  margin-right: 20rpx;
+}
+
+.shop-name{
+  font-size: 32rpx;
+  color: #000;
+}
+
+.cancel-collection{
+  width: 130rpx;
+  height: 44rpx;
+  border: 1px solid #FF4648;
+  border-radius: 22rpx;
+  font-size: 20rpx;
+  color: #FF4648;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.goods-pannel{
+  padding-left: 48rpx;
+  background: #fff;
+}
+
+.goods-item{
+  height: 216rpx;
+  padding-bottom: 10rpx;
+  padding-top: 10rpx;
+  border-bottom: 1px solid #E0E0E0;  
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.goods-info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+
+.goods-pic{
+  width: 208rpx;
+  height: 208rpx;
+  margin-right: 17rpx;
+  background: #f5f6fb;
+}
+
+.goods-addition{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 14rpx;
+  height: 100%;
+}
+
+.goods-name{
+  font-size: 26rpx;
+  color: #333;
+  margin-bottom: 26rpx;
+  width: 340rpx;
+}
+
+.goods-groupon-num{
+  font-size: 20rpx;
+  color: #999;
+}
+
+.goods-price{
+  font-size: 30rpx;
+  color: #EA2831;
+}
+
+.goods-price-symbol{
+  font-size: 18rpx;
+}
+
+.goods-cancel-c{
+  width: 130rpx;
+  height: 44rpx;
+  border: 1px solid #FF4648;
+  border-radius: 22rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FF4648;
+  font-size: 20rpx;
+  margin-right: 30rpx;
+  margin-bottom: 22rpx;
+}

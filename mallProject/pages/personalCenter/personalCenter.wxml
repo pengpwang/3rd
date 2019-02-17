@@ -6,21 +6,21 @@
         <image src="" class="per_center-header_my_avatorPic" />
       </view>
       <view class="per_center-header_my_tips">
-        <view class="per_center-header_my_phone">173····1080</view>
+        <view class="per_center-header_my_phone">{{ phoneNum }}</view>
         <view class="per_center-header_my_info">
-          <view class="per_center-header_my_score">我的积分：<text class="per_center-header_my_score-blod">60</text></view>
-          <view class="per_center-header_my_level">普通会员</view>
+          <view class="per_center-header_my_score">我的积分：<text class="per_center-header_my_score-blod">{{ myPoints }}</text></view>
+          <view class="per_center-header_my_level">{{ myLevel }}</view>
         </view>
       </view>
     </view>
     <view class="per_center-header_order">
       <view class="per_center-header_order-item per_center-header_order-pay_money">
-        <text class="per_center-header_order-num">1</text>
+        <text class="per_center-header_order-num">{{ paymentNum }}</text>
         <text class="per_center-header_order-text">待付款</text>
       </view>
       <view class="order_splite"></view>
       <view class="per_center-header_order-item per_center-header_order-send">
-        <text class="per_center-header_order-num">1</text>
+        <text class="per_center-header_order-num">{{ deliveryNum }}</text>
         <text class="per_center-header_order-text">待发货</text>
       </view>
     </view>

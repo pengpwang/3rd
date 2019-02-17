@@ -1,0 +1,65 @@
+page{
+  background: #f5f6fb;
+  font-family:PingFang-SC-Medium;
+}
+
+.lists-wrap{
+  margin-bottom: 20rpx;
+  padding-left: 27rpx;
+  padding-right: 23rpx;
+  background: #fff;
+}
+
+.list-item{
+  height: 76rpx;
+  border-bottom: 1px solid #E7E7E7;
+  display: flex;
+  flex-direction: row;
+  justify-content: flex-start;
+  align-items: center;
+}
+
+.borderB-no{
+  border-bottom: none;
+}
+
+.list-item-txt{
+  height: 100%;
+  width: 150rpx;
+  padding-left: 10rpx;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  font-size: 24rpx;
+  color: #000024;
+}
+
+.list-item-input{
+  flex: 1;
+  height: 100%;
+  font-size: 24rpx;
+  color: #333;
+}
+
+.myData-placeholder{
+  font-size: 24rpx;
+  color: #ccc;
+}
+
+.btn-save{
+  position: fixed;
+  bottom: 148rpx;
+  left: 50%;
+  transform: translateX(-50%);
+  width: 640rpx;
+  height: 84rpx;
+  background: #FF4648;
+  box-shadow:3rpx 4rpx 10rpx 0rpx rgba(255,70,72,0.3);
+  border-radius:42rpx;
+  text-align: center;
+  line-height: 84rpx;
+  font-size: 34rpx;
+  color: #fff;
+}
+
+

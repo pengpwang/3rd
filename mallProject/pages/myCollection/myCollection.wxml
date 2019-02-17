@@ -1,0 +1,32 @@
+<view class="conatiner">
+  <view class="tab-wrap">
+    <view class="tab tab-shop {{ !bHiddenShop ? 'tab-active' : '' }}" bind:tap="onShopCollectTabed">店铺收藏</view>
+    <view class="tab tab-goods {{ bHiddenShop ? 'tab-active' : '' }}" bind:tap="onGoodsCollectTabed" >商品收藏</view>
+  </view>
+  <view class="pannel-wrap">
+    <view class="pannel" hidden="{{ bHiddenShop }}">
+      <view class="shop-item" wx:for="{{ shopArr }}" wx:key="unique">
+        <view class="shop-info">
+          <image class="shop-logo" mode="center" src="{{ item.imgSrc }}" />
+          <view class="shop-name">{{ item.shopName }}</view>
+        </view>
+        <view class="cancel-collection">取消收藏</view>
+      </view>
+    </view>
+    <view class="pannel goods-pannel" hidden="{{ !bHiddenShop }}">
+      <view class="goods-item" wx:for="{{ goodsArr }}" wx:key="unique">
+        <view class="goods-info">
+          <image class="goods-pic" src="{{ item.goodsPic }}" mode="center" />
+          <view class="goods-addition">
+            <view class="goods-add-info">
+              <view class="goods-name overflow1">{{ item.goodsName }}</view>
+              <view class="goods-groupon-num">已团<text>{{ item.grouponNum }}</text>件</view>
+            </view>
+            <view class="goods-price"><text class="goods-price-symbol">¥</text>{{ item.pirce }}</view>
+          </view>
+        </view>
+        <view class="goods-cancel-c">取消收藏</view>
+      </view>
+    </view>
+  </view>
+</view>

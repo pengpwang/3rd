@@ -1,5 +1,7 @@
 {
   "pages":[
+    "pages/myCollection/myCollection",
+    "pages/personalData/personalData",
     "pages/personalCenter/personalCenter",
     "pages/index/index",
     "pages/commodityClassification/commodityClassification",
@@ -8,16 +10,16 @@
   "window": {
     "backgroundColor": "#f9f9f9",
     "enablePullDownRefresh": true,
-    "backgroundTextStyle": "#fff",
+    "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#FF4648",
     "navigationBarTitleText": "通程微购",
-    "navigationBarTextStyle": "#fff"
+    "navigationBarTextStyle": "white"
   },
   "tabBar": {
     "color": "#828282",
     "selectedColor": "#FF4648",
     "backgroundColor": "#ffffff",
-    "borderStyle": "#f4f4f4",
+    "borderStyle": "white",
     "list": [
       {
         "pagePath": "pages/index/index",

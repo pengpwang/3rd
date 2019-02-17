@@ -1,15 +1,15 @@
-// pages/personalCenter/personalCenter.js
+
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    phoneNum: '173····1080',
-    myPoints: 60,
-    myLevel: '普通会员',
-    paymentNum: 1,
-    deliveryNum: 1
+    name: '',
+    phoneNum: '',
+    idCard: '',
+    education: '',
+    address: ''
   },
 
   /**
