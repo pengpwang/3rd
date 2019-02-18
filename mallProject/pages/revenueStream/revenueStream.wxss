@@ -8,7 +8,7 @@ page{
   margin-top: 20rpx;
   padding-left: 45rpx;
   padding-right: 45rpx;
-  height: 192rpx;
+  height: 395rpx;
   background: #fff;
 }
 
@@ -74,8 +74,10 @@ page{
 
 .q-r-item{
   margin-top: 18rpx;
+  padding-top: 10rpx;
+  padding-bottom: 10rpx;
   width: 100%;
-  height: 135rpx;
+  height: 398rpx;
   background: #fff;
   padding-left: 45rpx;
   padding-right: 30rpx;
@@ -96,12 +98,17 @@ page{
 .q-r-item-person{
   display: flex;
   justify-content: flex-start;
-  align-items: center;
+  align-items: flex-start;
 }
 
 .q-r-item-person-s{
   width: 130rpx;
   color: #666;
+}
+
+.q-r-item-person-s-addtion{
+  flex: 1;
+  color: #999;
 }
 
 .q-r-item-person-name{
@@ -122,4 +129,17 @@ page{
 
 .q-r-item-time-info{
   color: #999;
+}
+
+.selector-picker{
+  flex: 1;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: flex-start;
+}
+
+.selector-picker-txt{
+  font-size: 28rpx;
+  color: #333;
 }
