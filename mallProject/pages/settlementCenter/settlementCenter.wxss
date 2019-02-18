@@ -248,3 +248,18 @@ page{
 .q-r-item-time-info{
   color: #999;
 }
+
+.btn-get-money{
+  position: absolute;
+  top: 18rpx;
+  right: 18rpx;
+  width: 78rpx;
+  height: 34rpx;
+  background: #FF4648;
+  border-radius: 4rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 20rpx;
+  color: #fff;
+}

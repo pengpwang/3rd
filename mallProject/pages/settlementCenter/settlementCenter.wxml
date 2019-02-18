@@ -28,6 +28,7 @@
     </view>
     <view class="get-money-pannel">
       <view class="get-money-addtion">可提现</view>
+      <view class="btn-get-money">提现</view>
       <view class="other-wrap">
         <view class="exp-money">￥<text class="exp-money-num">10</text></view>
         <view class="get-money-tip">
