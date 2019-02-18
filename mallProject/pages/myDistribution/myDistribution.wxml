@@ -1,0 +1,39 @@
+<view class="container">
+  <view class="query-wrap">
+    <view class="query-item">
+      <view class="query-item-txt">当前状态</view>
+      <view class="kaitong-status">开通</view>
+    </view>
+    <view class="query-item">
+      <view class="query-item-txt">用户名</view>
+      <picker class="selector-picker" mode="selector" bindchange="bindPersonPickerChange" range="{{ personArr }}" value="{{ index }}">
+        <view class="selector-picker-txt">{{ personArr[index] }}</view>
+      </picker>
+      <view class="selector-picker-cart"></view>
+    </view>
+    <view class="query-item">
+      <view class="query-item-txt">注册时间</view>
+      <view class="item-right-txt-zc">370683199006189210</view>
+    </view>
+    <view class="query-item">
+      <view class="query-item-txt">手机</view>
+      <picker class="selector-picker" mode="selector" bindchange="bindBankPickerChange" range="{{ bankArr }}" value="{{ indexBank }}">
+        <view class="selector-picker-txt">{{ bankArr[indexBank] }}</view>
+      </picker>
+      <view class="selector-picker-cart"></view>
+    </view>
+    <view class="query-item border-B-none">
+      <view class="query-item-txt">我的推荐码</view>
+      <view class="item-right-txt">100000</view>
+    </view>
+  </view>
+  <view class="addition">
+    <view class="add-txt">温馨提示：</view>
+    <view class="add-txt">(1)请上传真实用户资料；</view>
+    <view class="add-txt">(2)我们会保护用户的隐私资料，绝不会向第三方透漏用户的个人资料；</view>
+    <view class="add-txt">(3)为确保结算安全，该项信息不能修改，如需变更，请联系客服，银行卡的户名必须同姓名一致；</view>
+    <view class="add-txt">(4)办理此银行卡时所用真实姓名，请与身份证保持一致；</view>
+    <view class="add-txt">(5)开户行地址格式为：xx省,xx市/县,xx支行/分行,请认真核对为确保结算安全，该项信息不能修改，如需变更，请联系客服；</view>
+    <view class="add-txt">(6)客服：QQ:43006111。</view>
+  </view>
+</view>
