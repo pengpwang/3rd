@@ -16,10 +16,10 @@
   "添加购物车": "addShoppingCart",
   "购物车": "shoppingCart",
   "我的订单": "mineOrder",
-  "结算中心": "settlementCenter",
-  "财务信息": "financialInformation",
+  "-------结算中心": "settlementCenter",
+  "ok-------财务信息": "financialInformation",
   "ok-------收入流水": "revenueStream",
-  "-------我的分销": "myDistribution",
+  "ok-------我的分销": "myDistribution",
   
   "ok-------我的推广": "myPromotion",
   "ok-------浏览记录": "browseRecord"

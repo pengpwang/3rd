@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/financialInformation/financialInformation",
     "pages/myDistribution/myDistribution",
     "pages/revenueStream/revenueStream",
     "pages/myPromotion/myPromotion",
