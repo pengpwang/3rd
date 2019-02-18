@@ -13,6 +13,7 @@
       <picker class="selector-picker" mode="selector" bindchange="bindPickerChange" range="{{ statusArr }}" value="{{ index }}">
         <view class="selector-picker-txt">{{ statusArr[index] }}</view>
       </picker>
+      <view class="selector-picker-cart"></view>
     </view>
     <view class="query-btn-wrap">
       <view class="query-btn-query" bind:tap="onQuery">查询</view>
