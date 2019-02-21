@@ -1,5 +1,6 @@
 {
   "pages":[
+    "pages/acknowledgementOfOrder/acknowledgementOfOrder",
     "pages/mineOrder/mineOrder",
     "pages/addressManagement/addressManagement",
     "pages/settlementCenter/settlementCenter",
