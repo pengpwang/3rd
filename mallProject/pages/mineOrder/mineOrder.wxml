@@ -1,0 +1,42 @@
+<view class="container">
+  <view class="tab-wrap">
+    <view class="tab {{ iSelTab == 0 ? 'tab-active' : '' }}" data-tabid="0" bind:tap="toggleTab">全部订单</view>
+    <view class="tab {{ iSelTab == 1 ? 'tab-active' : '' }}" data-tabid="1" bind:tap="toggleTab">待付款</view>
+    <view class="tab {{ iSelTab == 2 ? 'tab-active' : '' }}" data-tabid="2" bind:tap="toggleTab">待收货</view>
+    <view class="tab {{ iSelTab == 3 ? 'tab-active' : '' }}" data-tabid="3" bind:tap="toggleTab">已完成</view>
+    <view class="tab {{ iSelTab == 4 ? 'tab-active' : '' }}" data-tabid="4" bind:tap="toggleTab">待评价</view>
+  </view>
+  <view class="res-lists-wrap">
+    <view class="res-lists-pannel">
+      <view class="res-lists-item" wx:for="{{ renderArr }}" wx:key="unique">
+        <view class="res-lists-i-order-s">
+          <view class="res-lists-i-order">订单号：{{ item.orderNum }}</view>
+          <view class="res-lists-i-status">{{ item.status == 1 ? '已完成' : (item.status == 2 ? '代付款' : '') }}</view>
+        </view>
+        <view class="res-lists-i-info">
+          <view class="res-lists-i-pro">
+            <image class="res-lists-i-pro-pic" src="{{ item.imgSrc }}" />
+            <view class="res-lists-i-pro-txt overflow2">{{ item.productName }}</view>
+          </view>
+          <view class="res-lists-i-price">
+            <view class="res-lists-i-price-1">￥{{ item.price1 }}</view>
+            <view class="res-lists-i-price-2">￥{{ item.price2 }}</view>
+            <view class="res-lists-i-price-3">×{{ item.mount }}</view>
+          </view>
+        </view>
+        <view class="res-lists-i-actually">共<text class="res-lists-i-actually-mount">{{ item.mount }}</text>件商品 实付款：<text class="res-lists-i-actually-p">￥{{ item.price3 }}</text></view>
+        <view class="res-lists-i-line"></view>
+        <view class="res-lists-i-btn-wrap">
+          <view class="i-btn i-btn-cancel" hidden="{{ item.status == 1 ? true : false }}">取消订单</view>
+          <view class="i-btn i-btn-payment" hidden="{{ item.status == 1 ? true : false }}">去付款</view>
+          <view class="i-btn i-btn-check" hidden="{{ item.status == 1 ? false : true }}">查看</view>
+        </view>
+      </view>
+      <view class="res-lists-footer">
+        <view class="footer-l"></view>
+        <view class="footer-txt">已到底线了</view>
+        <view class="footer-l"></view>
+      </view>
+    </view>
+  </view>
+</view>
