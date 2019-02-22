@@ -2,37 +2,37 @@
   <view class="address">
     <view class="add-info">
       <view class="add-info-l">
-        <view class="add-info-name">某某某</view>
+        <view class="add-info-name">{{ address.name }}</view>
         <view class="add-info-moren">默认</view>
       </view>
       <view class="add-info-t">
-        <view class="add-info-t-phone">13033377899</view>
-        <view class="add-info-t-add">安徽省-合肥市-庐阳区 某某某街道阜阳北路与北城大道交口创智天地</view>
+        <view class="add-info-t-phone">{{ address.phone }}</view>
+        <view class="add-info-t-add overflow2">{{ address.address }}</view>
       </view>
       <view class="add-info-btn">
-        <image src="" class="icon-edit" />
+        <image src="../../images/shoppingCar/icon-del.png" class="icon-edit" />
         <view class="add-info-btn-txt">修改</view>
       </view>
     </view>
     <view class="add-line">
-      <image src=""  class="add-line-pic"/>
+      <image src="../../images/line-red-blue.png"  class="add-line-pic"/>
     </view>
   </view>
   <view class="product">
     <view class="pro-header">
-      <image src="" class="pro-header-icon" />
+      <image src="../../images/shoppingCar/icon-shopping.png" class="pro-header-icon" />
       <view class="pro-icon-txt">平台自营</view>
     </view>
-    <view class="pro-item">
+    <view class="pro-item" wx:for="{{ product }}" wx:key="unique">
       <view class="pro-i-img">
-        <image src="" class="pro-i-img-txt" />
+        <image src="{{ item.imgSrc }}" class="pro-i-img-txt" />
       </view>
       <view class="pro-i-t-wrap">
-        <view class="pro-i-t-name">儿童大块积木桶装1-2-3-6周岁益智早教婴儿宝宝教婴儿宝宝</view>
-        <view class="pro-i-t-gg">规格：全部套装【68块】</view>
+        <view class="pro-i-t-name overflow2">{{ item.proName }}</view>
+        <view class="pro-i-t-gg">{{ item.spec }}</view>
         <view class="pro-i-t-pm">
-          <view class="pro-i-t-p">￥100</view>
-          <view class="pro-i-t-m">x1</view>
+          <view class="pro-i-t-p">￥{{ item.price }}</view>
+          <view class="pro-i-t-m">x{{ item.mount }}</view>
         </view>
       </view>
     </view>
@@ -55,10 +55,10 @@
     <view class="pay-header">支付方式</view>
     <view class="pay-item">
       <view class="pay-item-name">
-        <image src="" class="pay-item-wx-logo" />
+        <image src="../../images/shoppingCar/icon-shopping.png" class="pay-item-wx-logo" />
         <view class="pay-item-wx-t">微信支付</view>
       </view>
-      <radio class="wx-radio radio" />
+      <radio class="wx-radio radio" color="#FF4648" />
     </view>
   </view>
   <view class="bar">

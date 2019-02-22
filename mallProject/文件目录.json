@@ -1,7 +1,7 @@
 {
   "首页":"index",
   "商品列表":"productList",
-  "-------订单确认": "acknowledgementOfOrder",
+  "ok--------订单确认": "acknowledgementOfOrder",
   "ok--------地址管理": "addressManagement",
   "ok--------个人资料": "personalData",
   "ok--------个人中心": "personalCenter",
