@@ -7,7 +7,7 @@
     <view class="query-item">
       <view class="query-item-txt">*证件类型</view>
       <picker class="selector-picker" mode="selector" bindchange="bindIdCardPickerChange" range="{{ idcardArr }}" value="{{ idcardIndex }}">
-        <view class="selector-picker-txt">{{ idcardArr[idcardIndex] }}</view>
+        <view class="selector-picker-txt flex">{{ idcardArr[idcardIndex] }}</view>
       </picker>
       <view class="selector-picker-cart"></view>
     </view>
@@ -18,7 +18,7 @@
     <view class="query-item">
       <view class="query-item-txt">*开户银行</view>
       <picker class="selector-picker" mode="selector" bindchange="bindBankPickerChange" range="{{ bankArr }}" value="{{ indexBank }}">
-        <view class="selector-picker-txt">{{ bankArr[indexBank] }}</view>
+        <view class="selector-picker-txt flex">{{ bankArr[indexBank] }}</view>
       </picker>
       <view class="selector-picker-cart"></view>
     </view>

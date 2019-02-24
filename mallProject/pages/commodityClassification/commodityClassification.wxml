@@ -1,2 +1,24 @@
 <!--pages/commodityClassification/commodityClassification.wxml-->
-<text>pages/commodityClassification/commodityClassification.wxml</text>
+<view class='commodityClassification common'>
+    <view class='top-search'>
+      <view class='search flex'>
+          <image src='/images/index/search.png'></image>
+          <input  placeholder-class='placeholder' placeholder='附近商家或商品'></input>
+      </view>
+    </view>
+    <view class='classification-con flex'>
+        <scroll-view scroll-y class='classification-left'>
+            <view class='type-name active opacity'>男装女装</view>
+            <view class='type-name opacity' wx:for='{{15}}'>男装女装</view>
+        </scroll-view>
+        <scroll-view scroll-y class='classification-right'>
+            <view class='classification-title'>热门分类</view>
+            <view class='classification-list-con flex'>
+                <view class='classification-list opacity' wx:for='{{15}}'>
+                    <view class='imgbox'> <image src='/images/index/swiper.png'></image></view>
+                    <view class='name'>毛呢外套</view>
+                </view>
+            </view> 
+        </scroll-view>
+    </view>
+</view>

@@ -10,13 +10,13 @@
 		"minified": true,
 		"newFeature": true,
 		"nodeModules": true,
-		"autoAudits": true,
+		"autoAudits": false,
 		"uglifyFileName": true
 	},
 	"compileType": "miniprogram",
 	"libVersion": "2.5.2",
 	"appid": "wx766e0346294adc10",
-	"projectname": "mallProject",
+	"projectname": "mallProject----finally",
 	"debugOptions": {
 		"hidedInDevtools": []
 	},

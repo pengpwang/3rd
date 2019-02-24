@@ -1,0 +1,150 @@
+/* pages/specificationParameter/specificationParameter.wxss */
+.common{
+  background: #f3f3f3;
+}
+.top-head{
+  height: 86rpx;
+  background: #fff;
+  border-top:1rpx solid #DBDBDB;
+  box-shadow:0px 3rpx 4rpx 0px rgba(0, 0, 0, 0.05);
+}
+.head-item{
+  width: 25%;
+  height: 24rpx;
+  line-height: 24rpx;
+  font-size:24rpx;
+  font-weight:500;
+  color:rgba(51,51,51,1);
+  text-align: center;
+  border-right: 2rpx solid #EFEFEF;
+  position: relative
+}
+.head-item.active{
+  color:#FF4848;
+}
+.head-item.active::after{
+  position: absolute;
+  content:'';
+  width:97rpx;
+  height:4rpx;
+  left: 50%;
+  bottom:-29rpx;
+  margin-left: -48.5rpx;
+  background:rgba(255,72,72,1);
+}
+
+.content{
+  width: 690rpx;
+  margin: 39rpx auto;
+  background: #fff;
+  border:2rpx solid rgba(221,221,221,1);
+  border-bottom: none;
+}
+.content-item view{
+  font-size:24rpx;
+  font-weight:500;
+  color:rgba(153,153,153,1);
+  height: 80rpx;
+  line-height: 80rpx;
+  text-align: left
+}
+.item-left{
+  padding-left: 32rpx;
+  width: 200rpx;
+  border-right: 2rpx solid #DDDDDD;
+  border-bottom: 2rpx solid #DDDDDD;
+}
+.item-right{
+  padding-left: 28rpx;
+  width: 490rpx;
+  border-bottom: 2rpx solid #DDDDDD;
+}
+
+.evaluation{
+  margin-top: 20rpx;
+}
+.evaluation-tag{
+  justify-content: flex-start;
+  flex-flow: wrap;
+  padding: 0 30rpx 30rpx;
+  background: #fff;
+}
+.tag-item{
+  height: 52rpx;
+  line-height: 52rpx;
+  border-radius: 26rpx;
+  padding: 0 21rpx;
+  background: #FFE1E1;
+  text-align: center;
+  font-size:24rpx;
+  font-weight:500;
+  color:rgba(102,102,102,1);
+  margin-right: 41rpx;
+  margin-top: 30rpx;
+}
+.tag-item.total{
+  width: 160rpx;
+  background:linear-gradient(-90deg,rgba(255,86,86,1),rgba(255,120,120,1));
+  border:2rpx solid rgba(255,72,72,1);
+  border-radius:26rpx;
+  color:#fff;
+}
+
+.evaluation-list-con{
+  border-top:2rpx solid #f3f3f3;
+}
+.evaluation-top{
+  justify-content: flex-start;
+  padding-top: 21rpx;
+}
+.evaluation-top image{
+  width:50rpx;
+  height: 50rpx;
+  border-radius: 50%;
+  overflow: hidden;
+}
+.nickName{
+  width: 550rpx;
+  padding: 0 10rpx;
+  font-size:24rpx;
+  font-weight:bold;
+  color:rgba(102,102,102,1);
+}
+.evaluation-list{
+  padding:0 30rpx 30rpx 30rpx;
+  margin-bottom: 10rpx;
+  background: #fff;
+}
+.evaluation-list .time{
+  width: 115rpx;
+  text-align: right;
+  font-size:20rpx;
+  font-weight:500;
+  color:rgba(153,153,153,1);
+}
+.evaluation-desc{
+  font-size:26rpx;
+  line-height: 40rpx;
+  font-weight:500;
+  color:rgba(51,51,51,1);
+  margin-top:17rpx;
+}
+.evaluation-tagcon{
+  font-size:24rpx;
+  font-weight:500;
+  color:rgba(153,153,153,1);
+  margin-top: 23rpx;
+}
+.pad{
+  padding-left: 24rpx;
+}
+.evaluation-img{
+  margin-top: 14rpx;
+  justify-content: flex-start;
+  flex-flow: wrap;
+}
+.evaluation-img image{
+  width: 200rpx;
+  height: 200rpx;
+  margin-right: 10rpx;
+}

@@ -1,2 +1,103 @@
-<!--pages/index/index.wxml-->
-<text>pages/index/index.wxml</text>
+ <!--pages/index/index.wxml-->
+<view class="index common">
+    <!--搜索商品-->
+    <view class='search-con flex'>
+        <image src='/images/index/search.png'/>
+        <input placeholder-class='placeholder' placeholder='搜索商品'></input>
+    </view>
+ 
+    <!--轮播-->
+    <swiper
+    indicator-color='{{color}}'
+    indicator-active-color='{{colorActive}}'
+    indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}"
+    interval="{{interval}}" 
+    duration="{{duration}}">
+        <block wx:for="{{imgUrls}}">
+            <swiper-item>
+              <image src="/images/index/swiper.png" class="slide-image" width="355" height="150" />
+            </swiper-item>
+        </block>
+    </swiper>
+    <!--功能按钮-->
+    <view class='function-button flex'>
+        <view class='button-item btnactive'>
+            <image src='/images/index/functionButton1.png'></image>
+            <view class='name'>分类查询</view>
+        </view>
+         <view class='button-item btnactive'>
+            <image src='/images/index/functionButton1.png'></image>
+            <view class='name'>购物车</view>
+        </view>
+         <view class='button-item btnactive'>
+            <image src='/images/index/functionButton3.png'></image>
+            <view class='name'>会员中心</view>
+        </view>
+         <view class='button-item btnactive'>
+            <image src='/images/index/functionButton4.png'></image>
+            <view class='name'>特卖场</view>
+        </view>
+         <view class='button-item btnactive'>
+            <image src='/images/index/functionButton5.png'></image>
+            <view class='name'>优券集市</view>
+        </view>
+         <view class='button-item btnactive'>
+            <image src='/images/index/functionButton6.png'></image>
+            <view class='name'>拼多多</view>
+        </view>
+         <view class='button-item btnactive'>
+            <image src='/images/index/functionButton7.png'></image>
+            <view class='name'>积分商城</view>
+        </view>
+         <view class='button-item btnactive'>
+            <image src='/images/index/functionButton8.png'></image>
+            <view class='name'>团购</view>
+        </view>
+    </view>
+    <!--活动模块-->
+    <view class='activity-con border-top flex'>
+        <view class='activity-left'>
+            <image class='opacity' src='/images/index/swiper.png'></image>
+        </view>
+        <view class='activity-right'>
+            <view class='activity-top'>
+                <image class='opacity' src='/images/index/swiper.png'></image>
+            </view>
+            <view class='activity-bot flex'>
+                <image class='opacity' src='/images/index/swiper.png'></image>
+                <image class='second opacity' src='/images/index/swiper.png'></image>
+            </view>
+        </view>
+    </view>
+    <!--商品分类模块-->
+    <view class='type-con border-top'>
+        <view class='type-title flex'>
+            <view class='line'></view>
+            <view class='titleName'>休闲食品</view>
+            <view class='line'></view>
+        </view>
+        <!--置顶商品-->
+        <view class='type-top opacity'><image src='/images/index/swiper.png'></image></view>
+        <view class='type-list-con flex' >
+            <view class='type-list' wx:for='{{6}}'>
+                <view class='type-img opacity imgbox flex'>
+                    <image src='/images/index/swiper.png'></image>
+                </view>
+                <view class='type-name overflow1'>耐克nike air 2019款1111111111</view>
+                <view class='type-desc overflow1'>极地的迷彩感，强势锁温暖2019款1111111111</view>
+                <view class='type-more flex'>
+                    <view class='type-price'>￥1299</view>
+                    <image class='type-btn' src='/images/index/car.png'></image>
+                </view>
+            </view>
+            
+        </view>
+    </view>
+    <!--到底线了-->
+    <view class='type-title noData flex'>
+          <view class='line'></view>
+          <view class='titleName'>已到底线了</view>
+          <view class='line'></view>
+    </view>
+</view>

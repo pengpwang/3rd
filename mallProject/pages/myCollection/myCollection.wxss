@@ -103,10 +103,13 @@ page{
 }
 
 .goods-pic{
+  margin-right: 17rpx;
   width: 208rpx;
   height: 208rpx;
-  margin-right: 17rpx;
-  background: #f5f6fb;
+}
+.goods-pic image{
+  width: 190rpx;
+  height: 180rpx;
 }
 
 .goods-addition{

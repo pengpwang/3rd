@@ -1,23 +1,33 @@
 {
   "pages":[
-    "pages/acknowledgementOfOrder/acknowledgementOfOrder",
-    "pages/mineOrder/mineOrder",
-    "pages/addressManagement/addressManagement",
-    "pages/settlementCenter/settlementCenter",
-    "pages/financialInformation/financialInformation",
-    "pages/myDistribution/myDistribution",
-    "pages/revenueStream/revenueStream",
-    "pages/myPromotion/myPromotion",
+    
+    "pages/index/index",
+    "pages/muchMore/muchMore",
+    "pages/commodityClassification/commodityClassification",
+    "pages/personalData/personalData",
     "pages/browseRecord/browseRecord",
     "pages/myCollection/myCollection",
-    "pages/personalData/personalData",
+    "pages/financialInformation/financialInformation",
+    "pages/settlementCenter/settlementCenter",
+    "pages/muchMoreDetails/muchMoreDetails",
+    "pages/myPromotion/myPromotion",
+    "pages/myDistribution/myDistribution",
+    "pages/revenueStream/revenueStream",
+    "pages/acknowledgementOfOrder/acknowledgementOfOrder",
     "pages/personalCenter/personalCenter",
-    "pages/index/index",
-    "pages/commodityClassification/commodityClassification",
-    "pages/shoppingCart/shoppingCart"
+    "pages/shoppingCart/shoppingCart",
+    "pages/mineOrder/mineOrder",
+    "pages/addressManagement/addressManagement",
+    "pages/integralMall/integralMall",
+    "pages/groupBuying/groupBuying",
+    "pages/commodityDetails/commodityDetails",
+    "pages/productList/productList",
+   
+    "pages/specificationParameter/specificationParameter"  
+   
   ],
   "window": {
-    "backgroundColor": "#f9f9f9",
+    "backgroundColor": "#f3f3f3",
     "enablePullDownRefresh": true,
     "backgroundTextStyle": "light",
     "navigationBarBackgroundColor": "#FF4648",

@@ -2,7 +2,8 @@
   <view class="goods-pannel">
     <view class="goods-item" wx:for="{{ recordArr }}" wx:key="unique">
       <view class="goods-info">
-        <image class="goods-pic" src="{{ item.goodsPic }}" mode="center" />
+        <view class='goods-pic imgbox'> <image src="{{ item.goodsPic }}" mode="center" /></view>
+       
         <view class="goods-addition">
           <view class="goods-add-info">
             <view class="goods-name overflow1">{{ item.goodsName }}</view>

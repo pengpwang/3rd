@@ -27,9 +27,9 @@
         <view class="res-lists-i-actually">共<text class="res-lists-i-actually-mount">{{ item.mount }}</text>件商品 实付款：<text class="res-lists-i-actually-p">￥{{ item.price3 }}</text></view>
         <view class="res-lists-i-line"></view>
         <view class="res-lists-i-btn-wrap">
-          <view class="i-btn i-btn-cancel" hidden="{{ item.status == 1 ? true : false }}">取消订单</view>
-          <view class="i-btn i-btn-payment" hidden="{{ item.status == 1 ? true : false }}">去付款</view>
-          <view class="i-btn i-btn-check" hidden="{{ item.status == 1 ? false : true }}">查看</view>
+          <view class="i-btn i-btn-cancel opacity" hidden="{{ item.status == 1 ? true : false }}">取消订单</view>
+          <view class="i-btn i-btn-payment opacity" hidden="{{ item.status == 1 ? true : false }}">去付款</view>
+          <view class="i-btn i-btn-check opacity" hidden="{{ item.status == 1 ? false : true }}">查看</view>
         </view>
       </view>
       <view class="res-lists-footer">

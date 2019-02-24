@@ -11,13 +11,13 @@
     <view class="query-item">
       <view class="query-item-txt">佣金状态</view>
       <picker class="selector-picker" mode="selector" bindchange="bindPickerChange" range="{{ statusArr }}" value="{{ index }}">
-        <view class="selector-picker-txt">{{ statusArr[index] }}</view>
+        <view class="selector-picker-txt flex">{{ statusArr[index] }}</view>
       </picker>
       <view class="selector-picker-cart"></view>
     </view>
     <view class="query-btn-wrap">
-      <view class="query-btn-query" bind:tap="onQuery">查询</view>
-      <view class="query-btn-reset" bind:tap="onReset">重置</view>
+      <view class="query-btn-query opacity" bind:tap="onQuery">查询</view>
+      <view class="query-btn-reset opacity" bind:tap="onReset">重置</view>
     </view>
   </view>
   <view class="query-result">

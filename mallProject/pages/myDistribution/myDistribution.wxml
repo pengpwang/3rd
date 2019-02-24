@@ -7,7 +7,7 @@
     <view class="query-item">
       <view class="query-item-txt">用户名</view>
       <picker class="selector-picker" mode="selector" bindchange="bindPersonPickerChange" range="{{ personArr }}" value="{{ index }}">
-        <view class="selector-picker-txt">{{ personArr[index] }}</view>
+        <view class="selector-picker-txt flex">{{ personArr[index] }}</view>
       </picker>
       <view class="selector-picker-cart"></view>
     </view>
@@ -18,7 +18,7 @@
     <view class="query-item">
       <view class="query-item-txt">手机</view>
       <picker class="selector-picker" mode="selector" bindchange="bindBankPickerChange" range="{{ bankArr }}" value="{{ indexBank }}">
-        <view class="selector-picker-txt">{{ bankArr[indexBank] }}</view>
+        <view class="selector-picker-txt flex">{{ bankArr[indexBank] }}</view>
       </picker>
       <view class="selector-picker-cart"></view>
     </view>

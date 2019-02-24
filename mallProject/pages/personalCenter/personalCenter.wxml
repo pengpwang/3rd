@@ -26,7 +26,7 @@
     </view>
   </view>
   <view class="per_center-lists">
-    <view class="per_center-list">
+    <view class="per_center-list opacity">
       <view class="per_center-list_logo">
         <image src="../../images/mine/icon-order.png" class="list_logo logo-order" />
       </view>
@@ -38,7 +38,7 @@
         </view>
       </view>
     </view>
-    <view class="per_center-list">
+    <view class="per_center-list opacity">
       <view class="per_center-list_logo">
         <image src="../../images/mine/icon-collect.png" class="list_logo logo-collect" />
       </view>
@@ -50,7 +50,7 @@
         </view>
       </view>
     </view>
-    <view class="per_center-list">
+    <view class="per_center-list opacity">
       <view class="per_center-list_logo">
         <image src="../../images/mine/icon-customer.png" class="list_logo logo-customer" />
       </view>
@@ -62,7 +62,7 @@
         </view>
       </view>
     </view>
-    <view class="per_center-list">
+    <view class="per_center-list opacity">
       <view class="per_center-list_logo">
         <image src="../../images/mine/icon-huiyuan.png" class="list_logo logo-huiyuan" />
       </view>
@@ -74,7 +74,7 @@
         </view>
       </view>
     </view>
-    <view class="per_center-list">
+    <view class="per_center-list opacity">
       <view class="per_center-list_logo">
         <image src="../../images/mine/icon-fenxiao.png" class="list_logo logo-fenxiao" />
       </view>

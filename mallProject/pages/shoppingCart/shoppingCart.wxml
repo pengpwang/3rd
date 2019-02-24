@@ -1,2 +1,60 @@
 <!--pages/shoppingCart/shoppingCart.wxml-->
-<text>pages/shoppingCart/shoppingCart.wxml</text>
+<view class='shoppingCart common'>
+    <!--暂无购买商品-->
+    <view class='empty-con' hidden>
+         <image src='/images/shoppingCar/shop.png'></image>
+         <view class='go opacity'>去逛逛吧</view>
+    </view>
+
+    <!--已有购买商品-->
+    <view class='shopping-con'>
+          <view class='shopping-list' wx:for='{{5}}'>
+                <view class='shopping-top flex'>
+                    <view class='select'>
+                         <radio class="wx-radio radio" color="#FF4648" />
+                    </view>
+                    <image class='home' src='/images/shoppingCar/home.png'></image>
+                    <view class='tag'>平台自营</view>
+                </view>
+                <view class='shopping-cen flex' wx:for='{{2}}'>
+                    <view class='select'>
+                        <radio class="wx-radio radio" color="#FF4648" />
+                    </view>
+                    <view class='cen-border flex'>
+                        <image class='img' src='/images/index/swiper.png'></image>
+                        <view class='cen-right'>
+                            <view class='title overflow2'>【四色可选】2018年韩国新款大码宽松百塔卫衣女</view>
+                            <view class='has'>(剩余库存：201)</view>
+                            <view class='bot-option flex'>
+                                  <view class='price'>¥77.22</view>
+                                  <view class='btncon flex'>
+                                        <view class='btn remove opacity'>-</view>
+                                        <view class='nums'>1</view>
+                                        <view class='btn add opacity'>+</view>
+                                  </view>
+                            </view>
+                        </view>
+                    </view>
+                </view>
+                <view class='total flex'>
+                    <view class='complete'>小计：￥128</view>
+                    <view class='save'>已省：￥30</view>
+                    <image class='delete' src='/images/shoppingCar/delete.png'></image>
+                </view>
+          </view>
+    </view>
+
+    <view class='foot-btn flex'>
+        <view class='select'>
+            <radio class="wx-radio radio" color="#FF4648" />
+        </view>
+        <view class='totalPrice flex'>
+            <view class='name'>全选</view>
+            <view class='total-right flex'>
+                <view class='name'>合计:</view>
+                <view class='val'>¥ 5650</view>
+            </view>
+        </view>
+        <view class='btn opacity'>立即购买</view>
+    </view>
+</view>
