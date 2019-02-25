@@ -1,0 +1,95 @@
+<!--pages/personalCenter/personalCenter.wxml-->
+<view class="container">
+  <view class="per_center-header">
+    <view class="per_center-header_my">
+      <view class="per_center-header_my_avator">
+        <image src="" class="per_center-header_my_avatorPic" />
+      </view>
+      <view class="per_center-header_my_tips">
+        <view class="per_center-header_my_phone">{{ phoneNum }}</view>
+        <view class="per_center-header_my_info">
+          <view class="per_center-header_my_score">我的积分：<text class="per_center-header_my_score-blod">{{ myPoints }}</text></view>
+          <view class="per_center-header_my_level">{{ myLevel }}</view>
+        </view>
+      </view>
+    </view>
+    <view class="per_center-header_order">
+      <view class="per_center-header_order-item per_center-header_order-pay_money">
+        <text class="per_center-header_order-num">{{ paymentNum }}</text>
+        <text class="per_center-header_order-text">待付款</text>
+      </view>
+      <view class="order_splite"></view>
+      <view class="per_center-header_order-item per_center-header_order-send">
+        <text class="per_center-header_order-num">{{ deliveryNum }}</text>
+        <text class="per_center-header_order-text">待发货</text>
+      </view>
+    </view>
+  </view>
+  <view class="per_center-lists">
+    <view class="per_center-list opacity">
+      <view class="per_center-list_logo">
+        <image src="../../images/mine/icon-order.png" class="list_logo logo-order" />
+      </view>
+      <view class="per_center-list_r">
+        <text class="per_center-list_r-text">订单中心</text>
+        <view class="per_center-list_r-tips">
+          <text class="per_center-list_r-tips-text"></text>
+          <view class="per_center-list_r-arrow"></view>
+        </view>
+      </view>
+    </view>
+    <view class="per_center-list opacity">
+      <view class="per_center-list_logo">
+        <image src="../../images/mine/icon-collect.png" class="list_logo logo-collect" />
+      </view>
+      <view class="per_center-list_r">
+        <text class="per_center-list_r-text">我的收藏</text>
+        <view class="per_center-list_r-tips">
+          <text class="per_center-list_r-tips-text">银行卡、优惠券</text>
+          <view class="per_center-list_r-arrow"></view>
+        </view>
+      </view>
+    </view>
+    <view class="per_center-list opacity">
+      <view class="per_center-list_logo">
+        <image src="../../images/mine/icon-customer.png" class="list_logo logo-customer" />
+      </view>
+      <view class="per_center-list_r">
+        <text class="per_center-list_r-text">客户服务</text>
+        <view class="per_center-list_r-tips">
+          <text class="per_center-list_r-tips-text"></text>
+          <view class="per_center-list_r-arrow"></view>
+        </view>
+      </view>
+    </view>
+    <view class="per_center-list opacity">
+      <view class="per_center-list_logo">
+        <image src="../../images/mine/icon-huiyuan.png" class="list_logo logo-huiyuan" />
+      </view>
+      <view class="per_center-list_r">
+        <text class="per_center-list_r-text">会员中心</text>
+        <view class="per_center-list_r-tips">
+          <text class="per_center-list_r-tips-text"></text>
+          <view class="per_center-list_r-arrow"></view>
+        </view>
+      </view>
+    </view>
+    <view class="per_center-list opacity">
+      <view class="per_center-list_logo">
+        <image src="../../images/mine/icon-fenxiao.png" class="list_logo logo-fenxiao" />
+      </view>
+      <view class="per_center-list_r">
+        <text class="per_center-list_r-text">分销中心</text>
+        <view class="per_center-list_r-tips">
+          <text class="per_center-list_r-tips-text"></text>
+          <view class="per_center-list_r-arrow"></view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="per_center-footer">
+    <view class="footer-line ft-line-l"></view>
+    <view class="per_center-footer_author-right">北京亿百分科技公司提供技术支持</view>
+    <view class="footer-line ft-line-r"></view>
+  </view>
+</view>

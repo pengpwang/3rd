@@ -1,0 +1,69 @@
+{
+  "pages":[
+    
+    "pages/index/index",
+    "pages/muchMore/muchMore",
+    "pages/commodityClassification/commodityClassification",
+    "pages/personalData/personalData",
+    "pages/browseRecord/browseRecord",
+    "pages/myCollection/myCollection",
+    "pages/financialInformation/financialInformation",
+    "pages/settlementCenter/settlementCenter",
+    "pages/muchMoreDetails/muchMoreDetails",
+    "pages/myPromotion/myPromotion",
+    "pages/myDistribution/myDistribution",
+    "pages/revenueStream/revenueStream",
+    "pages/acknowledgementOfOrder/acknowledgementOfOrder",
+    "pages/personalCenter/personalCenter",
+    "pages/shoppingCart/shoppingCart",
+    "pages/mineOrder/mineOrder",
+    "pages/addressManagement/addressManagement",
+    "pages/integralMall/integralMall",
+    "pages/groupBuying/groupBuying",
+    "pages/commodityDetails/commodityDetails",
+    "pages/productList/productList",
+   
+    "pages/specificationParameter/specificationParameter"  
+   
+  ],
+  "window": {
+    "backgroundColor": "#f3f3f3",
+    "enablePullDownRefresh": true,
+    "backgroundTextStyle": "light",
+    "navigationBarBackgroundColor": "#FF4648",
+    "navigationBarTitleText": "商城小程序",
+    "navigationBarTextStyle": "white"
+  },
+  "tabBar": {
+    "color": "#828282",
+    "selectedColor": "#FF4648",
+    "backgroundColor": "#ffffff",
+    "borderStyle": "white",
+    "list": [
+      {
+        "pagePath": "pages/index/index",
+        "text": "首页",
+        "iconPath": "/images/index/index1_1.png",
+        "selectedIconPath": "/images/index/index1_2.png"
+      },
+      {
+        "pagePath": "pages/commodityClassification/commodityClassification",
+        "text": "分类",
+        "iconPath": "/images/index/index2_1.png",
+        "selectedIconPath": "/images/index/index2_2.png"
+      },
+      {
+        "pagePath": "pages/shoppingCart/shoppingCart",
+        "text": "购物车",
+        "iconPath": "/images/index/index3_1.png",
+        "selectedIconPath": "/images/index/index3_2.png"
+      },
+      {
+        "pagePath": "pages/personalCenter/personalCenter",
+        "text": "我的",
+        "iconPath": "/images/index/index4_1.png",
+        "selectedIconPath": "/images/index/index4_2.png"
+      }
+    ]
+  }
+}

@@ -1,0 +1,124 @@
+<!--pages/commodityDetails/commodityDetails.wxml-->
+<view class='commodityDetails common'>
+    <!-- 商品轮播 -->
+    <view class='top-swiper'>
+         <swiper
+          indicator-color='{{color}}'
+          indicator-active-color='{{colorActive}}'
+          indicator-dots="{{indicatorDots}}"
+          autoplay="{{autoplay}}"
+          interval="{{interval}}" 
+          duration="{{duration}}">
+            <block wx:for="{{imgUrls}}">
+                <swiper-item class='flex'>
+                  <image src="/images/index/swiper.png" class="slide-image" width="355" height="150" />
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+
+    <!-- 商品价格名称等 -->
+    <view class='commodity-name commodity-pad'>
+        <view class='commodityPrice'>¥<span class='max'>12358</span><span>.00</span></view>
+        <view class='commodityName'>瑞璐莎 秋冬修身职业装女装套装长裤商务 毛料小西装女OL正装工装行政银行工作服KK820</view>
+        <view class='commodityTag'>季候风年货节，办公白领必备</view>
+    </view>
+    <!-- 商品数量 -->
+    <view class='commodity-nums  pad33 commodity-border flex'>
+        <view class='numsName'>数量</view>
+        <view class='numsBtn remove'>-</view>
+        <view class='numsVal'>1</view>
+        <view class='numsBtn add'>+</view>
+        <view class='numsHas'>(剩余库存：201)</view>
+    </view>
+    <!-- 选择收获地址 -->
+    <view class='commodity-address pad33 commodity-border'>
+        <view class='commodity-top flex'>
+            <view class='commodity-left flex'>
+                <view class='desc'>送至</view>
+                <view class='address overflow1'>请选择收获地址</view>
+            </view>
+            <image class='right' src='/images/index/right.png'/>
+        </view>
+        <view class='commodity-bot'>付款后，预计<span>48小时内</span>发货</view>
+    </view>
+    <!-- 商品介绍 -->
+    <view class='commodity-introduce pad33 commodity-border'>
+        <view class='introduce-item flex'>
+            <view class='commodity-left'>
+                <view class='indicatorName'>详细介绍</view>
+            </view>
+            <image class='right' src='/images/index/right.png'></image>
+        </view>
+        <view class='introduce-item flex'>
+            <view class='commodity-left'>
+                <view class='indicatorName'>规格参数</view>
+            </view>
+            <image class='right' src='/images/index/right.png'></image>
+        </view>
+        <view class='introduce-item flex'>
+            <view class='commodity-left flex'>
+                <view class='indicatorName'>商品评价<span>100%</span>好评</view>
+                <view class='personNums'>1000人已评价</view>
+            </view>
+            <image class='right' src='/images/index/right.png'></image>
+        </view>
+        <view class='introduce-item flex'>
+            <view class='commodity-left'>
+                <view class='indicatorName'>商品资讯0条</view>
+            </view>
+            <image class='right' src='/images/index/right.png'></image>
+        </view>
+    </view>
+    <!-- 商品店铺 -->
+    <view class='commodity-shop commodity-pad commodity-border'>
+        <view class='shop-top flex'>
+            <view class='shop-left flex'>
+                <view class='shopTag red'>平台自营</view>
+                <view class='shopTag'>关注 100</view>
+            </view>
+            <view class='shop-right flex'>
+                 <button class='opacity bot'>收藏店铺</button>
+                 <button class='opacity'>进入店铺</button>
+            </view>
+        </view>
+        <view class='shop-branch flex'>
+            <view class='branch-item'>商品评分 4.8</view>
+            <view class='branch-item'>服务态度 4.8</view>
+            <view class='branch-item'>物流速度 4.8</view>
+        </view>
+    </view>
+    <!-- 商品详情 -->
+    <view class='commodity-details flex'>
+        <view class='line'></view>
+        <view class='detailsName'>商品详情</view>
+        <view class='line'></view>
+    </view>
+    <!-- 商品详情内容 -->
+
+    <!--到底线了-->
+    <view class='type-title noData flex'>
+          <view class='line'></view>
+          <view class='titleName'>已到底线了</view>
+          <view class='line'></view>
+    </view>
+
+    <!--底部按钮-->
+    <view class='foot-btn flex'>
+        <view class='btn-item'>
+            <view class='notice'>
+                <image src='/images/index/notice.png'></image>
+            </view>
+            <view class='name'>关注</view>
+        </view>
+        <view class='btn-item'>
+            <view class='car'>
+                 <image src='/images/index/buyCar.png'></image>
+                 <view class='nums'>11</view>
+            </view>
+            <view class='name'>购物车</view>
+        </view>
+        <view class='btn addCar opacity'>加入购物车</view>
+        <view class='btn buy opacity'>立即购买</view>
+    </view>
+</view>

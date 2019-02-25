@@ -1,0 +1,27 @@
+<view class="container">
+  <view class="lists-wrap">
+    <view class="list-item">
+      <view class="list-item-txt">姓名</view>
+      <input value="{{ name }}" class="list-item-input" placeholder-class="myData-placeholder" type="text" maxlength="8" placeholder="请填写姓名" />
+    </view>
+    <view class="list-item borderB-no">
+      <view class="list-item-txt">手机号码</view>
+      <input value="{{ phoneNum }}" class="list-item-input" placeholder-class="myData-placeholder" type="number" maxlength="11" placeholder="请填写手机号码" />
+    </view>
+  </view>
+  <view class="lists-wrap">
+    <view class="list-item">
+      <view class="list-item-txt">身份证号</view>
+      <input value="{{ idCard }}" class="list-item-input" placeholder-class="myData-placeholder" type="idcard" maxlength="18" placeholder="请填写真实的身份证号" />
+    </view>
+    <view class="list-item">
+      <view class="list-item-txt">学历</view>
+      <input value="{{ education }}" class="list-item-input" placeholder-class="myData-placeholder" type="text" maxlength="8" placeholder="请填写学历信息" />
+    </view>
+    <view class="list-item borderB-no">
+      <view class="list-item-txt">地址</view>
+      <input value="{{ address }}" class="list-item-input" placeholder-class="myData-placeholder" type="text" placeholder="请填写收货地址" />
+    </view>
+  </view>
+  <view class="btn-save" hover-class="hover-opacity">保存</view>
+</view>

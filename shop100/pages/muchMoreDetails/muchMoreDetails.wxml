@@ -1,0 +1,58 @@
+<!--pages/muchMoreDetails/muchMoreDetails.wxml-->
+<view class='muchMoreDetails common'>
+    <!-- 商品轮播 -->
+    <view class='top-swiper'>
+         <swiper
+          indicator-color='{{color}}'
+          indicator-active-color='{{colorActive}}'
+          indicator-dots="{{indicatorDots}}"
+          autoplay="{{autoplay}}"
+          interval="{{interval}}" 
+          duration="{{duration}}">
+            <block wx:for="{{imgUrls}}">
+                <swiper-item class='flex'>
+                  <image src="/images/index/swiper.png" class="slide-image" width="355" height="150" />
+                </swiper-item>
+            </block>
+        </swiper>
+    </view>
+    <!-- 商品价格 -->
+    <view class='commodity-descon flex'>
+        <view class='priceCon flex'>
+            <view class='name'>首付款:</view>
+            <view class='price'>￥5000.00</view>
+        </view>
+        <view class='oldPrice'>市场价:￥420000.00</view>
+        <view class='time'>
+            <view>距离结束还剩：</view>
+            <view class='day'>25天</view>
+        </view>
+    </view>
+    <!-- 商品名称等 -->
+    <view class='commodity-name commodity-pad'>
+        <view class='commodityNums'>39人已参团</view>
+        <view class='commodityName'> 惠普(HP)轻薄系列 HP15-ac190TX 15.6英寸超薄笔记本
+(i5-4210U 4G 500G R5 M330 2G独显 摄像头 读卡器 无光驱 Win0 曜石黑)银行工作服KK820</view>
+        <view class='commodityTag'>季候风年货节，办公白领必备</view>
+    </view>
+    <!-- 商品剩余 -->
+    <view class='commodity-has  pad33 commodity-border flex'>
+        <view class='numsName wid flex'>
+            <view class='name'>剩余库存:</view>
+            <view class='hasNums'>201</view>
+        </view>
+    </view>
+    <!-- 商品数量 -->
+    <view class='commodity-nums  pad33 flex'>
+        <view class='numsName'>数量</view>
+        <view class='numsBtn remove'>-</view>
+        <view class='numsVal'>1</view>
+        <view class='numsBtn add'>+</view>
+    </view>
+    <view class='foot-btn flex'>
+        <view class='btn btn1 opacity'>原价购买</view>
+        <view class='btn opacity'>立即抢购</view>
+    </view>
+
+    <view class='commodity-border'>其它内容</view>
+</view>

@@ -1,0 +1,103 @@
+ <!--pages/index/index.wxml-->
+<view class="index common">
+    <!--搜索商品-->
+    <view class='search-con flex'>
+        <image src='/images/index/search.png'/>
+        <input placeholder-class='placeholder' placeholder='搜索商品'></input>
+    </view>
+ 
+    <!--轮播-->
+    <swiper
+    indicator-color='{{color}}'
+    indicator-active-color='{{colorActive}}'
+    indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}"
+    interval="{{interval}}" 
+    duration="{{duration}}">
+        <block wx:for="{{data.banners}}">
+            <swiper-item>
+              <image src="{{imageHost + item.image}}" class="slide-image" width="355" height="150" />
+            </swiper-item>
+        </block>
+    </swiper>
+    <!--功能按钮-->
+    <view class='function-button flex'>
+        <view bindtap="toCateList" class='button-item btnactive'>
+            <image src='/images/index/functionButton1.png'></image>
+            <view class='name'>分类查询</view>
+        </view>
+         <view bindtap="toBuyList" class='button-item btnactive'>
+            <image src='/images/index/gouwuche.png'></image>
+            <view class='name'>购物车</view>
+        </view>
+         <view bindtap="toMember" class='button-item btnactive'>
+            <image src='/images/index/functionButton3.png'></image>
+            <view class='name'>会员中心</view>
+        </view>
+         <view bindtap="toBuy" class='button-item btnactive'>
+            <image src='/images/index/functionButton4.png'></image>
+            <view class='name'>特卖场</view>
+        </view>
+         <view bindtap="toCouponList" class='button-item btnactive'>
+            <image src='/images/index/functionButton5.png'></image>
+            <view class='name'>优券集市</view>
+        </view>
+         <view bindtap="toPing" class='button-item btnactive'>
+            <image src='/images/index/functionButton6.png'></image>
+            <view class='name'>拼多多</view>
+        </view>
+         <view bindtap="toScore" class='button-item btnactive'>
+            <image src='/images/index/functionButton7.png'></image>
+            <view class='name'>积分商城</view>
+        </view>
+         <view bindtap="toTuan" class='button-item btnactive'>
+            <image src='/images/index/functionButton8.png'></image>
+            <view class='name'>团购</view>
+        </view>
+    </view>
+    <!--活动模块-->
+    <view class='activity-con border-top flex'>
+        <view bindtap="toDetail" data-i="{{data.hotList[0].product.id}}" class='activity-left'>
+            <image class='opacity' src='{{imageHost + data.hotList[0].product.masterImg}}'></image>
+        </view>
+        <view class='activity-right'>
+            <view bindtap="toDetail" data-i="{{data.hotList[1].product.id}}" class='activity-top'>
+                <image class='opacity' src='{{imageHost + data.hotList[1].product.masterImg}}'></image>
+            </view>
+            <view class='activity-bot flex'>
+                <image bindtap="toDetail" data-i="{{data.hotList[2].product.id}}" class='opacity' src='{{imageHost + data.hotList[2].product.masterImg}}'></image>
+                <image bindtap="toDetail" data-i="{{data.hotList[3].product.id}}" class='second opacity' src='{{imageHost + data.hotList[3].product.masterImg}}'></image>
+            </view>
+        </view>
+    </view>
+    <!--商品分类模块-->
+    <view wx:for="{{data.floors}}" class='type-con border-top'>
+        <view class='type-title flex'>
+            <view class='line'></view>
+            <view class='titleName'>{{item.name}}</view>
+            <view class='line'></view>
+        </view>
+        <!--置顶商品-->
+        <view class='type-top opacity' bindtap="toDetail" data-link="{{item.advLinkUrl}}"><image src='{{imageHost + item.advImage}}'></image></view>
+        <view class='type-list-con flex' >
+            <view bindtap="toDetail" data-i="{{item2.product.id}}" class='type-list' wx:for='{{item.datas}}' wx:for-item="item2">
+                <view class='type-img opacity imgbox flex'>
+                    <image src='{{imageHost + item2.product.masterImg}}'></image>
+                </view>
+                <view class='type-name overflow1'>{{item2.productName}}</view>
+                <!-- <view class='type-desc overflow1'>极地的迷彩感，强势锁温暖2019款1111111111</view> -->
+                <view class='type-more flex'>
+                    <view class='type-price'>￥{{item2.product.malMobilePrice}}</view>
+                    <image class='type-btn' src='/images/index/car.png'></image>
+                </view>
+            </view>
+            
+        </view>
+    </view>
+    <!--到底线了-->
+    <view class='type-title noData flex'>
+          <view class='line'></view>
+          <view class='titleName'>已到底线了</view>
+          <view class='line'></view>
+    </view>
+</view>

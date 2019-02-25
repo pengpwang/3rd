@@ -1,0 +1,35 @@
+<!--pages/groupBuying/groupBuying.wxml-->
+<view class='groupBuying common'>
+    <!--种类-->
+    <view class='type-con flex'>
+        <view class='type-left flex'>
+            <view class='type-item'>全部</view>
+            <view class='type-item'>电脑数码</view>
+            <view class='type-item active'>衣服配饰</view>
+            <view class='type-item'>食品生鲜</view>
+        </view>
+        <view class='type-right flex'>
+            <image src='/images/top2_2.png'></image>
+        </view>
+    </view>
+    <!--活动宣传图-->
+    <image class='hd' src='/images/index/swiper.png'></image>
+    <!--商品列表-->
+    <view class='commodity'>
+        <view class='commodity-title'><span>精品团</span>/全部</view>
+        <view class='commodity-con flex'>
+            <view class='commodity-list' wx:for='{{6}}'>
+                <view class='top-img flex'>
+                    <image src='/images/index/swiper.png'></image>
+                </view>
+                <view class='bot-con'>
+                    <view class='title overflow2'>三只松鼠 三只松鼠的超级大礼包六合一 盐焗腰果...</view>
+                    <view class='desc-con flex'>
+                        <view class='price'>￥99</view>
+                        <view class='nums'>已有201人参团</view>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

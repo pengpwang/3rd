@@ -1,0 +1,64 @@
+<!--pages/muchMore/muchMore.wxml--> 
+<view class='muchMore common'>
+    <!--活动时间-->
+    <scroll-view scroll-x class='top-time'>
+        <view class='top-box flex'>
+             <view class='time-con '>
+                  <view class='time'>08:00</view>
+                  <view class='status'>已结束</view>
+              </view>
+              <view class='time-con active'>
+                  <view class='time'>10:00</view>
+                  <view class='status'>正在疯抢</view>
+              </view>
+              <view class='time-con'>
+                  <view class='time'>12:00</view>
+                  <view class='status'>即将开始</view>
+              </view>
+              <view class='time-con'>
+                  <view class='time'>14:00</view>
+                  <view class='status'>即将开始</view>
+              </view>
+        </view>
+    </scroll-view>
+    <!--种类-->
+    <view class='type-con flex'>
+        <view class='type-left flex'>
+            <view class='type-item'>全部</view>
+            <view class='type-item'>电脑数码</view>
+            <view class='type-item active'>衣服配饰</view>
+            <view class='type-item'>食品生鲜</view>
+        </view>
+        <view class='type-right flex'>
+            <image src='/images/top2_2.png'></image>
+        </view>
+    </view>
+    <!--活动宣传图-->
+    <image class='hd' src='/images/index/swiper.png'></image>
+    <!--商城列表-->
+    <view class='integral-con'>
+        <view class='list-item flex' wx:for='{{5}}'>
+            <view class='list-left imgbox'>
+               <image src='/images/index/swiper.png'></image>
+            </view>
+            <view class='list-right'>
+                  <view class='title overflow2'>美的38L精准温控电烤箱PE7138上下独立控温 钻石纹背板 超聚能聚热省…</view>
+                  <view class='list-bot'>
+                      <view class='bot-left fir flex'>
+                          <view class='score'>最低可优惠至 <span>¥3700.00</span></view>
+                           <view class='item2'>已抢购：<span>39人</span></view>
+                               
+                      </view>
+                      <view class='bot-right flex'>                      
+                         <view class='price'><span>预付款：¥</span>500.00</view>             
+                          <view class='btn opacity flex'>
+                              <view class='btnName'>马上抢</view>
+                              <image src='/images/right.png'></image>
+                          </view>
+                      </view>
+                  </view>
+            </view>
+        </view>
+    </view>
+
+</view>

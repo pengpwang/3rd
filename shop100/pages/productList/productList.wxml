@@ -1,0 +1,32 @@
+<!--pages/productList/productList.wxml-->
+<view class='productList common'>
+    <view class='top-tab flex'>
+        <view class='tab-item'>默认</view>
+        <view class='tab-item flex'>
+            <view class='tabName'>价格</view>
+            <view class='tab-right'>
+                <image src='/images/top1_2.png'></image>
+                <image class='last' src='/images/top2_1.png'></image>
+            </view> 
+        </view>
+        <view class='tab-item active'>销量</view>
+        <view class='tab-item'>评论</view>
+        <view class='tab-item'>筛选</view>
+    </view>
+    <view class='productList-list'>
+         <view class='list-item flex' wx:for='{{5}}'>
+              <view class='img imgbox'><image  src='/images/index/swiper.png'/></view>
+            
+              <view class='list-right'>
+                   <view class='top-list overflow2 '>
+                        <view class='list-title'><span class='list-tag'>有货</span>下普 (SHARP) LCD-50SU57593950英寸4K超高清wi-fi智能网络液晶电...</view>
+                   </view>
+                   <view class='bot-list flex'>
+                        <view class='pirce'><span class='min1'>¥</span>2999<span class='min2'>.00</span></view>
+                        <view class='oldPirce'>¥3999.00</view>
+                        <view class='nums'>0条评价</view>
+                   </view>
+              </view> 
+         </view>
+    </view>
+</view>
