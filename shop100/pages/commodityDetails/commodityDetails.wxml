@@ -9,9 +9,9 @@
           autoplay="{{autoplay}}"
           interval="{{interval}}" 
           duration="{{duration}}">
-            <block wx:for="{{imgUrls}}">
+            <block wx:for="{{data.productLeadPicList}}">
                 <swiper-item class='flex'>
-                  <image src="/images/index/swiper.png" class="slide-image" width="355" height="150" />
+                  <image src="{{imageHost + item}}" class="slide-image" width="355" height="150" />
                 </swiper-item>
             </block>
         </swiper>
@@ -19,9 +19,9 @@
 
     <!-- 商品价格名称等 -->
     <view class='commodity-name commodity-pad'>
-        <view class='commodityPrice'>¥<span class='max'>12358</span><span>.00</span></view>
-        <view class='commodityName'>瑞璐莎 秋冬修身职业装女装套装长裤商务 毛料小西装女OL正装工装行政银行工作服KK820</view>
-        <view class='commodityTag'>季候风年货节，办公白领必备</view>
+        <view class='commodityPrice'>¥<span class='max'>{{data.goods.mallMobilePrice}}</span><span>.00</span></view>
+        <view class='commodityName'>{{data.product.name1}}</view>
+        <view class='commodityTag'>{{data.product.name2}}</view>
     </view>
     <!-- 商品数量 -->
     <view class='commodity-nums  pad33 commodity-border flex'>
@@ -29,18 +29,27 @@
         <view class='numsBtn remove'>-</view>
         <view class='numsVal'>1</view>
         <view class='numsBtn add'>+</view>
-        <view class='numsHas'>(剩余库存：201)</view>
+        <view class='numsHas'>(剩余库存：{{data.goods.productStock}})</view>
     </view>
     <!-- 选择收获地址 -->
     <view class='commodity-address pad33 commodity-border'>
         <view class='commodity-top flex'>
             <view class='commodity-left flex'>
                 <view class='desc'>送至</view>
-                <view class='address overflow1'>请选择收获地址</view>
+                <picker
+                  mode="region"
+                  bindchange="bindRegionChange"
+                  value="{{region}}"
+                  custom-item="{{customItem}}"
+                >
+                  <view class="address overflow1">
+                    {{region[0]}}{{region[1]?'，'+region[1]:''}}{{region[2]?'，'+region[2]:''}}
+                  </view>
+                </picker>
             </view>
             <image class='right' src='/images/index/right.png'/>
         </view>
-        <view class='commodity-bot'>付款后，预计<span>48小时内</span>发货</view>
+        <view class='commodity-bot'>付款后，预计<span>{{(data.transport.transTime == 5 || data.transport.transTime == 7)?data.transport.transTime+'天':data.transport.transTime+'小时'}}内</span>发货</view>
     </view>
     <!-- 商品介绍 -->
     <view class='commodity-introduce pad33 commodity-border'>
@@ -58,14 +67,14 @@
         </view>
         <view class='introduce-item flex'>
             <view class='commodity-left flex'>
-                <view class='indicatorName'>商品评价<span>100%</span>好评</view>
-                <view class='personNums'>1000人已评价</view>
+                <view class='indicatorName'>商品评价<span>{{data.statisticsVO.productCommentsHighProportion}}%</span>好评</view>
+                <view class='personNums'>{{data.statisticsVO.productCommentsAllCount}}人已评价</view>
             </view>
             <image class='right' src='/images/index/right.png'></image>
         </view>
         <view class='introduce-item flex'>
             <view class='commodity-left'>
-                <view class='indicatorName'>商品资讯0条</view>
+                <view class='indicatorName'>商品资讯{{data.statisticsVO.productAskCount}}条</view>
             </view>
             <image class='right' src='/images/index/right.png'></image>
         </view>
@@ -74,8 +83,8 @@
     <view class='commodity-shop commodity-pad commodity-border'>
         <view class='shop-top flex'>
             <view class='shop-left flex'>
-                <view class='shopTag red'>平台自营</view>
-                <view class='shopTag'>关注 100</view>
+                <view class='shopTag red'>{{data.seller.sellerName}}</view>
+                <view class='shopTag'>关注 {{data.seller.collectionNumber}}</view>
             </view>
             <view class='shop-right flex'>
                  <button class='opacity bot'>收藏店铺</button>
@@ -83,9 +92,9 @@
             </view>
         </view>
         <view class='shop-branch flex'>
-            <view class='branch-item'>商品评分 4.8</view>
-            <view class='branch-item'>服务态度 4.8</view>
-            <view class='branch-item'>物流速度 4.8</view>
+            <view class='branch-item'>商品评分 {{data.seller.scoreDescription}}</view>
+            <view class='branch-item'>服务态度 {{data.seller.scoreService}}</view>
+            <view class='branch-item'>物流速度 {{data.seller.scoreDeliverGoods}}</view>
         </view>
     </view>
     <!-- 商品详情 -->
@@ -114,11 +123,11 @@
         <view class='btn-item'>
             <view class='car'>
                  <image src='/images/index/buyCar.png'></image>
-                 <view class='nums'>11</view>
+                 <view class='nums'>{{data.cartNumber}}</view>
             </view>
             <view class='name'>购物车</view>
         </view>
         <view class='btn addCar opacity'>加入购物车</view>
-        <view class='btn buy opacity'>立即购买</view>
+        <view bindtap="nowBuy" class='btn buy opacity'>立即购买</view>
     </view>
 </view>

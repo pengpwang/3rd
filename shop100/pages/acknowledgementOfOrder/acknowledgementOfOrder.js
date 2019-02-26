@@ -1,4 +1,4 @@
-
+import { request, regeneratorRuntime } from '../../utils/request.js'
 Page({
 
   /**
@@ -14,7 +14,8 @@ Page({
       { imgSrc: '', proName: '儿童大块积木桶装1-2-3-6周岁益智早教婴儿宝宝教婴儿宝宝', spec: '规格：全部套装【68块】', price: '100', mount: 1 },
       { imgSrc: '', proName: '儿童大块积木桶装1-2-3-6周岁益智早教婴儿宝宝教婴儿宝宝', spec: '规格：全部套装【68块】', price: '100', mount: 1 },
       { imgSrc: '', proName: '儿童大块积木桶装1-2-3-6周岁益智早教婴儿宝宝教婴儿宝宝', spec: '规格：全部套装【68块】', price: '100', mount: 1 },
-    ]
+    ],
+    data: {}
   },
 
   /**
@@ -71,5 +72,11 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  async getData(){
+    let data = await request('order', {}, true, 'GET')
+    this.setData({
+      data: data
+    })
   }
 })

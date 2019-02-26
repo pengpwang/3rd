@@ -1,28 +1,28 @@
 // pages/commodityDetails/commodityDetails.js
+import { request, regeneratorRuntime } from '../../utils/request.js'
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    imgUrls: [
-      'http://img02.tooopen.com/images/20150928/tooopen_sy_143912755726.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175866434296.jpg',
-      'http://img06.tooopen.com/images/20160818/tooopen_sy_175833047715.jpg'
-    ],
     indicatorDots: true,
     autoplay: false,
     interval: 10000,
     duration: 1000,
     colorActive: '#FB556F',
-    color: '#dddddd'
+    color: '#dddddd',
+    data: {},
+    region: ['请选择城市', '', ''],
+    imageHost: 'http://123.207.136.56:8080/ejsimage'
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-
+    let id = options.id
+    this.getData(id)
   },
 
   /**
@@ -72,5 +72,21 @@ Page({
    */
   onShareAppMessage: function () {
 
+  },
+  getData: async function (id) {
+    let data = await request('/product/'+ id + '.html', {}, true, 'GET')
+    this.setData({
+      data: data.data
+    })
+  },
+  bindRegionChange(e) {
+    this.setData({
+      region: e.detail.value
+    })
+  },
+  nowBuy() {
+    wx.navigateTo({
+      url: '/pages/acknowledgementOfOrder/acknowledgementOfOrder'
+    })
   }
 })

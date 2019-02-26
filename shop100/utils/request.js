@@ -4,13 +4,19 @@ const baseUrl = {
   // getToken: baseHost + "/wechat/getToken", // 获取接口token
   // getPhone: baseHost + "/wechat/getRegisterPhone", // 解密手机号
   index: baseHost + "/index.html", // 首页数据
+  order: baseHost + "/order/info.html", // 订单确认页面
   
 }
 function request(url, postData = {}, toast = true, method = 'POST') {
   const app = getApp()
+  postData.memberId = 1
   return new Promise( (resolve, reject) => {
+    let realUrl = baseUrl[url]
+    if (!realUrl) {
+      realUrl = baseHost + url
+    }
     let paras = {
-      url: baseUrl[url] + '?t=' + new Date().getTime(),
+      url: realUrl + '?t=' + new Date().getTime(),
       data: postData,
       header: {
         // token: app ? app.globalData.token : '', // 登录token
