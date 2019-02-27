@@ -330,3 +330,36 @@ button::after{
   font-family:PingFang-SC-Bold;
   font-weight:bold;
 }
+/* 尺寸选择 */
+.commodity-size .name{
+  font-size:24rpx;
+  font-weight:500;
+  color:rgba(141,141,141,1);
+}
+.commodity-size .flex{
+  justify-content: flex-start;
+}
+.commodity-size>.flex{
+  padding: 15rpx 0;
+}
+.commodity-size .box{
+  height: 60rpx;
+  line-height: 60rpx;
+  min-width: 100rpx;
+  padding: 0 15rpx;
+  color:#333333;
+  border-radius: 12rpx;
+  font-size: 24rpx;
+  text-align: center;
+  border:2rpx solid #cccccc;
+  margin-right: 30rpx;
+}
+.commodity-size .box.active{
+  color:#FF4648;
+  border-color: #FF4648;
+}
+.commodity-size .name-item{
+  font-size: 26rpx;
+  color:#333333;
+  margin-right: 30rpx;
+}

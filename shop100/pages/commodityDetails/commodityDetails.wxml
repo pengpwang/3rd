@@ -23,8 +23,35 @@
         <view class='commodityName'>{{data.product.name1}}</view>
         <view class='commodityTag'>{{data.product.name2}}</view>
     </view>
+    <!-- 尺寸选择 -->
+    <view class='commodity-size pad33'>
+        <view class='has-item flex'>
+            <view class='name'>已选：</view>
+            <view class='hasBox flex'>
+                <view class='name-item'>黑色</view>
+                <view class='name-item'>XL</view>
+                <view class='name-item'>1</view>
+            </view>
+        </view>
+        <view class='color-item flex'>
+            <view class='name'>颜色：</view>
+            <view class='colorBox flex'>
+                <view class='box active'>黑色</view>
+                <view class='box'>白色</view>
+                <view class='box'>红色</view>
+            </view>
+        </view>
+        <view class='size-item flex'>
+            <view class='name'>尺寸：</view>
+            <view class='sizeBox flex'>
+                <view class='box'>M</view>
+                <view class='box'>L</view>
+                <view class='box'>XL</view>
+            </view>
+        </view>
+    </view>
     <!-- 商品数量 -->
-    <view class='commodity-nums  pad33 commodity-border flex'>
+    <view class='commodity-nums  pad33  flex'>
         <view class='numsName'>数量</view>
         <view class='numsBtn remove'>-</view>
         <view class='numsVal'>1</view>
