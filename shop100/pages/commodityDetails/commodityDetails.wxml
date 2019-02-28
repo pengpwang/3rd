@@ -19,44 +19,42 @@
 
     <!-- 商品价格名称等 -->
     <view class='commodity-name commodity-pad'>
-        <view class='commodityPrice'>¥<span class='max'>{{data.goods.mallMobilePrice}}</span><span>.00</span></view>
+        <view class='commodityPrice'>¥<span class='max'>{{money}}</span><span>.00</span></view>
         <view class='commodityName'>{{data.product.name1}}</view>
         <view class='commodityTag'>{{data.product.name2}}</view>
     </view>
     <!-- 尺寸选择 -->
-    <view class='commodity-size pad33'>
+    <view wx:if="{{data.norms.length > 0}}" class='commodity-size pad33'>
         <view class='has-item flex'>
             <view class='name'>已选：</view>
             <view class='hasBox flex'>
-                <view class='name-item'>黑色</view>
-                <view class='name-item'>XL</view>
-                <view class='name-item'>1</view>
+                <view class='name-item'>{{normAttr0}}</view>
+                <view class='name-item'>{{normAttr1}}</view>
+                <view class='name-item'>{{amount}}</view>
             </view>
         </view>
-        <view class='color-item flex'>
-            <view class='name'>颜色：</view>
+        <view wx:for="{{data.norms}}" wx:for-index="index0" class='color-item flex'>
+            <view class='name'>{{item.name}}：</view>
             <view class='colorBox flex'>
-                <view class='box active'>黑色</view>
-                <view class='box'>白色</view>
-                <view class='box'>红色</view>
+                <view bindtap="chooseAttr" data-name="{{item.name}}" data-i="{{item.id}}" data-index="{{index0}}" wx:for="{{item.attrList}}" class='box {{(index0==0 && normAttrId0==item.id)||(index0==1 && normAttrId1==item.id)?"active":""}}'>{{item.name}}</view>
             </view>
         </view>
-        <view class='size-item flex'>
+        <!-- <view class='size-item flex'>
             <view class='name'>尺寸：</view>
             <view class='sizeBox flex'>
                 <view class='box'>M</view>
                 <view class='box'>L</view>
                 <view class='box'>XL</view>
             </view>
-        </view>
+        </view> -->
     </view>
     <!-- 商品数量 -->
     <view class='commodity-nums  pad33  flex'>
         <view class='numsName'>数量</view>
-        <view class='numsBtn remove'>-</view>
-        <view class='numsVal'>1</view>
-        <view class='numsBtn add'>+</view>
-        <view class='numsHas'>(剩余库存：{{data.goods.productStock}})</view>
+        <view bindtap="removeNum" class='numsBtn remove'>-</view>
+        <view class='numsVal'>{{amount}}</view>
+        <view bindtap="addNum" class='numsBtn add'>+</view>
+        <view class='numsHas'>(剩余库存：{{productStock}})</view>
     </view>
     <!-- 选择收获地址 -->
     <view class='commodity-address pad33 commodity-border'>
@@ -154,7 +152,7 @@
             </view>
             <view class='name'>购物车</view>
         </view>
-        <view class='btn addCar opacity'>加入购物车</view>
-        <view bindtap="nowBuy" class='btn buy opacity'>立即购买</view>
+        <button disabled="{{btnDisable}}" class='btn addCar opacity'>加入购物车</button>
+        <button disabled="{{btnDisable}}" bindtap="buyNow" class='btn buy opacity'>立即购买</button>
     </view>
 </view>

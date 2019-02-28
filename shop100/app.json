@@ -1,6 +1,5 @@
 {
-  "pages":[
-    
+  "pages": [
     "pages/index/index",
     "pages/muchMore/muchMore",
     "pages/commodityClassification/commodityClassification",
@@ -22,9 +21,9 @@
     "pages/groupBuying/groupBuying",
     "pages/commodityDetails/commodityDetails",
     "pages/productList/productList",
-   
-    "pages/specificationParameter/specificationParameter"  
-   
+    "pages/specificationParameter/specificationParameter",
+    "pages/payselect/payselect",
+    "pages/paysuccess/paysuccess"
   ],
   "window": {
     "backgroundColor": "#f3f3f3",

@@ -6,23 +6,21 @@ Page({
    */
   data: {
     address: {
-      name: '某某某',
-      phone: '13009090909',
-      address: '安徽省-合肥市-庐阳区 某某某街道阜阳北路与北城大道交口创智天地'
+      memberName: '',
+      mobile: '',
+      addressInfo: '',
+      addAll: '',
+      id: ''
     },
-    product: [
-      { imgSrc: '', proName: '儿童大块积木桶装1-2-3-6周岁益智早教婴儿宝宝教婴儿宝宝', spec: '规格：全部套装【68块】', price: '100', mount: 1 },
-      { imgSrc: '', proName: '儿童大块积木桶装1-2-3-6周岁益智早教婴儿宝宝教婴儿宝宝', spec: '规格：全部套装【68块】', price: '100', mount: 1 },
-      { imgSrc: '', proName: '儿童大块积木桶装1-2-3-6周岁益智早教婴儿宝宝教婴儿宝宝', spec: '规格：全部套装【68块】', price: '100', mount: 1 },
-    ],
-    data: {}
+    data: {},
+    imageHost: 'http://123.207.136.56:8080/ejsimage',
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    
+    this.getData()
   },
 
   /**
@@ -76,7 +74,36 @@ Page({
   async getData(){
     let data = await request('order', {}, true, 'GET')
     this.setData({
-      data: data
+      data: data.data,
+      address: data.data.address
     })
+  },
+  updateAddress(){
+    wx.navigateTo({
+      url: '/pages/addressManagement/addressManagement'
+    })
+  },
+  async toPay() {
+    if (!this.data.address.id) {
+      wx.showToast({ title: '请添加或选择收货地址', icon: 'none' })
+      return
+    }
+    let postData = {
+      paymentCode: 'ONLINE',
+      paymentName: 'paymentName',
+      addressId: this.data.address.id,
+    }
+    let data = await request('ordercommit', postData, true, 'POST')
+    let orderSn = data.data.mainOrder.orderSn
+    if (data.data.goJumpPayfor) {
+      wx.navigateTo({
+        url: '/pages/payselect/payselect?orderSn=' + orderSn,
+      })
+    } else {
+      // wx.navigateTo({
+      //   url: '/pages/paysuccess/paysuccess?orderSn=' + orderSn,
+      // })
+    }
+    
   }
 })

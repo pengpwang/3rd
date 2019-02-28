@@ -1,0 +1,23 @@
+<!--pages/payselect/payselect.wxml-->
+<view>
+  <view>
+    <view class="p-o-infor">
+	    <view>
+          订单提交成功，请您尽快付款！    订单号：  
+					<view>{{data.orderSn}}</view>
+	    </view>
+	    <view class="font12 pad-top">
+        请您在提交订单后
+        <view class="clr53">24小时内</view>
+        完成支付,否则订单会自动取消
+      </view>
+	  </view>
+  </view>
+  <view class="p-o-method">
+    <view>支付金额</view>
+    <view class="clr53 money">{{data.payAmount}}元</view>
+  </view>
+  <view class="payBtn">
+    <button bindtap="pay">立即支付</button>
+  </view>
+</view>

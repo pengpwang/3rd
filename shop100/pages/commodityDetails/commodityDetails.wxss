@@ -315,6 +315,7 @@ button::after{
  color:rgba(255,255,255,1);
 }
 .foot-btn .addCar{
+  border-radius:0;
   width:260rpx;
   height:90rpx;
   background:rgba(246,201,68,1);
@@ -323,6 +324,7 @@ button::after{
   font-weight:bold;
 }
 .foot-btn .buy{
+  border-radius:0;
   flex-grow: 1;
   height:90rpx;
   background:rgba(255,70,72,1);

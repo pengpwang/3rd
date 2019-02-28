@@ -108,7 +108,7 @@ page{
 }
 
 .pro-icon-txt{
-  width: 100rpx;
+  width: 120rpx;
   height: 30rpx;
   background: #F5032E;
   border-radius: 15rpx;
@@ -133,6 +133,10 @@ page{
   width: 140rpx;
   height: 140rpx;
   background: #fff;
+}
+.pro-i-img image{
+  width: 100%;
+  height: 100%;
 }
 
 .pro-i-t-wrap{
@@ -264,6 +268,7 @@ page{
 }
 
 .bar-btn{
+  border-radius:0;
   width: 257rpx;
   display: flex;
   justify-content: center;

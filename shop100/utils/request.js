@@ -4,8 +4,12 @@ const baseUrl = {
   // getToken: baseHost + "/wechat/getToken", // 获取接口token
   // getPhone: baseHost + "/wechat/getRegisterPhone", // 解密手机号
   index: baseHost + "/index.html", // 首页数据
-  order: baseHost + "/order/info.html", // 订单确认页面
-  
+  order: baseHost + "/order/info.html?isBuyNow=YES", // 订单确认页面
+  buyNow: baseHost + "/cart/addtocart.html",
+  getGoodsInfo: baseHost + "/getGoodsInfo.html",
+  ordercommit: baseHost + "/order/ordercommit.html",
+  payselect: baseHost + "/order/pay.html",
+  pay: baseHost + "/pay.html"
 }
 function request(url, postData = {}, toast = true, method = 'POST') {
   const app = getApp()
@@ -47,7 +51,7 @@ function request(url, postData = {}, toast = true, method = 'POST') {
               showCancel: false
             })
           }
-          resolve(data.data)
+          reject(data.data)
         } 
       },
       fail: (err) => {
