@@ -23,7 +23,9 @@ Page({
     money: '',
     productGoodsId: '',
     productStock: 0,
-    btnDisable: false
+    btnDisable: false,
+    save: true, // 是否关注
+    saveShop: false, // 收藏店铺
   },
 
   /**
@@ -31,7 +33,8 @@ Page({
    */
   onLoad: function (options) {
     let id = options.id
-    this.getData(id)
+    let goodId = options.goodId || ''
+    this.getData(id, goodId)
   },
 
   /**
@@ -82,8 +85,12 @@ Page({
   onShareAppMessage: function () {
 
   },
-  getData: async function (id) {
-    let data = await request('/product/'+ id + '.html', {}, true, 'GET')
+  getData: async function (id, goodId) {
+    let postData = {}
+    if (goodId) {
+      postData.goodId = goodId
+    }
+    let data = await request('/product/' + id + '.html', postData, true, 'GET')
     this.setData({
       data: data.data,
     })
@@ -100,9 +107,27 @@ Page({
         normAttrId1: norms[1].attrList[0].id
       })
     }
+    let normAttrId = data.data.goods.normAttrId.split(',')
+    let normAttrName = data.data.goods.normName.split(';')
+    if (normAttrId.length > 0) {
+      if (normAttrId[0]) {
+        this.setData({
+          normAttr0: normAttrName[0].split(',')[1],
+          normAttrId0: normAttrId[0]
+        })
+      }
+      if (normAttrId[1]) {
+        this.setData({
+          normAttr1: normAttrName[1].split(',')[1],
+          normAttrId1: normAttrId[1]
+        })
+      }
+    }
     this.setData({
       money: data.data.goods.mallMobilePrice,
-      productStock: data.data.goods.productStock
+      productStock: data.data.goods.productStock,
+      save: data.data.statisticsVO.collectedProduct,
+      saveShop: data.data.statisticsVO.collectedShop
     })
     this.getGoodInfo()
   },
@@ -166,15 +191,68 @@ Page({
       })
     }
   },
-  async buyNow() {
+  async buyNow(e) {
+    let type = e.currentTarget.dataset.type
     let postData = {
       productId: this.data.data.productId,
       productGoodId: this.data.productGoodsId,
       number: this.data.amount,
     }
     await request('buyNow', postData, true, 'POST')
-    wx.navigateTo({
-      url: '/pages/acknowledgementOfOrder/acknowledgementOfOrder'
+    if (type == 1) { // 购买
+      wx.navigateTo({
+        url: '/pages/acknowledgementOfOrder/acknowledgementOfOrder'
+      })
+    } else { // 添加购物车
+      wx.showToast({ title: '添加成功', icon: 'none' })
+      let num = this.data.data.cartNumber
+      if (!num) {
+        num = 0
+      }
+      this.setData({
+        'data.cartNumber': num + parseInt(this.data.amount)
+      })
+    }
+  },
+  async collect() { //关注
+    let postData = {
+      productId: this.data.data.productId
+    }
+    await request('docollectproduct', postData, false, 'GET')
+    this.setData({
+      save: true
+    })
+  },
+  async delcollect() { //取消关注
+    let postData = {
+      productId: this.data.data.productId
+    }
+    await request('cancelcollectproduct', postData, false, 'GET')
+    this.setData({
+      save: false
+    })
+  },
+  toBuyList: function () {
+    wx.switchTab({
+      url: '/pages/shoppingCart/shoppingCart'
+    })
+  },
+  async shoucang() {
+    let postData = {
+      sellerId: this.data.data.seller.id
+    }
+    await request('docollectshop', postData, false, 'GET')
+    this.setData({
+      saveShop: true
+    })
+  },
+  async delshoucang() {
+    let postData = {
+      sellerId: this.data.data.seller.id
+    }
+    await request('cancelcollectshop', postData, false, 'GET')
+    this.setData({
+      saveShop: false
     })
   }
 })

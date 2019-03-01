@@ -33,6 +33,7 @@
   border-top:18rpx solid #f3f3f3;
 }
 .shopping-top{
+  padding-left: 20rpx;
   justify-content: flex-start;
   height: 84rpx;
 }
@@ -126,7 +127,7 @@
 .total{
   justify-content: flex-end;
   height: 69rpx;
-  border-top:2rpx solid #f3f3f3;
+  /* border-top:2rpx solid #f3f3f3; */
   width: 663rpx;
   margin-left:calc(100% - 663rpx);
 }
@@ -159,7 +160,7 @@
 .totalPrice{
   flex-grow: 1;
   justify-content: space-between;
-  padding: 0 37rpx 0 0rpx;
+  padding: 10rpx 37rpx 0 0rpx;
 }
 .foot-btn .name{
   font-size:28rpx;
@@ -182,4 +183,8 @@
   color:#F91A1A;
   flex-grow: 1;
   padding-left: 15rpx;
+}
+checkbox .wx-checkbox-input {
+  width: 40rpx;
+  height: 40rpx;
 }

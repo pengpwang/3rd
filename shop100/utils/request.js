@@ -1,15 +1,25 @@
 import regeneratorRuntime from './runtime.js'
-const baseHost = "http://123.207.136.56/miniProgram"
+const baseHost = "http://test1.100smartdata.cn/miniProgram"
 const baseUrl = {
-  // getToken: baseHost + "/wechat/getToken", // 获取接口token
-  // getPhone: baseHost + "/wechat/getRegisterPhone", // 解密手机号
+  getToken: baseHost + "/wechat/getToken", // 获取接口token
+  getPhone: baseHost + "/wechat/getRegisterPhone", // 解密手机号
   index: baseHost + "/index.html", // 首页数据
   order: baseHost + "/order/info.html?isBuyNow=YES", // 订单确认页面
   buyNow: baseHost + "/cart/addtocart.html",
   getGoodsInfo: baseHost + "/getGoodsInfo.html",
   ordercommit: baseHost + "/order/ordercommit.html",
   payselect: baseHost + "/order/pay.html",
-  pay: baseHost + "/pay.html"
+  pay: baseHost + "/pay.html",
+
+  docollectproduct: baseHost + "/member/docollectproduct.html", //关注
+  cancelcollectproduct: baseHost + "/member/cancelcollectproduct.html", //取消关注
+  docollectshop: baseHost + "/member/docollectshop.html", //收藏店铺
+  cancelcollectshop: baseHost + "/member/cancelcollectshop.html", //取消收藏店铺
+  cartDetail: baseHost + "/cart/detail.html", //购物车
+  updateCartById: baseHost + "/cart/updateCartById.html", // 更新购物车数量
+  cartchecked: baseHost + "/cart/cartchecked.html", // 购物车选中
+  cartcheckedall: baseHost + "/cart/cartcheckedall.html", // 购物车全选
+  deleteCartById: baseHost + "/cart/deleteCartById.html", //购物车删除
 }
 function request(url, postData = {}, toast = true, method = 'POST') {
   const app = getApp()

@@ -84,7 +84,7 @@ Page({
       optionsRadios: 'wxpay',
       orderSn: this.data.data.orderSn,
     }
-    let data = request('pay', postData, true, 'GET')
+    let data = await request('pay', postData, true, 'GET')
     let opts = {
       'nonceStr': data.data.apiNoncestr,
       'package': data.data.apiPackage,

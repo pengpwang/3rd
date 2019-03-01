@@ -112,7 +112,8 @@
                 <view class='shopTag'>关注 {{data.seller.collectionNumber}}</view>
             </view>
             <view class='shop-right flex'>
-                 <button class='opacity bot'>收藏店铺</button>
+                 <button wx:if="{{saveShop}}" bindtap="delshoucang" class='opacity bot'>取消收藏</button>
+                 <button wx:else bindtap="shoucang" class='opacity bot'>收藏店铺</button>
                  <button class='opacity'>进入店铺</button>
             </view>
         </view>
@@ -140,19 +141,23 @@
     <!--底部按钮-->
     <view class='foot-btn flex'>
         <view class='btn-item'>
-            <view class='notice'>
-                <image src='/images/index/notice.png'></image>
+            <view wx:if="{{save}}" bindtap="delcollect" class='notice'>
+                <image src='/images/index/notice-1.png'></image>
+                <view class='name'>取消</view>
             </view>
-            <view class='name'>关注</view>
+            <view wx:else bindtap="collect" class='notice'>
+                <image src='/images/index/notice.png'></image>
+                <view class='name'>关注</view>
+            </view>
         </view>
-        <view class='btn-item'>
+        <view bindtap="toBuyList" class='btn-item'>
             <view class='car'>
                  <image src='/images/index/buyCar.png'></image>
-                 <view class='nums'>{{data.cartNumber}}</view>
+                 <view wx:if="{{data.cartNumber>0}}" class='nums'>{{data.cartNumber}}</view>
             </view>
             <view class='name'>购物车</view>
         </view>
-        <button disabled="{{btnDisable}}" class='btn addCar opacity'>加入购物车</button>
-        <button disabled="{{btnDisable}}" bindtap="buyNow" class='btn buy opacity'>立即购买</button>
+        <button disabled="{{btnDisable}}" bindtap="buyNow" data-type="2" class='btn addCar opacity'>加入购物车</button>
+        <button disabled="{{btnDisable}}" bindtap="buyNow" data-type="1" class='btn buy opacity'>立即购买</button>
     </view>
 </view>

@@ -1,5 +1,6 @@
 // pages/index/index.js
 import { request, regeneratorRuntime } from '../../utils/request.js'
+const app = getApp()
 Page({
 
   /**
@@ -21,6 +22,7 @@ Page({
    */
   onLoad: function (options) {
     this.getData()
+    this.login()
   },
 
   /**
@@ -128,5 +130,37 @@ Page({
     wx.navigateTo({
       url: '/pages/groupBuying/groupBuying'
     })
-  }
+  },
+  login: function () {
+    if (app.globalData.openId) {
+      return true
+    }
+    return new Promise((resolve) => {
+      // 登录
+      wx.login({
+        success: async res => {
+          if (res.code) {
+            let data = await request('getToken', {
+              code: res.code
+            })
+            app.globalData.openId = data.data.openId
+            console.log('openId', app.globalData.openId)
+            app.globalData.sessionKey = data.data.sessionKey
+            if (data.data.phoneNumber) {
+              app.globalData.phone = data.data.phoneNumber
+            }
+            return resolve()
+          }
+          // 发送 res.code 到后台换取 openId, sessionKey, unionId
+        }
+      })
+    })
+  },
+
+  getUserPhone: function () {
+    if (app.globalData.phone) {
+      return true
+    }
+    wx.redirectTo({ url: "/pages/phone/phone" });
+  },
 })
