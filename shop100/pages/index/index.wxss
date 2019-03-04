@@ -108,7 +108,7 @@ swiper-item image{
 .type-list-con{
   width: 100%;
   flex-flow: wrap;
-  padding: 0 43rpx;
+  padding: 0 43rpx 20rpx;
 }
 .type-list{
   width: 316rpx;

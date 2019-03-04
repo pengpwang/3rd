@@ -10,6 +10,13 @@
             <image src='/images/top2_2.png'></image>
         </view>
     </view>
+    <!--所有种类-->
+    <scroll-view scroll-x class='type-con total'>
+        <view bindtap="getData" class='type-item {{type==""?"active":""}}'>全部</view>
+        <view wx:for="{{data.actGroupTypes}}" bindtap="getData" data-type="{{item.id}}" class='type-item {{type==item.id?"active":""}}'>{{item.name}}</view>
+        <view wx:for="{{data.actGroupTypes}}" bindtap="getData" data-type="{{item.id}}" class='type-item {{type==item.id?"active":""}}'>{{item.name}}</view>
+        <view wx:for="{{data.actGroupTypes}}" bindtap="getData" data-type="{{item.id}}" class='type-item {{type==item.id?"active":""}}'>{{item.name}}</view>
+    </scroll-view >
     <!--活动宣传图-->
     <swiper
       indicator-color='{{color}}'

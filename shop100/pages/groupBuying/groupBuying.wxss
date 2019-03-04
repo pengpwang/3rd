@@ -6,6 +6,15 @@
   border-top: 2rpx solid #f5f5f5;
   border-bottom: 2rpx solid #f5f5f5;
 }
+.type-con.total{
+  background:#fff;
+  position:absolute;
+  z-index:111;
+  top:75rpx;
+}
+.type-con.total .type-item{
+  display: inline-block;
+}
 .type-item{
   height: 72rpx;
   text-align: center;
