@@ -16,7 +16,7 @@
   <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
     <!-- 分类 -->
     <swiper-item>
-      <scroll-view scroll-y style="height:{{winHeight - 31 - 80}}px;white-space: nowrap;">
+      <scroll-view scroll-y style="height:100%;padding-bottom:50rpx;white-space: nowrap;">
         <view wx:for="{{data0.couponList}}" class='home-coupons-view'>
           <image class='home-Receive-img' src='../../images/mycounpon-notused.png'></image>
           <view class='home-couponswrapper'>
