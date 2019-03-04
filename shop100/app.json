@@ -24,7 +24,9 @@
     "pages/specificationParameter/specificationParameter",
     "pages/payselect/payselect",
     "pages/paysuccess/paysuccess",
-    "pages/userInfo/userInfo"
+    "pages/userInfo/userInfo",
+    "pages/tuanDetail/tuanDetail",
+    "pages/orderGroup/orderGroup"
   ],
   "window": {
     "backgroundColor": "#f3f3f3",

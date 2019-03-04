@@ -8,6 +8,7 @@ const baseUrl = {
   buyNow: baseHost + "/cart/addtocart.html",
   getGoodsInfo: baseHost + "/getGoodsInfo.html",
   ordercommit: baseHost + "/order/ordercommit.html",
+  ordercommitforgroup: baseHost + "/order/ordercommitforgroup.html",
   payselect: baseHost + "/order/pay.html",
   pay: baseHost + "/pay.html",
 
@@ -23,6 +24,7 @@ const baseUrl = {
   catelist: baseHost + "/catelist.html", //分类查询
   cate: baseHost + "/cate.html", //分类查询列表
   member: baseHost + "/member/index.html", //分类查询列表
+  tuan: baseHost + "/tuan.html", //团购
   
 }
 function request(url, postData = {}, toast = true, method = 'POST') {

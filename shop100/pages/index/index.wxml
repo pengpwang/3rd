@@ -58,15 +58,15 @@
     <!--活动模块-->
     <view class='activity-con border-top flex'>
         <view bindtap="toDetail" data-i="{{data.hotList[0].product.id}}" class='activity-left'>
-            <image class='opacity' src='{{imageHost + data.hotList[0].product.masterImg}}'></image>
+            <image class='opacity' mode="aspectFit" src='{{imageHost + data.hotList[0].product.masterImg}}'></image>
         </view>
         <view class='activity-right'>
             <view bindtap="toDetail" data-i="{{data.hotList[1].product.id}}" class='activity-top'>
-                <image class='opacity' src='{{imageHost + data.hotList[1].product.masterImg}}'></image>
+                <image class='opacity' mode="aspectFit" src='{{imageHost + data.hotList[1].product.masterImg}}'></image>
             </view>
             <view class='activity-bot flex'>
-                <image bindtap="toDetail" data-i="{{data.hotList[2].product.id}}" class='opacity' src='{{imageHost + data.hotList[2].product.masterImg}}'></image>
-                <image bindtap="toDetail" data-i="{{data.hotList[3].product.id}}" class='second opacity' src='{{imageHost + data.hotList[3].product.masterImg}}'></image>
+                <image bindtap="toDetail" mode="aspectFit" data-i="{{data.hotList[2].product.id}}" class='opacity' src='{{imageHost + data.hotList[2].product.masterImg}}'></image>
+                <image bindtap="toDetail" mode="aspectFit" data-i="{{data.hotList[3].product.id}}" class='second opacity' src='{{imageHost + data.hotList[3].product.masterImg}}'></image>
             </view>
         </view>
     </view>
@@ -82,7 +82,7 @@
         <view class='type-list-con flex' >
             <view bindtap="toDetail" data-i="{{item2.product.id}}" class='type-list' wx:for='{{item.datas}}' wx:for-item="item2">
                 <view class='type-img opacity imgbox flex'>
-                    <image src='{{imageHost + item2.product.masterImg}}'></image>
+                    <image mode="aspectFit" src='{{imageHost + item2.product.masterImg}}'></image>
                 </view>
                 <view class='type-name overflow1'>{{item2.productName}}</view>
                 <!-- <view class='type-desc overflow1'>极地的迷彩感，强势锁温暖2019款1111111111</view> -->
