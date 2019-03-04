@@ -23,7 +23,8 @@
     "pages/productList/productList",
     "pages/specificationParameter/specificationParameter",
     "pages/payselect/payselect",
-    "pages/paysuccess/paysuccess"
+    "pages/paysuccess/paysuccess",
+    "pages/userInfo/userInfo"
   ],
   "window": {
     "backgroundColor": "#f3f3f3",

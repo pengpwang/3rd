@@ -70,6 +70,10 @@
   color:rgba(223,24,28,1);
   margin-right: 5rpx;
 }
+.list-tag.noNum{
+  background: #ddd;
+  color: #fff
+}
 .list-title{
   font-size:26rpx;
   line-height: 34rpx;

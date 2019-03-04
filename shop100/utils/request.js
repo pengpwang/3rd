@@ -20,6 +20,10 @@ const baseUrl = {
   cartchecked: baseHost + "/cart/cartchecked.html", // 购物车选中
   cartcheckedall: baseHost + "/cart/cartcheckedall.html", // 购物车全选
   deleteCartById: baseHost + "/cart/deleteCartById.html", //购物车删除
+  catelist: baseHost + "/catelist.html", //分类查询
+  cate: baseHost + "/cate.html", //分类查询列表
+  member: baseHost + "/member/index.html", //分类查询列表
+  
 }
 function request(url, postData = {}, toast = true, method = 'POST') {
   const app = getApp()

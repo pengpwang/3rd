@@ -35,8 +35,9 @@ page{
   justify-content: flex-start;
   position: fixed;
   width: 100%;
-  height: calc(100% - 90rpx);
-  top:90rpx;
+  height: 100%;
+  /* height: calc(100% - 90rpx); */
+  /* top:90rpx; */
 }
 .classification-con scroll-view{
   height: 100%;

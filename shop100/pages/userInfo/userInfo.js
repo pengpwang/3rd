@@ -1,20 +1,19 @@
-// pages/commodityClassification/commodityClassification.js
-import { request, regeneratorRuntime } from '../../utils/request.js'
+// pages/userInfo/userInfo.js
+const app = getApp()
 Page({
 
   /**
    * 页面的初始数据
    */
   data: {
-    data: {},
-    cateIndex: 0,
+
   },
 
   /**
    * 生命周期函数--监听页面加载
    */
   onLoad: function (options) {
-    this.getData()
+
   },
 
   /**
@@ -65,27 +64,11 @@ Page({
   onShareAppMessage: function () {
 
   },
-  getData: async function () {
-    let data = await request('catelist', {}, true, 'GET')
-    for (let item of data.data.cateList) {
-      if (item.name.length > 4) {
-        item.name = item.name.replace('、', '').substring(0, 4)
-      }
+  userInfo: function (e) {
+    if (e.detail.userInfo) {
+      console.log('用户信息', e.detail.userInfo)
+      app.globalData.userInfo = e.detail.userInfo
+      wx.switchTab({ url: "/pages/index/index" })
     }
-    this.setData({
-      data: data.data
-    })
-  },
-  changeTab(e) {
-    let index = e.currentTarget.dataset.index
-    this.setData({
-      cateIndex: index
-    })
-  },
-  toList(e) {
-    let id= e.currentTarget.dataset.i
-    wx.navigateTo({
-      url: '/pages/productList/productList?id=' + id,
-    })
   }
 })

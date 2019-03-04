@@ -1,0 +1,15 @@
+<!--pages/userInfo/userInfo.wxml-->
+<view class='container'>
+    <view class='img'>
+        <image class='logo' src='../../images/logo.jpeg'></image>
+        <view class='logo-name'>亿百分</view>
+    </view>
+    <view class='line'></view>
+    <view class='title'>请确认以下授权信息</view>
+    <view class='sub-title'>·获取你的信息(头像，昵称等)</view>
+    <view class='button'>
+        <button type="primary" class="authBtn" open-type="getUserInfo" lang="zh_CN" bindgetuserinfo="userInfo">
+            授 权
+        </button>
+    </view>
+</view>

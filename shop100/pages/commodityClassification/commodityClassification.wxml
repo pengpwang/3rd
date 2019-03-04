@@ -1,22 +1,21 @@
 <!--pages/commodityClassification/commodityClassification.wxml-->
 <view class='commodityClassification common'>
-    <view class='top-search'>
+    <!-- <view class='top-search'>
       <view class='search flex'>
           <image src='/images/index/search.png'></image>
           <input  placeholder-class='placeholder' placeholder='附近商家或商品'></input>
       </view>
-    </view>
+    </view> -->
     <view class='classification-con flex'>
         <scroll-view scroll-y class='classification-left'>
-            <view class='type-name active opacity'>男装女装</view>
-            <view class='type-name opacity' wx:for='{{15}}'>男装女装</view>
+            <view bindtap="changeTab" class='type-name opacity {{cateIndex==index?"active":""}}' wx:for='{{data.cateList}}' data-index="{{index}}" >{{item.name}}</view>
         </scroll-view>
-        <scroll-view scroll-y class='classification-right'>
-            <block wx:for='{{4}}'>
-              <view class='classification-title'>女装</view>
+        <scroll-view wx:for='{{data.cateList}}' wx:if="{{cateIndex == index}}" scroll-y class='classification-right'>
+            <block wx:for='{{item.childs}}'>
+              <view class='classification-title'>{{item.name}}</view>
               <view class='classification-list-con flex'>
-                  <view class='classification-list opacity' wx:for='{{15}}'>      
-                      <view class='name overflow1'>毛呢外套</view>
+                  <view class='classification-list opacity' wx:for='{{item.childs}}'>      
+                      <view bindtap="toList" data-i="{{item.id}}" class='name overflow1'>{{item.name}}</view>
                   </view>
               </view> 
             </block>

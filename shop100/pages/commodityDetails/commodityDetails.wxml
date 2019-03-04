@@ -78,26 +78,26 @@
     </view>
     <!-- 商品介绍 -->
     <view class='commodity-introduce pad33 commodity-border'>
-        <view class='introduce-item flex'>
+        <view bindtap="detail" data-tab="1" class='introduce-item flex'>
             <view class='commodity-left'>
                 <view class='indicatorName'>详细介绍</view>
             </view>
             <image class='right' src='/images/index/right.png'></image>
         </view>
-        <view class='introduce-item flex'>
+        <view bindtap="detail" data-tab="2" class='introduce-item flex'>
             <view class='commodity-left'>
                 <view class='indicatorName'>规格参数</view>
             </view>
             <image class='right' src='/images/index/right.png'></image>
         </view>
-        <view class='introduce-item flex'>
+        <view bindtap="detail" data-tab="3" class='introduce-item flex'>
             <view class='commodity-left flex'>
                 <view class='indicatorName'>商品评价<span>{{data.statisticsVO.productCommentsHighProportion}}%</span>好评</view>
                 <view class='personNums'>{{data.statisticsVO.productCommentsAllCount}}人已评价</view>
             </view>
             <image class='right' src='/images/index/right.png'></image>
         </view>
-        <view class='introduce-item flex'>
+        <view bindtap="detail" data-tab="4" class='introduce-item flex'>
             <view class='commodity-left'>
                 <view class='indicatorName'>商品资讯{{data.statisticsVO.productAskCount}}条</view>
             </view>

@@ -3,24 +3,24 @@
   <view class="per_center-header">
     <view class="per_center-header_my">
       <view class="per_center-header_my_avator">
-        <image src="" class="per_center-header_my_avatorPic" />
+        <image src="{{userInfo.avatarUrl}}" class="per_center-header_my_avatorPic" />
       </view>
       <view class="per_center-header_my_tips">
-        <view class="per_center-header_my_phone">{{ phoneNum }}</view>
+        <view class="per_center-header_my_phone">{{ data.member.name }}</view>
         <view class="per_center-header_my_info">
-          <view class="per_center-header_my_score">我的积分：<text class="per_center-header_my_score-blod">{{ myPoints }}</text></view>
-          <view class="per_center-header_my_level">{{ myLevel }}</view>
+          <view class="per_center-header_my_score">我的积分：<text class="per_center-header_my_score-blod">{{ data.member.integral }}</text></view>
+          <view class="per_center-header_my_level">{{ data.member.gradeValue }}</view>
         </view>
       </view>
     </view>
     <view class="per_center-header_order">
       <view class="per_center-header_order-item per_center-header_order-pay_money">
-        <text class="per_center-header_order-num">{{ paymentNum }}</text>
+        <text class="per_center-header_order-num">{{ data.toBepaidOrders }}</text>
         <text class="per_center-header_order-text">待付款</text>
       </view>
       <view class="order_splite"></view>
       <view class="per_center-header_order-item per_center-header_order-send">
-        <text class="per_center-header_order-num">{{ deliveryNum }}</text>
+        <text class="per_center-header_order-num">{{ data.toBeReceivedOrders }}</text>
         <text class="per_center-header_order-text">待发货</text>
       </view>
     </view>

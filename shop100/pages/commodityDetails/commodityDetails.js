@@ -254,5 +254,12 @@ Page({
     this.setData({
       saveShop: false
     })
+  },
+  detail(e) {
+    let id = this.data.data.productId
+    let tab = e.currentTarget.dataset.tab
+    wx.navigateTo({
+      url: '/pages/specificationParameter/specificationParameter?id=' + id + '&tab=' + tab,
+    })
   }
 })
