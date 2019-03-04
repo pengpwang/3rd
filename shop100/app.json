@@ -26,7 +26,9 @@
     "pages/paysuccess/paysuccess",
     "pages/userInfo/userInfo",
     "pages/tuanDetail/tuanDetail",
-    "pages/orderGroup/orderGroup"
+    "pages/orderGroup/orderGroup",
+    "pages/couponList/couponList",
+    "pages/shopHome/shopHome"
   ],
   "window": {
     "backgroundColor": "#f3f3f3",

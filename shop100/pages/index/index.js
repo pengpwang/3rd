@@ -115,9 +115,9 @@ Page({
     // })
   },
   toCouponList: function () {
-    // wx.navigateTo({
-    //   url: ''
-    // })
+    wx.navigateTo({
+      url: '/pages/couponList/couponList'
+    })
   },
   toPing: function () {
     wx.navigateTo({

@@ -261,5 +261,10 @@ Page({
     wx.navigateTo({
       url: '/pages/specificationParameter/specificationParameter?id=' + id + '&tab=' + tab,
     })
+  },
+  toShopHome() {
+    wx.navigateTo({
+      url: '/pages/shopHome/shopHome?id=' + this.data.data.seller.id,
+    })
   }
 })

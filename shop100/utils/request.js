@@ -25,6 +25,8 @@ const baseUrl = {
   cate: baseHost + "/cate.html", //分类查询列表
   member: baseHost + "/member/index.html", //分类查询列表
   tuan: baseHost + "/tuan.html", //团购
+  couponList: baseHost + "/coupon.html", //优惠券
+  reveivecoupon: baseHost + "/member/coupon/reveivecoupon.html", //领取优惠券
   
 }
 function request(url, postData = {}, toast = true, method = 'POST') {

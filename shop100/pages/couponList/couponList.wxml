@@ -1,0 +1,118 @@
+<view class='mycoupon-container'>
+  <view class="swiper-tab">
+    <view catchtap="swichNav" class="swiper-tab-list {{currentTab==0? 'on' : ''}}" data-currents="0" catchtap="swichNav">
+      <text>默认</text>
+      <view class='vertical-bar'>|</view>
+    </view>
+    <view catchtap="swichNav" class="swiper-tab-list {{currentTab==1? 'on' : ''}}" data-currents="1" catchtap="swichNav">
+      <text>即将过期</text>
+      <view class='vertical-bar'>|</view>
+    </view>
+    <view catchtap="swichNav" class="swiper-tab-list {{currentTab==2? 'on' : ''}}" data-currents="2" catchtap="swichNav">
+      <text>面值最大</text>
+    </view>
+  </view>
+
+  <swiper current="{{currentTab}}" class="swiper-box" duration="300" style="height:{{winHeight - 31}}px" bindchange="bindChange">
+    <!-- 分类 -->
+    <swiper-item>
+      <scroll-view scroll-y style="height:{{winHeight - 31 - 80}}px;white-space: nowrap;">
+        <view wx:for="{{data0.couponList}}" class='home-coupons-view'>
+          <image class='home-Receive-img' src='../../images/mycounpon-notused.png'></image>
+          <view class='home-couponswrapper'>
+            <view class='home-couponswrapper'>
+              <view class='home-coupons-goods-detail'>
+                <text class='home-coupons-goods-name'>限购[{{item.sellerName}}]商品</text>
+                <text class='home-coupons-goods-money'>{{item.couponValue}}元<text class='home-coupons-goods-money2'>（满{{item.minAmount}}元可用）</text></text>
+                <text class='home-coupons-goods-date'>{{item.useStartTime}}~{{item.useEndTime}}</text>
+              </view>
+              <view wx:if="{{item.memberReceivedNum > 0}}" data-sellerid="{{item.sellerId}}" bindtap="toShopHome" class='home-counpons-schedule'>
+                <view class='home-counpons-alreadys'>
+                  <text class='home-counpons-alreadys-text-1'>立即使用</text>
+                </view>
+              </view>
+              <view wx:elif="{{item.receivedNum >= item.totalLimitNum}}" class='home-counpons-schedule'>
+              </view>
+              <view wx:else data-type="" data-couponid="{{item.id}}" bindtap="receiveCoupon" class='home-counpons-schedule'>
+                <view class='home-counpons-alreadys'>
+                  <text class='home-counpons-alreadys-text-1'>立即领取</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class='home-underscore'>
+          <view class="home-underscore-line"></view>
+          <text class="home-underscore-text">已经到底线了</text>
+          <view class="home-underscore-line"></view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view scroll-y style="height:{{winHeight - 31 - 80}}px;white-space: nowrap;">
+        <view wx:for="{{data1.couponList}}" class='home-coupons-view'>
+          <image class='home-Receive-img' src='../../images/mycounpon-notused.png'></image>
+          <view class='home-couponswrapper'>
+            <view class='home-couponswrapper'>
+              <view class='home-coupons-goods-detail'>
+                <text class='home-coupons-goods-name'>限购[{{item.sellerName}}]商品</text>
+                <text class='home-coupons-goods-money'>{{item.couponValue}}元<text class='home-coupons-goods-money2'>（满{{item.minAmount}}元可用）</text></text>
+                <text class='home-coupons-goods-date'>{{item.useStartTime}}~{{item.useEndTime}}</text>
+              </view>
+              <view wx:if="{{item.memberReceivedNum > 0}}" data-sellerid="{{item.sellerId}}" bindtap="toShopHome" class='home-counpons-schedule'>
+                <view class='home-counpons-alreadys'>
+                  <text class='home-counpons-alreadys-text-1'>立即使用</text>
+                </view>
+              </view>
+              <view wx:elif="{{item.receivedNum >= item.totalLimitNum}}" class='home-counpons-schedule'>
+              </view>
+              <view wx:else data-type="1" data-couponid="{{item.id}}" bindtap="receiveCoupon" class='home-counpons-schedule'>
+                <view class='home-counpons-alreadys'>
+                  <text class='home-counpons-alreadys-text-1'>立即领取</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class='home-underscore'>
+          <view class="home-underscore-line"></view>
+          <text class="home-underscore-text">已经到底线了</text>
+          <view class="home-underscore-line"></view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+    <swiper-item>
+      <scroll-view scroll-y style="height:{{winHeight - 31 - 80}}px;white-space: nowrap;">
+        <view wx:for="{{data2.couponList}}" class='home-coupons-view'>
+          <image class='home-Receive-img' src='../../images/mycounpon-notused.png'></image>
+          <view class='home-couponswrapper'>
+            <view class='home-couponswrapper'>
+              <view class='home-coupons-goods-detail'>
+                <text class='home-coupons-goods-name'>限购[{{item.sellerName}}]商品</text>
+                <text class='home-coupons-goods-money'>{{item.couponValue}}元<text class='home-coupons-goods-money2'>（满{{item.minAmount}}元可用）</text></text>
+                <text class='home-coupons-goods-date'>{{item.useStartTime}}~{{item.useEndTime}}</text>
+              </view>
+              <view wx:if="{{item.memberReceivedNum > 0}}" data-sellerid="{{item.sellerId}}" bindtap="toShopHome" class='home-counpons-schedule'>
+                <view class='home-counpons-alreadys'>
+                  <text class='home-counpons-alreadys-text-1'>立即使用</text>
+                </view>
+              </view>
+              <view wx:elif="{{item.receivedNum >= item.totalLimitNum}}" class='home-counpons-schedule'>
+              </view>
+              <view wx:else data-type="2" data-couponid="{{item.id}}" bindtap="receiveCoupon" class='home-counpons-schedule'>
+                <view class='home-counpons-alreadys'>
+                  <text class='home-counpons-alreadys-text-1'>立即领取</text>
+                </view>
+              </view>
+            </view>
+          </view>
+        </view>
+        <view class='home-underscore'>
+          <view class="home-underscore-line"></view>
+          <text class="home-underscore-text">已经到底线了</text>
+          <view class="home-underscore-line"></view>
+        </view>
+      </scroll-view>
+    </swiper-item>
+  </swiper>
+</view>

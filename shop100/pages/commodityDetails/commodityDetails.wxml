@@ -114,7 +114,7 @@
             <view class='shop-right flex'>
                  <button wx:if="{{saveShop}}" bindtap="delshoucang" class='opacity bot'>取消收藏</button>
                  <button wx:else bindtap="shoucang" class='opacity bot'>收藏店铺</button>
-                 <button class='opacity'>进入店铺</button>
+                 <button bindtap="toShopHome" class='opacity'>进入店铺</button>
             </view>
         </view>
         <view class='shop-branch flex'>
