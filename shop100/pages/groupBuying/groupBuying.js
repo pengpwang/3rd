@@ -14,6 +14,7 @@ Page({
     color: '#dddddd',
     data: {},
     type: '',
+    showMore: false,
     imageHost: 'http://123.207.136.56:8080/ejsimage'
   },
 
@@ -82,7 +83,8 @@ Page({
       postData.type = type
     }
     this.setData({
-      type: type
+      type: type,
+      showMore: false
     })
     let data = await request('tuan', postData, true, 'GET')
     this.setData({
@@ -104,6 +106,11 @@ Page({
     let id = e.currentTarget.dataset.i
     wx.navigateTo({
       url: '/pages/tuanDetail/tuanDetail?id=' + id,
+    })
+  },
+  setShowMore() {
+    this.setData({
+      showMore: !this.data.showMore
     })
   }
 })

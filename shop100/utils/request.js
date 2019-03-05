@@ -9,6 +9,7 @@ const baseUrl = {
   getGoodsInfo: baseHost + "/getGoodsInfo.html",
   ordercommit: baseHost + "/order/ordercommit.html",
   ordercommitforgroup: baseHost + "/order/ordercommitforgroup.html",
+  ordercommitforbidding: baseHost + "/order/ordercommitforbidding.html",
   payselect: baseHost + "/order/pay.html",
   pay: baseHost + "/pay.html",
 
@@ -27,6 +28,9 @@ const baseUrl = {
   tuan: baseHost + "/tuan.html", //团购
   couponList: baseHost + "/coupon.html", //优惠券
   reveivecoupon: baseHost + "/member/coupon/reveivecoupon.html", //领取优惠券
+  bidding: baseHost + "/bidding-sale.html", // 拼多多-正在疯抢
+  biddingEnd: baseHost + "/bidding-end.html", // 拼多多-已结束
+  biddingStart: baseHost + "/bidding-start.html", // 拼多多-即将开始
   
 }
 function request(url, postData = {}, toast = true, method = 'POST') {

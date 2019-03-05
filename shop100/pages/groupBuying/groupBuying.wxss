@@ -23,14 +23,24 @@
   font-weight:500;
   color:rgba(51,51,51,1);
   margin: 0 30rpx;
+  display: inline-block;
+}
+.type-left{
+  position: relative;
+  overflow:hidden;
+  padding-right: 70rpx;
+  white-space:nowrap;
 }
 .type-item.active{
   color:#FF2741;
   border-bottom: 4rpx solid #FF2741;
 }
 .type-right{
+  position:absolute;
   padding: 0 21rpx;
   height: 72rpx;
+  right: 10rpx;
+  top: 0rpx
 }
 .type-right image{
   width: 12rpx;

@@ -23,8 +23,11 @@ image.right{
 /*商品轮播*/
 .top-swiper{
   width:100%rpx;
-  height:556rpx;
+  height:500rpx;
   background: #FFFCFE;
+}
+.top-swiper image{
+  width: 100%;
 }
 .top-swiper swiper{
   width: 682rpx;
@@ -177,6 +180,7 @@ image.right{
   width: 100%;
 }
 .foot-btn .btn{
+  border-radius:0;
   width: 50%;
   height: 90rpx;
   text-align: center;
@@ -188,4 +192,37 @@ image.right{
 }
 .foot-btn .btn1{
   background:rgba(255,182,0,1);
+}
+/* 尺寸选择 */
+.commodity-size .name{
+  font-size:24rpx;
+  font-weight:500;
+  color:rgba(141,141,141,1);
+}
+.commodity-size .flex{
+  justify-content: flex-start;
+}
+.commodity-size>.flex{
+  padding: 15rpx 0;
+}
+.commodity-size .box{
+  height: 60rpx;
+  line-height: 60rpx;
+  min-width: 100rpx;
+  padding: 0 15rpx;
+  color:#333333;
+  border-radius: 12rpx;
+  font-size: 24rpx;
+  text-align: center;
+  border:2rpx solid #cccccc;
+  margin-right: 30rpx;
+}
+.commodity-size .box.active{
+  color:#FF4648;
+  border-color: #FF4648;
+}
+.commodity-size .name-item{
+  font-size: 26rpx;
+  color:#333333;
+  margin-right: 30rpx;
 }
