@@ -1,20 +1,32 @@
 <!--pages/integralMall/integralMall.wxml-->
 <view class='integralMall common'>
     <!--活动宣传图-->
-    <image class='hd' src='/images/index/swiper.png'></image>
+    <swiper
+    indicator-color='{{color}}'
+    indicator-active-color='{{colorActive}}'
+    indicator-dots="{{indicatorDots}}"
+    autoplay="{{autoplay}}"
+    interval="{{interval}}" 
+    duration="{{duration}}">
+        <block wx:for="{{data.actIntegralBanners}}">
+            <swiper-item>
+              <image bindtap="toDetail" data-link="{{item.linkUrl}}" src="{{imageHost + item.image}}" class='hd'/>
+            </swiper-item>
+        </block>
+    </swiper>
     <!--我的个人-->
     <view class='mine-integral'>
         <view class='top-integral flex'>
-            <image class='headimg' src='/images/index/swiper.png'></image>
+            <image class='headimg' src='{{userInfo.avatarUrl}}'></image>
             <view class='mine-right'>
-                <view class='userName'>chaoyue123</view>
+                <view class='userName'>{{data.member.name}}</view>
                 <view class='grade flex'>
-                    <image src='/images/index/swiper.png'></image>
-                    <view>银牌会员</view>
+                    <!-- <image src='/images/index/swiper.png'></image> -->
+                    <view>{{data.member.gradeValue}}</view>
                 </view>
             </view>
             <view class='integration flex'>
-                <view class='nums'>500</view>
+                <view class='nums'>{{data.member.integral}}</view>
                 <view class='desc'>积分</view>
             </view>
         </view>
@@ -24,42 +36,57 @@
                     <view class='desc1'>签到送积分</view>
                     <view class='desc2'>每天限领一次</view>
                 </view>
-                <span class='tag'>今日可领取10积分</span>
+                <span wx:if="{{data.isSign==0}}" style="background:#ddd" class='tag'>今日可领取{{data.memberRule.sign}}积分</span>
+                <span wx:else class='tag'>今日已领取{{data.memberRule.sign}}积分</span>
             </view>
-            <view class='btn opacity'>点击签到</view>
+            <view bindtap="sign" wx:if="{{data.isSign==0}}" class='btn opacity'>点击签到</view>
         </view>
     </view>
     <!--tab筛选-->
     <view class='top-tab flex'>
-        <view class='tab-item'>人气</view>
-        <view class='tab-item flex'>
+        <view bindtap="filterSort" data-sort="0" class='tab-item {{data.sort==0?"active":""}}'>人气</view>
+        <view wx:if="{{data.sort==0||data.sort==1||data.sort==2}}" bindtap="filterSort" data-sort="3" class='tab-item flex'>
+            <view class='tabName'>价格</view>
+        </view>
+        <view wx:if="{{data.sort==3}}" bindtap="filterSort" data-sort="4" class='tab-item flex active'>
             <view class='tabName'>价格</view>
             <view class='tab-right'>
                 <image src='/images/top1_2.png'></image>
                 <image class='last' src='/images/top2_1.png'></image>
-            </view> 
+            </view>
         </view>
-        <view class='tab-item active'>销量</view>
-        <view class='tab-item'>最新</view>
-        <view class='tab-item'>筛选</view>
+        <view wx:if="{{data.sort==4}}" bindtap="filterSort" data-sort="3" class='tab-item flex active'>
+            <view class='tabName'>价格</view>
+            <view class='tab-right'>
+                <image style="transform:rotate(180deg)" src='/images/top2_1.png'></image>
+                <image style="transform:rotate(180deg)" class='last' src='/images/top1_2.png'></image>
+            </view>
+        </view>
+        <view bindtap="filterSort" data-sort="2" class='tab-item {{data.sort==2?"active":""}}'>销量</view>
+        <view bindtap="filterSort" data-sort="1" class='tab-item {{data.sort==1?"active":""}}'>最新</view>
+        <!-- <view class='tab-item'>筛选</view> -->
     </view>
     <!--商城列表-->
     <view class='integral-con'>
-        <view class='list-item flex' wx:for='{{5}}'>
-            <view class='list-left imgbox'> <image  src='/images/index/swiper.png'></image></view>
+        <view class='list-item flex' wx:for='{{data.actIntegrals}}' wx:for-item="actIntegral">
+            <view class='list-left imgbox'> <image src='{{imageHost + actIntegral.image}}'></image></view>
            
             <view class='list-right'>
-                  <view class='title overflow2'>美的38L精准温控电烤箱PE7138上下独立控温 钻石纹背板 超聚能聚热省…</view>
+                  <view class='title overflow2'>{{actIntegral.productName}}</view>
                   <view class='list-bot flex'>
                       <view class='bot-left fir'>
-                          <view class='score'>限普通会员</view>
-                          <view class='price'>¥800.00<span>+</span>200分</view>
-                          <view class='oldPrice'>原价：¥198</view>
+                          <view wx:if="{{actIntegral.gradeValue==1}}" class='score'>限普通会员</view>
+                          <view wx:elif="{{actIntegral.gradeValue==2}}" class='score'>限铜牌会员</view>
+                          <view wx:elif="{{actIntegral.gradeValue==3}}" class='score'>限银牌会员</view>
+                          <view wx:elif="{{actIntegral.gradeValue==4}}" class='score'>限金牌会员</view>
+                          <view wx:elif="{{actIntegral.gradeValue==5}}" class='score'>限钻石会员</view>
+                          <view class='price'>{{actIntegral.price}}分{{actIntegral.isWithMoney==1?'+￥'+actIntegral.priceMoney:''}}</view>
+                          <view class='oldPrice'>原价：¥{{actIntegral.marketPrice}}</view>
                       </view>
                       <view class='bot-right'>                      
-                          <view class='item2'>已兑换：<span>11人</span></view>
+                          <view class='item2'>已兑换：<span>{{actIntegral.virtualSaleNum + actIntegral.saleNum}}人</span></view>
                           <view class='btn opacity flex'>
-                              <view class='btnName'>兑换</view>
+                              <view bindtap="toScoreDetail" data-i="{{actIntegral.id}}" class='btnName'>兑换</view>
                               <image src='/images/right.png'></image>
                           </view>
                       </view>

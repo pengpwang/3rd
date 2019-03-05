@@ -29,7 +29,9 @@
     "pages/orderGroup/orderGroup",
     "pages/couponList/couponList",
     "pages/shopHome/shopHome",
-    "pages/orderBidding/orderBidding"
+    "pages/orderBidding/orderBidding",
+    "pages/scoreDetail/scoreDetail",
+    "pages/orderScore/orderScore"
   ],
   "window": {
     "backgroundColor": "#f3f3f3",

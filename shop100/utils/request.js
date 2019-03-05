@@ -4,14 +4,17 @@ const baseUrl = {
   getToken: baseHost + "/wechat/getToken", // 获取接口token
   getPhone: baseHost + "/wechat/getRegisterPhone", // 解密手机号
   index: baseHost + "/index.html", // 首页数据
+  score: baseHost + "/jifen.html", // 积分商城数据
   order: baseHost + "/order/info.html?isBuyNow=YES", // 订单确认页面
   buyNow: baseHost + "/cart/addtocart.html",
   getGoodsInfo: baseHost + "/getGoodsInfo.html",
   ordercommit: baseHost + "/order/ordercommit.html",
   ordercommitforgroup: baseHost + "/order/ordercommitforgroup.html",
   ordercommitforbidding: baseHost + "/order/ordercommitforbidding.html",
+  ordercommitforintegral: baseHost + "/order/ordercommitforintegral.html",
   payselect: baseHost + "/order/pay.html",
   pay: baseHost + "/pay.html",
+  sign: baseHost + "/member/sign.html", // 签到
 
   docollectproduct: baseHost + "/member/docollectproduct.html", //关注
   cancelcollectproduct: baseHost + "/member/cancelcollectproduct.html", //取消关注
