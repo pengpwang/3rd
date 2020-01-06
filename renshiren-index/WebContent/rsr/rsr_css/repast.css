@@ -1,0 +1,478 @@
+.nav_con ul li:nth-child(4) a:nth-child(1) {
+    border-bottom: 6px solid #ff7b17;
+}
+.solu_p1{
+    color: #ff7b17 !important;
+}
+/*-- bannner --*/
+.content_bg {
+    width: 100%;
+    height: 500px;
+    background: url("../rsr_images/icon/banner.png") no-repeat center;
+}
+
+.w1002 {
+    width: 1002px;
+    margin: 0 auto;
+}
+
+.w1002 .big_title {
+    color: #fff;
+    font-size: 46px;
+    text-align: center;
+    padding-top: 120px;
+}
+
+.w1002 .small_title {
+    color: #e6e8e7;
+    width: 70%;
+    margin: 0 auto;
+    font-size: 18px;
+    text-align: center;
+    padding-top: 25px;
+    padding-bottom: 60px;
+}
+
+.w1002 .shiyong_btn {
+    width: 170px;
+    height: 54px;
+    background: #f58e43;
+    border-radius: 27px;
+    margin: 0 auto;
+    overflow: hidden;
+}
+
+.w1002 .shiyong_btn a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    line-height: 54px;
+    color: #fff;
+    font-size: 20px;
+}
+
+/*-- content--*/
+
+.content {
+    width: 100%;
+}
+
+.content .nav_bg {
+    width: 100%;
+    background: #273c51;
+    height: 60px;
+}
+
+.content .nav_bg .Navs li {
+    float: left;
+    width: 50%;
+    text-align: center;
+    line-height: 60px;
+}
+
+.content .nav_bg .Navs li a {
+    display: block;
+    width: 100%;
+    height: 100%;
+    color: #fff;
+    font-size: 16px;
+}
+
+.content .nav_bg .Navs li.on {
+    background: #fff;
+}
+
+.content .nav_bg .Navs li.on a {
+    color: #27a2ff;
+    font-size: 16px;
+}
+
+.main {
+    padding-bottom: 52px;
+}
+
+.content .main .main_title {
+    font-size: 36px;
+    padding-top: 68px;
+    padding-bottom: 52px;
+    text-align: center;
+    font-weight: normal;
+    color: #27323e;
+}
+
+.content .main .main_list {
+    width: 100%;
+}
+
+.content .main .main_list li {
+    float: left;
+    border: 1px solid #d6d6d6;
+    height: 177px;
+    padding-left: 35px;
+    padding-top: 21px;
+    margin-bottom: 20px;
+}
+
+.content .main .main_list li:hover {
+    border: 1px solid #27a3fd;
+}
+
+.content .main .main_list li.one {
+    width: 391px;
+    margin-right: 19px;
+}
+
+.content .main .main_list li.two {
+    width: 518px;
+}
+
+.content .main .main_list li.three {
+    width: 522px;
+}
+
+.content .main .main_list li .canIcon {
+    float: left;
+    width: 37px;
+    height: 44px;
+    background: url("../rsr_images/icon/canyin1_01.png") no-repeat center;
+    margin-top: 36px;
+}
+
+.content .main .main_list li.one:hover .canIcon {
+    background: url("../rsr_images/icon/canyin1_02.png") no-repeat center;
+}
+
+.content .main .main_list li.two .canIcon {
+    background: url("../rsr_images/icon/canyin2_01.png") no-repeat center;
+}
+
+.content .main .main_list li.two:hover .canIcon {
+    background: url("../rsr_images/icon/canyin2_02.png") no-repeat center;
+}
+
+.content .main .main_list li.three .canIcon {
+    background: url("../rsr_images/icon/canyin3_01.png") no-repeat center;
+}
+
+.content .main .main_list li.three:hover .canIcon {
+    background: url("../rsr_images/icon/canyin3_02.png") no-repeat center;
+}
+
+.content .main .main_list li.four .canIcon {
+    background: url("../rsr_images/icon/canyin4_01.png") no-repeat center;
+}
+
+.content .main .main_list li.four:hover .canIcon {
+    background: url("../rsr_images/icon/canyin4_02.png") no-repeat center;
+}
+
+.content .main .main_list li.four {
+    margin-left: 19px;
+}
+
+.content .main .main_list li .can_content {
+    float: left;
+    width: 320px;
+    padding-left: 30px;
+}
+
+.content .main .main_list li .can_content .title {
+    font-size: 20px;
+}
+
+.content .main .main_list li .can_content .article {
+    line-height: 28px;
+    width: 264px;
+    font-size: 14px;
+    padding-top: 18px;
+    color: #979797;
+}
+
+.content .main .main_list li.two .can_content .article {
+    width: 404px;
+}
+
+.content .main .main_list li.three .can_content .article {
+    width: 402px;
+}
+
+.content .main .main_list li.four .can_content .article {
+    width: 251px;
+}
+
+.influence {
+    width: 100%;
+    height: 790px;
+    background: #f5f5f7;
+}
+
+.influence .title {
+    font-size: 36px;
+    line-height: 192px;
+    text-align: center;
+    font-weight: normal;
+    color: #27323e;
+}
+
+.influence .contentArt {
+    position: relative;
+    transition: all .2s linear;
+    width: 100%;
+    height: 486px;
+    background: url("../rsr_images/icon/canyingBanner.png") no-repeat center;
+}
+
+.influence .contentArt:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
+    transform: translate3d(0, -3px, 0);
+    transition: all .5s linear;
+}
+
+.influence .contentArt .art_list {
+    padding-top: 81px;
+    padding-left: 45px;
+}
+
+.influence .contentArt .art_list li {
+    margin-bottom: 36px;
+}
+
+.influence .contentArt .art_list li .small_icon {
+    float: left;
+    width: 13px;
+    height: 13px;
+    background: url("../rsr_images/icon/duigou.png") no-repeat center;
+    margin-right: 10px;
+    margin-top: 6px;
+}
+
+.influence .contentArt .art_list li .list_item {
+    float: left;
+    color: #b7b7b7;
+    width: 460px;
+    line-height: 26px;
+    font-size: 14px;
+}
+
+.influence .contentArt .art_list li .list_item span {
+    color: #27a3fd;
+    font-weight: bold;
+}
+
+.scheme {
+    width: 100%;
+    height: 855px;
+}
+
+.scheme .title {
+    line-height: 186px;
+    font-size: 36px;
+    text-align: center;
+    font-weight: normal;
+    color: #27323e;
+}
+
+.scheme .scheme_list li {
+    position: relative;
+    overflow: hidden;
+    float: left;
+    width: 490px;
+    height: 276px;
+    border: 1px solid #d6d6d6;
+    border-bottom: 6px solid #27a3fd;
+    margin-bottom: 20px;
+}
+
+.scheme .scheme_list li.one, .scheme .scheme_list li.three {
+    margin-right: 18px;
+}
+
+.scheme .scheme_list li:hover .find_bg {
+    top: 0;
+    transition: all 1s ease;
+}
+
+.scheme .scheme_list li:hover .top h3 {
+    color: #fefefc;
+    transition: all 1s .2s ease;
+}
+
+.scheme .scheme_list li:hover .essay {
+    color: #fefefc;
+    transition: all 1s .2s ease;
+}
+
+.scheme .scheme_list li .top {
+    height: 104px;
+    text-align: center;
+}
+
+.scheme .scheme_list li .top span {
+    display: inline-block;
+    width: 42px;
+    height: 35px;
+    background: url("../rsr_images/icon/canyin5.png") no-repeat center;
+    vertical-align: -6px;
+    margin-right: 10px;
+}
+
+.scheme .scheme_list li.two .top span {
+    background: url("../rsr_images/icon/canyin6.png") no-repeat center;
+}
+
+.scheme .scheme_list li.three .top span {
+    height: 38px;
+    background: url("../rsr_images/icon/canyin7.png") no-repeat center;
+}
+
+.scheme .scheme_list li.four .top span {
+    background: url("../rsr_images/icon/canyin8.png") no-repeat center;
+}
+
+.scheme .scheme_list li .top h3 {
+    display: inline-block;
+    font-size: 20px;
+    line-height: 104px;
+    transition: all 1s .2s ease;
+    color: #273240;
+}
+
+.scheme .scheme_list li .essay {
+    width: 380px;
+    margin: 0 auto;
+    font-size: 14px;
+    line-height: 28px;
+    padding-top: 10px;
+    color: #989898;
+    transition: all 1s .2s ease;
+}
+
+.scheme .scheme_list li .find_bg {
+    position: absolute;
+    left: 0;
+    top: 280px;
+    width: 100%;
+    height: 100%;
+    background: #526373;
+    z-index: -1;
+    transition: top 1s ease;
+}
+
+.case {
+    width: 100%;
+    height: 718px;
+    background: #f5f5f7;
+}
+
+.case .title {
+    padding-top: 20px;
+    font-size: 36px;
+    text-align: center;
+    line-height: 120px;
+    font-weight: normal;
+    color: #27323e;
+}
+
+.case .content_box {
+    position: relative;
+    transition: all .2s linear;
+    width: 100%;
+    height: 482px;
+    background: #fff;
+}
+
+.case .content_box:hover {
+    box-shadow: 0 15px 30px rgba(0, 0, 0, .1);
+    transform: translate3d(0, -3px, 0);
+    transition: all .5s linear;
+}
+
+.case .content_box .left {
+    float: left;
+    width: 258px;
+}
+
+.case .content_box .left img {
+    display: block;
+    width: 118px;
+    height: 118px;
+    margin: 170px auto 0;
+}
+
+.case .content_box .right {
+    float: left;
+    padding-top: 53px;
+    margin-bottom: 20px;
+}
+
+.case .content_box .right p {
+    font-size: 14px;
+    color: #646464;
+    line-height: 35px;
+}
+
+.case .content_box .right .wrap {
+    height: 1px;
+    width: 650px;
+    border-bottom: 2px dotted #d8d8d8;
+    margin-bottom: 25px;
+    margin-top: 25px;
+}
+
+.case .content_box .right p span {
+    font-size: 18px;
+    color: #28a4fc;
+}
+
+.case .content_box .right ul li {
+    height: 37px;
+    font-size: 14px;
+    color: #656565;
+}
+
+.case .content_box .right ul li i {
+    font-style: normal;
+    font-weight: 800;
+}
+
+.case .content_box .right ul li span {
+    font-size: 18px;
+    color: #27a3fd;
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

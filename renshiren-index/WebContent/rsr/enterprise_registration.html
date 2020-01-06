@@ -1,0 +1,66 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="UTF-8">
+    <link rel="icon" href="rsr_images/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="rsr_images/favicon.ico" type="image/x-icon"/>
+    <title>企业注册</title>
+    <meta name="keywords" content="人事人社保代缴公司_北京社保代缴_北京社保代缴服务_公司社保代缴">
+    <meta name="description" content="事人，社保代缴公司，倾心为企业提供代缴五险一金、薪酬管理、员工福利方案、BPO业务流程外包等专业服务，是深受企业信赖的社保代缴公司。">
+    <link href="rsr_css/reset.min.css" rel="stylesheet" type="text/css">
+    <link href="rsr_css/index.css" rel="stylesheet" type="text/css">
+    <link href="rsr_css/enterprise_registration.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<!--头部js删除即可-->
+<script src="rsr_js/tou.js"></script>
+<!---->
+<!--banner-->
+<div class="login_box">
+    <div class="w1002 login_tt">
+        <h2>HCM在线云平台</h2>
+    </div>
+</div>
+<!--end-->
+<div class="reset_bg">
+    <div class="main">
+        <div class="contentBox">
+            <p class="title">企业注册</p>
+            <form action="">
+                <ul class="infoList">
+                    <li>
+                        <span></span>
+                        <input type="text" placeholder="手机号">
+                    </li>
+                    <li>
+                        <span></span>
+                        <input type="password" placeholder="手机验证码">
+                        <input type="button"  value="获取验证码" id="getAuthCode">
+                    </li>
+                    <button type="submit" class="btn" onclick="oPen()">下一步</button>
+                </ul>
+            </form>
+        </div>
+    </div>
+</div>
+<!--footer-->
+<script src="rsr_js/jiao.js"></script>
+<!---->
+<script type="text/javascript" src="rsr_js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="rsr_js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="rsr_js/public.js"></script>
+<script src="rsr_js/VerificationCode.js"></script>
+<script type="text/javascript">
+    jQuery(".nav_con").slide({ type:"menu",  titCell:".m", targetCell:".nav_son", effect:"slideDown",delayTime:300, triggerTime:0,});
+
+    $('#getAuthCode').on('click',function () {
+        settime(this);
+    });
+    function oPen() {
+        window.open('/rsrweb/perfect_information.html');
+    }
+</script>
+</body>
+</html>

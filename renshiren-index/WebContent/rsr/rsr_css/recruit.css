@@ -1,0 +1,251 @@
+.service_p9{
+    color: #ff7b17!important;
+}
+.qcb_foot{
+    width: 100%;
+    height: 240px;
+    background: url(../rsr_images/slogan.png) no-repeat center #292f36;
+}
+.qcb_footer{
+    font-size: 24px;
+    color: #fff;
+    width: 770px;
+    margin: 0 auto;
+    letter-spacing: 2px;
+}
+.footer_p1{
+    text-align: left;
+    padding-top: 85px;
+}
+.footer_p2{
+    text-align: right;
+    padding-top: 16px;
+}
+.footer_p2 b{
+    color: #f68e41;
+}
+.footer{
+    display: none!important;
+}
+.rsr-banner{
+    width: 100%;
+    height: 500px;
+    background: url(../rsr_images/ygb_banner.jpg) no-repeat center #856a4c;
+    position: relative;
+}
+.rsr-banner2{
+    width: 100%;
+    height: 500px;
+    background: url(../rsr_images/lgb_banner.png) no-repeat center #2f8bda;
+    position: relative;
+}
+.lgb_btn{
+    width: 100%;
+    height: 100%;
+    display: block;
+    cursor: pointer;
+}
+.rsr-zx{
+    text-align: center;
+    padding-top: 380px;
+}
+.rsr-zx a{
+    width: 194px;
+    height: 56px;
+    line-height: 56px;
+    text-align: center;
+    background: #f68e42;
+    color: #fff;
+    border-radius: 28px;
+    margin: auto 0;
+    font-size: 20px;
+    cursor: pointer;
+    display: inline-block;
+}
+.rsr-zx a:hover{
+    background: #fff;
+    color: #f68e42;
+}
+.rsr-w1002{
+    width: 1002px;
+    margin: 0 auto;
+}
+.rsr-h2{
+    font-size: 36px;
+    text-align: center;
+    font-weight: normal;
+    color: #27323e;
+}
+.tit-1{
+    line-height: 145px;
+}
+
+.content {
+    width: 1000px;
+    height: auto;
+    border: 1px solid #d6d6d6;
+}
+
+.content li {
+    float: left;
+    width: 459px;
+    height: 230px;
+    background: #fff;
+    padding-left: 40px;
+}
+
+.content li.one, .content li.three {
+    border-right: 1px solid #d6d6d6;
+}
+
+.content li.one, .content li.two {
+    border-bottom: 1px solid #d6d6d6;
+}
+
+.content li .itemTitle {
+    font-size: 20px;
+    line-height: 100px;
+    color: #27303f;
+}
+
+.content li .itemTitle span {
+    display: inline-block;
+    width: 42px;
+    height: 40px;
+    background: url("../rsr_images/recruit_1.png") no-repeat center;
+    vertical-align: -10px;
+    margin-right: 10px;
+}
+
+.content li.two .itemTitle span {
+    background: url("../rsr_images/recruit_2.png") no-repeat center;
+}
+
+.content li.three .itemTitle span {
+    background: url("../rsr_images/recruit_3.png") no-repeat center;
+}
+
+.content li.four .itemTitle span {
+    background: url("../rsr_images/recruit_4.png") no-repeat center;
+}
+
+.essay p {
+    color: #989898;
+    font-size: 14px;
+    line-height: 30px;
+}
+.con-2{
+    padding-bottom: 60px;
+}
+.con-3{
+    background: #f5f5f7;
+    padding-bottom: 60px;
+}
+.ryoushi{
+    background: url("../rsr_images/recruit-bg.png") no-repeat right top;
+    height: 385px;
+}
+.ryoushi li{
+    font-size: 18px;
+    height: 27px;
+    line-height: 27px;
+    color: #484848;
+    margin-bottom: 23px;
+    background: url("../rsr_images/recruit_dot.png") no-repeat;
+    padding-left: 40px;
+}
+.ryoushi li:first-child{
+    background:none;
+    margin-bottom: 0;
+}
+.qcb_con_three{
+    background: #49505d;
+    padding-bottom: 60px;
+}
+.content_three{
+    padding-left: 30px;
+}
+.content_three a{
+    width: 140px;
+    text-align: center;
+    font-size: 20px;
+    color: #fff;
+    display: block;
+    float: left;
+}
+.content_three span{
+    float: left;
+    display: block;
+    margin-top: 30px;
+}
+.colf{
+    color: #fff;
+}
+.content_three a:first-child{
+    width: 170px;
+}
+.content_three a img{
+    margin-bottom: 10px;
+}
+.anli{
+    border: 1px solid #dcdcdc;
+    padding: 30px 0;
+}
+.anli p{
+    font-size: 18px;
+    color: #484848;
+    line-height: 50px;
+    padding:0 40px;
+    letter-spacing: 1px;
+}
+.anli p span{
+    color: #f68e42;
+}
+.padb{
+    padding-bottom: 69px;
+}
+.ser-con{
+    border-left: 1px solid #dcdcdc;
+    border-top: 1px solid #dcdcdc;
+    border-right: 1px solid #dcdcdc;
+}
+.ser-con ul{
+    background: #fff;
+}
+.ser-con ul li{
+    width: 249px;
+    border-bottom: 1px solid #dcdcdc;
+    border-right: 1px solid #dcdcdc;
+    float: left;
+    height: 146px;
+    line-height: 146px;
+    overflow: hidden;
+    text-align: center;
+}
+.ser-con ul li img{
+    vertical-align: middle;
+    height: 147px;
+}
+/*åè®®*/
+.agree-con{
+    padding-bottom: 30px;
+    padding-top: 50px;
+}
+.agree-con p{
+    font-size: 14px;
+    line-height: 24px;
+    margin-bottom: 10px;
+}
+.agree-con h2{
+    text-align:center;
+    display:block;
+    font-size: 20px;
+    line-height: 50px;
+}
+.pindent{
+    text-indent: 24px;
+}
+.pindent2{
+    text-indent: 48px;
+}
+

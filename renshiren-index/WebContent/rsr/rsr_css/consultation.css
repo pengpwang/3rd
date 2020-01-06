@@ -1,0 +1,107 @@
+/*立即咨询弹窗样式*/
+/*反馈弹窗*/
+.Consultation{
+    width: 100%;
+    height: 100%;
+    background:rgba(299,299,299,0.3);
+    left: 0;
+    top: 0;
+    z-index: 9;
+    display: none;
+    position: fixed;
+}
+.chat{
+    width: 577px;
+    height:300px;
+    border: 1px solid #d3d3d3;
+    top:0;
+    left:0;
+    bottom:0;
+    right: 0;
+    margin: auto;
+    background: #fff;
+    background:rgba(255,255,255,1);
+    position: absolute;
+    z-index: 9;
+}
+.chat_tt{
+    height: 70px;
+    text-align: center;
+    background: #f7f7f7;
+    color: #3c3c3c;
+    font-size: 16px;
+    position: relative;
+}
+.chat_tt p{
+    line-height: 70px;
+}
+.chat_close_box{
+    font-size: 24px;
+    color: #c3c3c3;
+    right: 20px;
+    top: 25px;
+    width: 20px;
+    height: 20px;
+    line-height: 20px;
+    position: absolute;
+    cursor: pointer;
+    display: inline-block;
+}
+.chat_con{
+    padding:20px 60px 0 50px;
+}
+.chat_con p{
+    color: #505050;
+    line-height: 22px;
+    font-size: 14px;
+    letter-spacing: 1px;
+    padding-bottom: 12px;
+}
+.chat_con p em{
+    font-style: normal;
+}
+.chat_con p span{
+    float: left;
+    width: 90px;
+    line-height: 42px;
+}
+.chat_con p span i{
+    color: #f07432;
+    font-style: normal;
+    padding-right: 5px;
+}
+
+.chat_con p input{
+    float: left;
+    font-family: "Microsoft YaHei";
+    color: #505050;
+    border: 1px solid #dcdcdc;
+    padding: 6px 10px;
+    height: 28px;
+    width: 355px;
+}
+p.chat_submit_btn{
+    text-align: center;
+    padding-top: 15px;
+    padding-bottom: 0;
+}
+p.chat_submit_btn button {
+    letter-spacing: 10px;
+    margin: 0 auto;
+    width: 140px;
+    height: 38px;
+    text-align: center;
+    background: #f07432;
+    color: #fff;
+    font-size: 14px;
+    border: none;
+    outline: none;
+    font-family: "Microsoft YaHei", 微软雅黑;
+    border-radius: 19px;
+    cursor: pointer;
+}
+p.chat_submit_btn button:hover{
+    background: #fff;
+    color: #f07432;
+    border: 1px solid #f07432;
+}

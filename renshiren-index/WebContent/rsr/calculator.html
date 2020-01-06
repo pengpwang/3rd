@@ -1,0 +1,676 @@
+﻿
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no" />
+    <meta charset="UTF-8">
+    <link rel="icon" href="rsr_images/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="rsr_images/favicon.ico" type="image/x-icon"/>
+    <title>工资社保计算器</title>
+    <meta name="keywords" content="薪酬管理，企业薪酬管理，薪酬绩效管理，薪酬管理公司" />
+    <meta name="description" content="人事人，服务热线：400-888-0556 。致力于为企业提供薪酬管理方案、代发工资等专业服务，着力解决员工薪酬管理的难题，满足您的薪酬管理个性化需求。">
+    <link href="rsr_css/reset.min.css" rel="stylesheet" type="text/css">
+    <link href="rsr_css/index.css" rel="stylesheet" type="text/css">
+    <link href="rsr_css/selectordie.css" rel="stylesheet" type="text/css">
+    <link href="rsr_css/consultation.css" rel="stylesheet" type="text/css">
+    <link href="rsr_css/calculator.css" rel="stylesheet" type="text/css">
+    <link href="rsr_css/jquery.mCustomScrollbar.css" rel="stylesheet" type="text/css">
+    <link href="layer/skin/layer.css" rel="stylesheet" type="text/css">
+
+</head>
+<body>
+<script src="rsr_js/tou.js"></script>
+<div class="cal_baner">
+    <div class="w1002 cal_con">
+        工资社保计算器
+    </div>
+</div>
+<div class="cal_box">
+    <input type="hidden" id="sqgzSet" name="sqgzSet" value="" />
+    <div class="jsq">
+        <ul>
+            <li class="xzdq">
+                <span><i class="let-sp">地</i>区:</span>
+                <select class="select_dq" id="sheng" style="display:none" onchange="getCity();" name="ssAreaId">
+                    <option value="0">请选择</option>
+                </select>
+                <select class="select_dq" id="shi" style="display:none" onchange="getCanbao();" name="ssCityId" style="margin-right: 0">
+                    <option value="0">请选择</option>
+                </select>
+            </li>
+            <li><span>税前工资：</span>
+                <input class="ldo" id="sqgz" name="sqgz" placeholder="请输入税前工资" type="text" onblur="checkSqgz(this)">
+            </li>
+            <li class="jnlx">
+                <span>缴纳类型：</span>
+                <select id="canbao" style="display:none" class="myselect" name="hukouType" onchange="getcheck(this)">
+                    <option value="0">请选择缴纳类型</option>
+                </select>
+            </li>
+            <li class="sbjn" id="sbjn">
+                <span>社保缴纳：</span>
+                <label><input type="radio" name="sq" value="s1" checked="checked" onclick="rsr_sbjn()">缴纳</label>
+                <label class="w185"><input type="radio" name="sq" value="s0" onclick="rsr_sbjn()">不缴纳</label>
+            </li>
+            <li class="sbjs" id="sbjs">
+                <input type="hidden" id="sqMin" />
+                <input type="hidden" id="sqMax" />
+                <span>社保基数:</span>
+                <select class="select_dq" style="display:none" onchange="rsr_sbjs();getSheBao(this);" id="rsr_sbjs">
+                    <option value="2">最低基数</option>
+                    <option value="1">自定义</option>
+                </select>
+                <input type="text" class="js_yc" disabled id="js_yc2" value="" onblur="checkSS(this)"/>
+            </li>
+            <li class="sbjn" id="gjj_jn">
+                <span class="let_no">公积金缴纳：</span>
+                <label ><input type="radio" name="gjj" value="g1" checked="checked" onclick="rsr_sbjnx()">缴纳</label>
+                <label  class="w185"><input type="radio" name="gjj" value="g0" onclick="rsr_sbjnx()">不缴纳</label>
+            </li>
+            <li class="sbjs" id="gjj_js">
+                <input type="hidden" id="gqMin" />
+                <input type="hidden" id="gqMax" />
+                <span class="let_no">公积金基数:</span>
+                <select class="" style="display:none" onchange="gjj_sbjs();getGongJiJin(this);" id="gjj_sbjs">
+                    <option value="2">最低基数</option>
+                    <option value="1">自定义</option>
+                </select>
+                <input type="text" class="js_yc" disabled id="js_yc" value="" onblur="checkFund(this)"/>
+            </li>
+            <span class="start end" id="ssfundtip" onclick="compute();">开始计算</span>
+        </ul>
+
+    </div>
+</div>
+<!--计算社保-->
+<div class="cal_box_con">
+    <div class="detailed clear">
+        <p>工资及社保明细<b class="closeX">×</b><i>单位：元</i></p>
+        <table width="100%" border="0" cellspacing="0" cellpadding="0" class="cal_tab">
+            <thead>
+            <tr>
+                <th colspan="2" bgcolor="e5e5e5">缴纳项目</th>
+                <th colspan="2" bgcolor="e5e5e5">个人缴纳</th>
+                <th colspan="2" bgcolor="e5e5e5">公司缴纳</th>
+            </tr>
+            </thead>
+            <tbody id="ssfunddetail">
+            </tbody>
+        </table>
+        <div class="cal_bot clear">
+            <div class="cal_botl">合计</div>
+            <div class="cal_botr">
+                <p>税后收入：<em><input type="text" id="shsrSet" disabled value=""></em></p>
+                <div class="last">
+                    <div class="last-left">
+                        <ul>
+                            <li>个人缴纳：<input disabled id="grjnSet" value=""/></li>
+                            <li>个人税额：<input disabled id="grjsSet" value=""/></li>
+                        </ul>
+                    </div>
+                    <div class="last-left">
+                        <ul>
+                            <li>公司缴纳：<input disabled id="gsjnSet" value=""/></li>
+                            <li>雇佣成本：<input disabled id="gycbSet" value=""/></li>
+                        </ul>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<!--footer-->
+<script src="rsr_js/jiao.js"></script>
+<!--end-->
+<script type="text/javascript" src="rsr_js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="rsr_js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="rsr_js/public.js"></script>
+<script type="text/javascript" src="rsr_js/consultaion.js"></script>
+<script type="text/javascript" src="rsr_js/selectordie.js"></script>
+<script type="text/javascript" src="rsr_js/jquery.mCustomScrollbar.js"></script>
+<script type="text/javascript" src="layer/layer.js"></script>
+<script type="text/javascript">
+    jQuery(".nav_con").slide({ type:"menu",  titCell:".m", targetCell:".nav_son", effect:"slideDown",delayTime:300, triggerTime:0,});
+    (function($){
+        $(window).load(function(){
+            $('select').selectOrDie();
+            $(".sod_list").mCustomScrollbar();
+            getAreaListForCalculator();
+        });
+    })(jQuery);
+
+    /******社保基数下拉框*****/
+    function rsr_sbjs() {
+        var sbjs_selct= $("#rsr_sbjs").val();
+        if(sbjs_selct== "1"){
+            $("#js_yc2").removeAttr("disabled")
+        }else {
+            $("#js_yc2").attr("disabled","disabled")
+        }
+    }
+    /******社保缴纳单选框*****/
+    function rsr_sbjn() {
+        var radio_select=$('#sbjn input:radio[name="sq"]:checked').val();
+        if(radio_select=="s0"){
+            $("#sbjs").hide();
+        }else {
+            $("#sbjs").show();
+        }
+
+    }
+    /******公积金缴纳单选框*****/
+    function rsr_sbjnx() {
+        var radio_selectx=$('#gjj_jn input:radio[name="gjj"]:checked').val();
+        if(radio_selectx=="g0"){
+            $("#gjj_js").hide();
+        }else {
+            $("#gjj_js").show();
+        }
+
+    }
+    /******公积金基数下拉框*****/
+    function gjj_sbjs() {
+        var gjj_js_selct= $("#gjj_sbjs").val();
+        if(gjj_js_selct=="1"){
+            $("#js_yc").removeAttr("disabled");
+        }else {
+            $("#js_yc").attr("disabled","disabled");
+        }
+    }
+    /****弹窗隐藏显示****/
+    $(".closeX").on("click",function () {
+        $(".cal_box_con").hide();
+        $(".cal_box").show();
+    });
+
+    var hxSheng;
+    var hxShi;
+    var areaList;
+    var base;
+    var ifExisSheng = 0;
+    var ifExisCity = 0;
+    var canbaoArea;
+
+    //获取地区列表
+    function getAreaListForCalculator(){
+        $.ajax({
+            type:'get',
+            url : 'http://hcm.renshiren.com/officialCalculator/getAreaListForCalculator',
+            dataType: 'JSONP',
+            jsonp: "jsonpCallback",
+            async:false,
+            success : function(data) {
+                areaList = data.resultList;
+                getSheng();
+            }
+        });
+    }
+
+    //获取省
+    function getSheng(){
+        var sheng = $("#sheng");
+        if(null!=areaList){
+            for(var i=0;i<areaList.length;i++){
+                if(areaList[i].pid==0){
+                    if(hxSheng == areaList[i].id){
+                        ifExisSheng = 1;
+                        var option = $("<option value='"+areaList[i].id+"' selected='selected'>"+areaList[i].name+"</option>");
+                    }else{
+                        var option = $("<option value='"+areaList[i].id+"'>"+areaList[i].name+"</option>");
+                    }
+
+                    sheng.append(option);
+                }
+            }
+            sheng.selectOrDie("update");
+            if(ifExisSheng == 1){
+                getCity();
+            }
+        }
+    }
+
+    //获取市
+    function getCity(){
+        var sheng = $("#sheng");
+        var shi = $("#shi");
+        var canbao = $("#canbao");
+        shi.find("option").not(":first").remove();
+        canbao.find("option").not(":first").remove();
+        if(sheng.val()==0){
+            shi.val(0);
+            canbao.val(0);
+            canbao.selectOrDie('update');
+            shi.selectOrDie('update');
+        }else{
+            for(var i=0;i<areaList.length;i++){
+                if(sheng.val()==areaList[i].pid){
+                    if(hxShi == areaList[i].id){
+                        ifExisCity = 1;
+                        var option = $("<option value='"+areaList[i].id+"'  selected='selected'>"+areaList[i].name+"</option>");
+                    }else{
+                        var option = $("<option value='"+areaList[i].id+"'>"+areaList[i].name+"</option>");
+                    }
+                    shi.append(option);
+                }
+            }
+            shi.selectOrDie("update");
+            if(ifExisCity == 1){
+                getCanbao();
+            }else{
+                canbao.selectOrDie("update");
+            }
+        }
+    }
+
+    function getCanbao(){
+        var shi = $("#shi");
+        var canbao = $("#canbao");
+        canbao.find("option").not(":first").remove();
+        if(shi.val() == 0){
+            layer.msg("请选择地区");
+        } else{
+            $.ajax({
+                type:'get',
+                url : 'http://hcm.renshiren.com/officialCalculator/getBaseListForCalculator',
+                data:"areaId="+shi.val(),
+                dataType: 'JSONP',
+                jsonp: "jsonpCallback",
+                async:false,
+                success : function(data) {
+                    base = data.resultList;
+                    console.log('base',data);
+                    if(base.length != 0){
+                        for(var i =0;i<base.length;i++){
+                            var option = $("<option value='"+base[i].hukouType+"'>"+base[i].hukouName+"</option>");
+                            canbao.append(option);
+                        }
+                        canbao.selectOrDie('update');
+                    } else{
+                        layer.msg("当前地区类型暂无基数");
+                    }
+                }
+            });
+        }
+
+    }
+
+    var checkedSq = 2;
+    var checkedGq = 2;
+    function getSheBao(a){
+        if($(a).val()!="1"){
+            checkSSFlag = 1;
+        }
+        //修改选中的值
+        checkedSq = $(a).val();
+        //给文本框赋值
+        getcheck("checkedSq");
+    }
+
+    function getGongJiJin(a){
+        if($(a).val()=="1"){
+            checkFundFlag =1;
+        }
+        //选中的值
+        checkedGq = $(a).val();
+        //给文本框赋值
+        getcheck("checkedGq");
+    }
+
+    function getcheck(e){
+        var sheng = $("#shi").val();
+        var shi = $("#shi").val();
+        var canbao = $("#canbao").val();
+        if(sheng==0||shi==0){
+            $("#ssBase").attr("placeholder","");
+            $("#fundBase").attr("placeholder","");
+            return;
+        }
+        if(canbao==0){
+            $("#ssBase").attr("placeholder","");
+            $("#fundBase").attr("placeholder","");
+            return;
+        }
+        var sqValue = $('#sbjn input:radio[name="sq"]:checked').val();
+        var gqValue = $('#gjj_jn input:radio[name="gjj"]:checked').val();
+
+        var countFlag = 0; //区别选择的是社保 / 公积金
+        if(e == "checkedSq"){
+            countFlag = 1; //社保
+        } else if(e == "checkedGq"){
+            countFlag = 2;//公积金
+        }
+        $.ajax({
+            type:"get",
+            url : 'http://hcm.renshiren.com/officialCalculator/getSsOrFund',
+            data : "areaId="+parseInt(shi)+"&hukouType="+parseInt(canbao)+"&countFlag="+countFlag,
+            dataType: 'JSONP',
+            jsonp: "jsonpCallback",
+            success : function(data) {
+                if(data.resultList!=null){
+                    console.log("getSsOrFunddata",data.resultList);
+                    if(countFlag == 1){
+                        if(sqValue == "s1")
+                        {
+                            $("#sqMin").attr("value",data.resultList[1]);
+                            $("#sqMax").attr("value",data.resultList[0]);
+                            if(checkedSq == 1){
+                                $("#js_yc2").attr("value","");
+                                $("#js_yc2").attr("placeholder",data.resultList[1]+"-"+data.resultList[0]);
+                            } else if(checkedSq == 2){
+                                $("#js_yc2").attr("value",data.resultList[1]);
+                            } else{
+                                $("#js_yc2").attr("value",data.resultList[0]);
+                            }
+                        }
+                    }else if(countFlag == 2){
+                        if(gqValue == "g1")
+                        {
+                            $("#gqMin").attr("value",data.resultList[1]);
+                            $("#gqMax").attr("value",data.resultList[0]);
+                            if(checkedGq == 1){
+                                $("#js_yc").attr("value","");
+                                $("#js_yc").attr("placeholder",data.resultList[1]+"-"+data.resultList[0]);
+                            } else if(checkedGq == 2){
+                                $("#js_yc").attr("value",data.resultList[1]);
+                            } else{
+                                $("#js_yc").attr("value",data.resultList[0]);
+                            }
+                        }
+                    } else{
+                        $("#sqMin").attr("value",data.resultList[1]);
+                        $("#sqMax").attr("value",data.resultList[0]);
+                        if(checkedSq == 1){
+                            $("#js_yc2").attr("value","");
+                            $("#js_yc2").attr("placeholder",data.resultList[1]+"-"+data.resultList[0]);
+                        } else if(checkedSq == 2){
+                            $("#js_yc2").attr("value",data.resultList[1]);
+                        } else{
+                            $("#js_yc2").attr("value",data.resultList[0]);
+                        }
+                        $("#gqMin").attr("value",data.resultList[3]);
+                        $("#gqMax").attr("value",data.resultList[2]);
+                        if(checkedGq == 1){
+                            $("#js_yc").attr("value","");
+                            $("#js_yc").attr("placeholder",data.resultList[3]+"-"+data.resultList[2]);
+                        } else if(checkedGq == 2){
+                            $("#js_yc").attr("value",data.resultList[3]);
+                        } else{
+                            $("#js_yc").attr("value",data.resultList[2]);
+                        }
+                    }
+
+                }else{
+                    layer.msg("当前地区类型暂无基数");
+                }
+            }
+        });
+    }
+
+    var checkSSFlag = 1;//校验社保标识
+    var checkFundFlag = 1;//校验公积金标识
+    var checkSqgzFlag = 1;
+    //添加正则校验
+    var reg = /^[1-9][0-9]*(\.\d{1,2})?$/;
+    var re = new RegExp(reg);
+
+    //校验社保
+    function checkSS(e){
+        var placeholder = $(e).attr("placeholder");
+        var val = $(e).val();
+        var xia = placeholder.substring(0,placeholder.indexOf("-"));
+        var shang = placeholder.substring(placeholder.indexOf("-")+1);
+
+        if(val==""){
+            layer.msg("请输入社保基数，并确保在范围之间");
+            checkSSFlag = 0;
+            return;
+        }else{
+            if(!re.test(val)){
+                layer.msg("请输入正确格式的数字");
+                checkSSFlag = 0;
+                return;
+            } else{
+                if(parseInt(val)>parseInt(shang)){
+                    layer.msg("社保基数超过上限");
+                    checkSSFlag = 0;
+                    return;
+                }else if(parseInt(val)<parseInt(xia)){
+                    layer.msg("社保基数低于下限");
+                    checkSSFlag = 0;
+                    return;
+                }
+            }
+
+        }
+        checkSSFlag = 1;
+    }
+
+    //校验公积金
+    function checkFund(e){
+        var placeholder = $(e).attr("placeholder");
+        var val = $(e).val();
+        var xia = placeholder.substring(0,placeholder.indexOf("-"));
+        var shang = placeholder.substring(placeholder.indexOf("-")+1);
+        if(val==""){
+            layer.msg("请输入公积金基数，并确保在范围之间");
+            checkFundFlag = 0;
+            return;
+        }else{
+            if(!re.test(val)){
+                layer.msg("请输入正确格式的数字");
+                checkFundFlag = 0;
+                return;
+            } else{
+                if(parseInt(val)>parseInt(shang)){
+                    layer.msg("公积金基数超过上限");
+                    checkFundFlag = 0;
+                    return;
+                }else if(parseInt(val)<parseInt(xia)){
+                    layer.msg("公积金基数低于下限");
+                    checkFundFlag = 0;
+                    return;
+                }
+            }
+        }
+        checkFundFlag = 1;
+    }
+
+    //校验税前工资
+    function checkSqgz(e){
+        var val = $(e).val();
+        if(val==""){
+            layer.msg("请输入税前工资");
+            checkSqgzFlag = 0;
+            return;
+        }else{
+            if(!re.test(val)){
+                layer.msg("请输入正确格式的数字");
+                checkSqgzFlag = 0;
+                return;
+            }
+        }
+        checkSqgzFlag = 1;
+    }
+
+    //计算
+    function compute(){
+        var areaId = $("#shi").val();
+        var hukouType = $("#canbao").val();
+        var ssBase = $("#js_yc2").val();
+        var fundBase = $("#js_yc").val();
+        var sqgz = $("#sqgz").val();
+        //传税前收入
+        $("#sqgzSet").attr("value",sqgz);
+        var sqgzSet = $("#sqgzSet").val();
+
+        //判断是否缴纳社保/公积金
+        var sqValue = $('#sbjn input:radio[name="sq"]:checked').val();
+        var gqValue = $('#gjj_jn input:radio[name="gjj"]:checked').val();
+        if(sqValue == "s0"){
+            ssBase = null;
+        }
+        if(gqValue == "g0"){
+            fundBase = null;
+        }
+
+        if(areaId!=0 && hukouType!=0 && sqgz!=''){
+            if(sqValue != "s0"){
+                if(ssBase == "" ){
+                    layer.msg("请输入社保基数");
+                    return;
+                }
+                if(checkSSFlag == 0){
+                    layer.msg("请重新输入社保基数");
+                    return;
+                }
+            }
+            if(gqValue != "g0"){
+                if(fundBase == ""){
+                    layer.msg("请输入公积金基数");
+                    return;
+                }
+                if(checkFundFlag == 0){
+                    layer.msg("请重新输入公积金基数");
+                    return;
+                }
+            }
+            if(sqgz!=''){
+                if(checkSqgzFlag == 0){
+                    layer.msg("请输入正确格式的数字");
+                    return false;
+                }
+            }else{
+                layer.msg("请输入税前工资");
+                return false;
+            }
+
+            var dataStr = "areaId="+areaId+"&hukouType="+hukouType+"&baseSalary="+sqgzSet;
+            if(ssBase != null){
+                dataStr += "&ssBase="+ssBase;
+            }
+            if(fundBase != null){
+                dataStr += "&fundBase="+fundBase;
+            }
+            $.ajax({
+                url:'http://hcm.renshiren.com/officialCalculator/count',
+                type:'get',
+                data : dataStr,
+                dataType: 'JSONP',
+                jsonp: "jsonpCallback",
+                success:function(data){
+                    $(".slarylist-mx,.bgshow").show();
+                    console.log("countdata",data);
+                    if(data != null && data !=''){
+                        setSsFundDataToHtml(data.obj);
+                    }
+                }
+            });
+        }else{
+            if(checkSqgzFlag == 1){
+                layer.msg("请设置相关参数");
+                return false;
+            }else{
+                layer.msg("请输入税前工资");
+                return false;
+            }
+        }
+    }
+
+    //回显工资及社保明细
+    function setSsFundDataToHtml(obj){
+        var str = '<tr>';
+        if(obj.ssBase != 0){
+            str += '<td colspan="2">养老</td>';
+            str += '<td width="20%">'+ accMul(obj.yanglaoPB,100) +'%</td>';
+            str += '<td width="18%">'+ obj.yanglaoP +'</td>';
+            str += '<td width="19%">'+ accMul(obj.yanglaoCB,100) +'%</td>';
+            str += '<td width="17%">'+ obj.yanglaoC +'</td>';
+            str += '</tr>';
+            str += '<td colspan="2">医疗</td>';
+            str += '<td width="20%">'+ accMul(obj.yiliaoPB,100) +'%</td>';
+            str += '<td width="18%">'+ obj.yiliaoP +'</td>';
+            str += '<td width="19%">'+ accMul(obj.yiliaoCB,100) +'%</td>';
+            str += '<td width="17%">'+ obj.yiliaoC +'</td>';
+            str += '</tr>';
+            str += '<td colspan="2">大额医疗</td>';
+            //大额医疗动态比例
+            if(obj.daeyiliaoPType==1){
+                str += '<td width="20%">'+ accMul(obj.daeyiliaoP,100) +'%</td>';
+                str += '<td width="18%">'+ obj.daeyiliaoPM +'</td>';
+            }else{
+                if(obj.daeyiliaoPType==2){
+                    str += '<td width="20%">按月收费</td>';
+                }else{
+                    str += '<td width="20%">按年收费</td>';
+                }
+                str += '<td width="18%">'+ obj.daeyiliaoPM +'</td>';
+            }
+            if(obj.daeyiliaoCType==1){
+                str += '<td width="20%">'+ accMul(obj.daeyiliaoC,100) +'%</td>';
+                str += '<td width="18%">'+ obj.daeyiliaoCM +'</td>';
+            }else{
+                if(obj.daeyiliaoCType==2){
+                    str += '<td width="19%">按月收费</td>';
+                }else{
+                    str += '<td width="19%">按年收费</td>';
+                }
+                str += '<td width="17%">'+ obj.daeyiliaoCM +'</td>';
+            }
+            str += '</tr>';
+            str += '<td colspan="2">失业</td>';
+            str += '<td width="20%">'+ accMul(obj.shiyePB,100) +'%</td>';
+            str += '<td width="18%">'+ obj.shiyeP +'</td>';
+            str += '<td width="19%">'+ accMul(obj.shiyeCB,100) +'%</td>';
+            str += '<td width="17%">'+ obj.shiyeC +'</td>';
+            str += '</tr>';
+            str += '<td colspan="2">工伤</td>';
+            str += '<td width="20%">'+ 0 +'%</td>';
+            str += '<td width="18%">'+ 0 +'</td>';
+            str += '<td width="19%">'+ accMul(obj.gongshangCB,100) +'%</td>';
+            str += '<td width="17%">'+ obj.gongshangC +'</td>';
+            str += '</tr>';
+            str += '<td colspan="2">生育</td>';
+            str += '<td width="20%">'+ 0 +'%</td>';
+            str += '<td width="18%">'+ 0 +'</td>';
+            str += '<td width="19%">'+ accMul(obj.shengyuCB,100) +'%</td>';
+            str += '<td width="17%">'+ obj.shengyuC +'</td>';
+            str += '</tr>';
+        }
+        if(obj.fundBase != 0){
+            str += '<td colspan="2">公积金</td>';
+            str += '<td width="20%">'+ accMul(obj.fundPB,100) +'%</td>';
+            str += '<td width="18%">'+ obj.fundP +'</td>';
+            str += '<td width="19%">'+ accMul(obj.fundCB,100) +'%</td>';
+            str += '<td width="17%">'+ obj.fundC +'</td>';
+            str += '</tr>';
+        }
+        str += '<tr>';
+
+        str += '</tr>';
+        $("#ssfunddetail").html(str);
+        $(".cal_box_con").show();
+        $(".cal_box").hide();
+        $("#shsrSet").attr("value",obj.afterTaxIncom);//税后收入
+        $("#grjnSet").attr("value",obj.ssFundPT); //个人缴纳
+        $("#gsjnSet").attr("value",obj.ssFundCT); //公司缴纳
+        $("#grjsSet").attr("value",obj.personalIncom);//个人缴税
+        $("#gycbSet").attr("value",obj.hiringCost);//雇佣成本
+
+    }
+
+    //js小数运算
+    function accMul(arg1,arg2){
+        var m=0,s1=arg1.toString(),
+            s2=arg2.toString();
+        try{
+            m+=s1.split(".")[1].length}catch(e){}
+        try{
+            m+=s2.split(".")[1].length}catch(e){}
+        return Number(s1.replace(".",""))*Number(s2.replace(".",""))/Math.pow(10,m )
+    }
+
+</script>
+</body>
+</html>

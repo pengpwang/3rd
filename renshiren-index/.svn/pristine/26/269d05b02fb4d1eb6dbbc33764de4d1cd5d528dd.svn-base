@@ -1,0 +1,51 @@
+.success_bg{
+    background: #f4f8f9;
+    padding-top: 110px;
+    padding-bottom: 80px;
+}
+.main {
+    width: 490px;
+    height: 440px;
+    margin: 0 auto;
+    background: #ffffff;
+    padding-top: 130px;
+    -moz-box-shadow:0px 0px 10px #f0f1f3, 2px 2px 5px #f0f1f3;
+    -webkit-box-shadow:0px 0px 10px #f0f1f3, 2px 2px 5px #f0f1f3;
+    -o-box-shadow:0px 0px 10px #f0f1f3, 2px 2px 5px #f0f1f3;
+    -ms-box-shadow:0px 0px 10px #f0f1f3, 2px 2px 5px #f0f1f3;
+    box-shadow:0px 0px 10px #f0f1f3, 2px 2px 5px #f0f1f3;
+}
+.m_pic{
+    width: 136px;
+    height: 136px;
+    background: url("../rsr_images/icons.png") no-repeat -669px -565px;
+    margin: 0 auto;
+}
+.successInfo{
+    text-align: center;
+    color: #3fb9f8;
+    font-size: 24px;
+    padding-top: 24px;
+}
+.skip{
+    color: #7f7e83;
+    text-align: center;
+    line-height: 40px;
+}
+.login_box{
+    height:120px;
+    width: 100%;
+    background: url("../rsr_images/hcm.png") no-repeat center #2d3137;
+}
+.w1002{
+    width:1002px;
+    margin: 0 auto;
+}
+.login_tt h2{
+    text-align: center;
+    font-size: 30px;
+    font-size: 24px;
+    color: #fff;
+    line-height: 120px;
+    letter-spacing: 1px;
+}

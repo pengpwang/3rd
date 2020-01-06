@@ -1,0 +1,232 @@
+
+.login_box{
+    height:120px;
+    width: 100%;
+    background: url("../rsr_images/hcm.png") no-repeat center #2d3137;
+}
+.w1002{
+    width:1002px;
+    margin: 0 auto;
+}
+.login_tt h2{
+    text-align: center;
+    font-size: 30px;
+    font-size: 24px;
+    color: #fff;
+    line-height: 120px;
+    letter-spacing: 1px;
+}
+
+.perfect_bg{
+    background: #f4f8f9;
+    padding-top: 110px;
+    padding-bottom: 80px;
+}
+
+.main {
+    width: 490px;
+    height: 570px;
+    margin: 0 auto;
+    background: #ffffff;
+    -moz-box-shadow:0px 0px 10px #f0f1f3, 2px 2px 5px #f0f1f3;
+    -webkit-box-shadow:0px 0px 10px #f0f1f3, 2px 2px 5px #f0f1f3;
+    -o-box-shadow:0px 0px 10px #f0f1f3, 2px 2px 5px #f0f1f3;
+    -ms-box-shadow:0px 0px 10px #f0f1f3, 2px 2px 5px #f0f1f3;
+    box-shadow:0px 0px 10px #f0f1f3, 2px 2px 5px #f0f1f3;
+}
+
+.main .contentBox {
+    width: 382px;
+    margin: 0 auto;
+}
+
+.main .contentBox .title {
+    text-align: center;
+    font-size: 18px;
+    color: #40bafd;
+    height: 98px;
+    line-height: 98px;
+    margin-bottom: 15px;
+}
+
+.contentBox .infoList {
+    width: 382px;
+}
+
+.contentBox .infoList li {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.contentBox .infoList li input {
+    width: 332px;
+    height: 48px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding-left: 50px;
+    font-size: 15px;
+    font-family: 'Microsoft YaHei', '微软雅黑';
+}
+
+.contentBox .infoList li span {
+    position: absolute;
+    left: 19px;
+    top: 13px;
+    display: block;
+    width: 25px;
+    height: 25px;
+    background: url("../rsr_images/icons.png") no-repeat -293px -164px;
+}
+
+.contentBox .infoList li:nth-child(2) span {
+    top: 17px;
+    background: url("../rsr_images/icons.png") no-repeat -293px -202px;
+}
+
+.contentBox .infoList li:nth-child(3) span {
+    background: url("../rsr_images/icons.png") no-repeat -293px -232px;
+}
+
+.contentBox .infoList li:nth-child(4) span, .contentBox .infoList li:nth-child(5) span {
+    background: url("../rsr_images/icons.png") no-repeat -292px -124px;
+}
+
+.contentBox .infoList li:nth-child(6) {
+    height: 16px;
+}
+
+.contentBox .infoList li:nth-child(6) input {
+    width: 16px;
+    height: 16px;
+    vertical-align: -2px;
+}
+
+.contentBox .infoList li:nth-child(7) {
+    margin-top: 30px;
+    height: 50px;
+    width: 100%;
+    background: #3fbafd;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+}
+
+.contentBox .infoList li:nth-child(6) label,.contentBox .infoList li:nth-child(6) input {
+    -webkit-user-select: none;
+    cursor: pointer;
+}
+a.goAgreement{
+    color: #3fbafd;
+}
+.agreement {
+    transition: transform 0.5s;
+    position:fixed;
+    left: 0;
+    bottom: 0;
+    background: #fff;
+    width: 100%;
+    height: 100%;
+    display: none;
+    z-index: 9;
+}
+
+
+.agreement .title {
+    position: relative;
+    width: 100%;
+    height: 70px;
+    text-align: center;
+    line-height: 70px;
+    font-size: 18px;
+    color: #3c3c3c;
+    background: #f7f7f7;
+}
+
+.agreement .title .agreementRemoveBtn {
+    position: absolute;
+    width: 16px;
+    height: 16px;
+    background: url("../rsr_images/icons.png") no-repeat -232px -132px;
+    top: 23px;
+    right: 23px;
+    cursor: pointer;
+}
+
+
+
+.agreementBottom {
+    width: 100%;
+    height: 70px;
+    line-height: 70px;
+    background: #f7f7f7;
+    text-align: center;
+}
+
+.agreementContentPar {
+    position: relative;
+    width: 100%;
+    overflow: hidden;
+}
+.agreementContent p{
+    padding: 0px 40px;
+    line-height: 21px;
+}
+.agreementContent{
+    position:relative;
+    overflow: hidden;
+    height:500px;
+    width: 100%;
+}
+.agreementBottom .agreementBtn {
+    display: inline-block;
+    width: 95px;
+    height: 30px;
+    background: #3da1ff;
+    border-radius: 15px;
+    text-align: center;
+    line-height: 30px;
+    color: #fff;
+}
+button.btn{
+    margin-top: 30px;
+    height: 50px;
+    width: 100%;
+    background: #0788ff;
+    border-radius: 4px;
+    text-align: center;
+    line-height: 50px;
+    font-size: 20px;
+    color: #fff;
+    cursor: pointer;
+    border: none;
+    font-family: 'Microsoft YaHei', '微软雅黑';
+}
+.scroll_bar{
+    width: 100%;
+    height: 100%;
+    overflow: hidden;
+}
+div.iScrollIndicator{
+    z-index: 99999999!important;
+}
+
+.login_box{
+    height:120px;
+    width: 100%;
+    background: url("../rsr_images/hcm.png") no-repeat center #2d3137;
+}
+.w1002{
+    width:1002px;
+    margin: 0 auto;
+}
+.login_tt h2{
+    text-align: center;
+    font-size: 30px;
+    font-size: 24px;
+    color: #fff;
+    line-height: 120px;
+    letter-spacing: 1px;
+}

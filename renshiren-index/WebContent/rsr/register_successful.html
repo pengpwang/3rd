@@ -1,0 +1,52 @@
+﻿<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta charset="UTF-8">
+    <link rel="icon" href="rsr_images/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="rsr_images/favicon.ico" type="image/x-icon"/>
+    <title>人事人(北京)科技有限公司[官网]</title>
+    <meta name="keywords" content="">
+    <meta name="description" content="">
+    <link href="rsr_css/index.css" rel="stylesheet" type="text/css">
+    <link href="rsr_css/reset.min.css" rel="stylesheet" type="text/css">
+    <link href="rsr_css/register_successful.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<script src="rsr_js/tou.js"></script>
+<!--banner-->
+<div class="login_box">
+    <div class="w1002 login_tt">
+        <h2>HCM在线云平台</h2>
+    </div>
+</div>
+<!--end-->
+<div class="success_bg">
+    <div class="main">
+        <div class="m_pic"></div>
+        <p class="successInfo">注册成功</p>
+        <p class="skip"><span id="timer"></span>秒后，将自动为您跳转至系统首页......</p>
+    </div>
+</div>
+<script src="rsr_js/jiao.js"></script>
+<script type="text/javascript" src="rsr_js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="rsr_js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="rsr_js/public.js"></script>
+<!---->
+<script type="text/javascript">
+    jQuery(".nav_con").slide({ type:"menu",  titCell:".m", targetCell:".nav_son", effect:"slideDown",delayTime:300, triggerTime:0,});
+
+        var time=4;
+        function showTime(){
+            time -= 1;
+            if(time==1){
+                window.location.href='http://renshiren.com';
+            }
+            document.getElementById('timer').innerHTML= time;
+            setTimeout("showTime()",1000);
+        }
+        showTime();
+</script>
+</body>
+</html>

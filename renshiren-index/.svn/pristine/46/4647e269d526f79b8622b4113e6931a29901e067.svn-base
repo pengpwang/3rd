@@ -1,0 +1,35 @@
+/**
+ * Created by xcy on 2017/4/23.
+ * 公用底部和右侧
+ */
+/*导航下拉二级导航*/
+    function setTab(name,cursel,n){
+        for(i=1;i<=n;i++){
+            var menu=document.getElementById(name+i);
+            var con=document.getElementById("con_"+name+"_"+i);
+            menu.className=i==cursel?"on":"";
+            con.style.display=i==cursel?"block":"none";
+        }
+    };
+/*首页反馈弹窗*/
+$('.feedback').on('click',function () {
+    $('.feed_back').fadeIn();
+});
+$('.close_box').on('click',function () {
+    $('.feed_back').fadeOut();
+});
+/*返回顶部*/
+$(window).scroll(function(){
+    if($(window).scrollTop()>200){
+        $('.top').fadeIn(200);
+    }
+    else{
+        $('.top').fadeOut(200);
+    }
+})
+$('.top').click(function(){
+    $('body,html').animate({'scrollTop':'0px'},200)
+})
+
+/*在线咨询*/
+document.writeln("<script type=\'text/javascript\' charset=\'utf-8\' src=\'https://www.v5kf.com/143635/v5kf.js?style=2\'></script>");

@@ -1,0 +1,3 @@
+document.writeln(" <img src=\'rsr_images/er-code.png\' width=\'120\' height=\'120\' style=\'float:right;\' alt=\'人事人订阅号\' title=\'人事人订阅号\'/><p>本文由人事人<a href=\'http://www.renshiren.com\' target=\'_blank\'>（www.renshiren.com）</a>整理发布，转载请注明出处。人事人（北京）科技有限公司，是一个基于移动互联网的企业，为HR提供一套人力资源管理SaaS服务云平台；全方位为企业提供人力资源管理、<a href=\'http://www.renshiren.com/enterprise_payment.html\' target=\'_blank\'>社保服务</a>、薪酬规划、<a href=\'http://www.renshiren.com/bpo.html\' target=\'_blank\'>BPO流程外包</a>、医疗健康、福利规划等多项业务。身体力行“科技改变人力资源”，是企业值得信赖的好助手！</p>");
+document.writeln("<p>欢迎关注“人事人订阅号”，获取等多人力资源、社保等最新资讯。</p>");
+document.writeln("<div class=\'clear\'></div>");

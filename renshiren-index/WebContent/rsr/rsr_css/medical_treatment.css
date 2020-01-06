@@ -1,0 +1,329 @@
+/*默认显示*/
+.select_on{
+    color: #ff7b17!important;
+}
+.service_p6{
+    color: #ff7b17!important;
+}
+.medical_box{
+    width: 100%;
+    height: 500px;
+    background:url("../rsr_images/banner_yiliao.png") no-repeat center #42518c;
+}
+.w1002{
+    width: 1002px;
+    margin: 0px auto;
+}
+.medical_dis{
+    width: 100%;
+    background: #f5f5f7;
+}
+.medical_con h4 {
+    font-size:56px;
+    color: #fff;
+    text-align: center;
+    font-weight: bold;
+    padding-top: 164px;
+    padding-bottom: 10px;
+
+}
+.medical_con p{
+    text-align: center;
+    font-size: 16px;
+    line-height: 30px;
+    padding-bottom: 58px;
+    color:#fff;
+    letter-spacing: 2px;
+}
+.medical_con p font{
+    font-style: normal;
+    color: #fff000;
+}
+.medical_con a{
+    width: 194px;
+    height: 55px;
+    line-height: 55px;
+    text-align: center;
+    font-size: 20px;
+    color: #805f0c;
+    display: block;
+    margin: 0 auto;
+    background: #fbca4c;
+    border-radius: 27px;
+}
+.medical_ms p{
+    width: 100%;
+    background: #f5f5f7;
+    padding-top: 60px;
+    padding-bottom: 58px;
+    text-indent: 2em;
+    font-size: 14px;
+    line-height: 30px;
+    letter-spacing: -0.1px;
+    color: #646464;
+}
+.plan{
+    width: 100%;
+    height: auto;
+    padding-bottom: 66px;
+}
+.plan_tt h4{
+    color: #33373d;
+    font-size: 36px;
+    font-weight: normal;
+    padding: 60px 0px 50px 0px;
+    text-align: center;
+}
+.plan_tt p{
+    font-size: 14px;
+    color: #646464;
+    line-height: 30px;
+    text-indent: 2em;
+}
+.steps{
+    padding-top: 30px;
+}
+.steps_con{
+    width: 390px;
+    float: left;
+}
+.plan_icon{
+    text-align: center;
+    width: 200px;
+    text-align: center;
+    display: block;
+    font-size: 16px;
+    color: #3c3c3c;
+}
+.plan_icon img{
+    padding-bottom: 16px;
+}
+.list_1{
+    padding-top: 19px;
+}
+.list_1 dt{
+    width: 30px;
+    height: 30px;
+    line-height: 30px;
+    text-align: center;
+    background: #a0a0a0;
+    border: 2px solid #f5f5f5;
+    border-radius:50%;
+    color: #fff;
+    font-size: 16px;
+    float: left;
+}
+.list_1 dd{
+    float: left;
+    padding-left: 10px;
+    font-size: 14px;
+    color: #787878;
+    line-height: 26px;
+}
+.w200{
+    width:220px;
+}
+.contrast{
+    width: 100%;
+    padding-top: 82px;
+    padding-bottom: 64px;
+    background: #f5f5f7;
+}
+.contrast_con{
+    background: url("../rsr_images/duibi.png") no-repeat;
+    height: 525px;
+}
+.ques_l{
+    float: left;
+    width: 370px;
+    padding-top: 128px;
+    padding-left: 45px;
+}
+.ques_l p{
+    font-size: 14px;
+    color: #8c8c8c;
+    line-height: 22px;
+    padding-bottom: 24px;
+}
+.ques_r{
+    float: left;
+    width: 525px;
+    padding-top: 125px;
+    padding-left: 60px;
+}
+.ques_r p{
+    font-size: 14px;
+    color: #8c8c8c;
+    line-height: 28px;
+    padding-bottom: 30px;
+}
+.ques_r p em{
+    font-style: normal;
+    color: #f07c3e;
+}
+.pad_b16{
+    padding-bottom: 16px!important;
+}
+.pad_b15{
+    padding-bottom: 15px!important;
+}
+.pad_b20{
+    padding-bottom: 20px!important;
+}
+.case_box{
+    width: 100%;
+    height: auto;
+    background: #fff;
+}
+.case_con h4{
+    color: #33373d;
+    font-size: 36px;
+    font-weight: normal;
+    padding: 60px 0 50px;
+    text-align: center;
+    background: url("../rsr_images/line.png") repeat-x bottom;
+}
+.jj{
+    padding-top: 40px;
+}
+.jj_l{
+    float: left;
+    width: 820px;
+}
+.jj_l h4{
+    font-size: 20px;
+    color: #505050;
+    font-weight: normal;
+    background: url("../rsr_images/365_1.png") no-repeat;
+    padding-left: 50px;
+}
+.jj_l p{
+    font-size: 14px;
+    color: #646464;
+    line-height: 26px;
+    padding-left: 50px;
+    padding-top: 20px;
+    padding-bottom: 28px;
+    border-bottom: 1px dashed #dcdcdc;
+}
+.jj_l p em{
+    font-size: 18px;
+    color: #f07c3e;
+    font-style: normal;
+}
+.jj_r{
+    width: 132px;
+    float: right;
+}
+.gs_ms{
+    padding: 40px 0px 10px 0px;
+    border-bottom: 1px dashed #dcdcdc;
+}
+.gs_l{
+    width: 215px;
+    float:left;
+}
+.gs_l h3{
+    font-size: 18px;
+    color: #505050;
+    font-weight: normal;
+    background: url("../rsr_images/365_2.png") no-repeat left 5px;
+    padding-left: 50px;
+}
+.gs_r ul{
+    width: 785px;
+    float: left;
+}
+.gs_r ul li{
+    width: 261px;
+    float: left;
+    padding-bottom: 20px;
+}
+.gs_r ul li span{
+    width: 28px;
+    height: 28px;
+    display: block;
+    color: #f07c3e;
+    float: left;
+    font-size: 14px;
+    padding-top: 5px;
+}
+.gs_r ul li p{
+    display: block;
+    float: left;
+    font-size: 14px;
+    line-height: 30px;
+}
+.gs_r{
+    float: left;
+}
+.gsfw{
+     padding: 40px 0px;
+}
+.gsfl_l{
+    float: left;
+}
+.gsfl_l h3{
+    font-size: 18px;
+    color: #505050;
+    font-weight: normal;
+    background: url("../rsr_images/365_3.png") no-repeat left;
+    padding-left: 50px;
+    height: 40px;
+    line-height: 40px;
+}
+.gsfl_r{
+    float: right;
+    width: 785px;
+}
+.pro_con dl{
+    padding-bottom: 17px;
+}
+.pro_con dl dd{
+    position: relative;
+}
+.pro_con dl dd em{
+    width: 3px;
+    height: 8px;
+    display: block;
+    position: absolute;
+    left: -3px;
+    top:16px;
+    background: url("../rsr_images/jiao2.png") no-repeat;
+}
+.pro_con dl dt{
+    width:160px;
+    float: left;
+    font-size: 14px;
+    line-height:40px;
+    color: #4e4e4e;
+}
+.pro_con dl dt i{
+    font-size: 14px;
+    color: #5c5c5c;
+    font-weight: bold;
+    font-style: normal;
+}
+.pro_con dl dd{
+    float: left;
+    width: 590px;
+    background: #f6f6f6;
+    padding-left: 35px;
+}
+.pro_con dl dd a{
+    line-height: 40px;
+    margin-right: 60px;
+    color: #646464;
+    font-size: 14px;
+}
+.pro_con dl dd img{
+    padding-right: 15px;
+}
+.pro_con dl dd p{
+    line-height: 40px;
+    color: #646464;
+    font-size: 14px;
+}
+.pad{
+    padding: 6px 0px;
+}

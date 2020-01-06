@@ -1,0 +1,228 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge,chrome=1">
+    <meta name="format-detection" content="telephone=no" />
+    <meta charset="UTF-8">
+    <link rel="icon" href="rsr_images/favicon.ico" type="image/x-icon" />
+    <link rel="shortcut icon" href="rsr_images/favicon.ico" type="image/x-icon"/>
+    <title>人事人_发展历程</title>
+    <meta name="keywords" content="北京人事人科技公司，北京代缴社保公司，北京提供社保代缴服务" />
+    <meta name="description" content="人事人，人事服务SAAS云平台，倾心为企业提供代缴五险一金、薪酬管理、员工福利方案、BPO业务流程外包等专业服务。">
+    <link href="rsr_css/reset.min.css" rel="stylesheet" type="text/css">
+    <link href="rsr_css/index.css" rel="stylesheet" type="text/css">
+    <link href="rsr_css/dev_course.css" rel="stylesheet" type="text/css">
+</head>
+<body>
+<script src="rsr_js/tou.js"></script>
+<div class="about_con">
+    <div class="w1002 gy_con">
+        <p class="gy_top">做中国<em>领先</em>的<br/>人力成本优化解决方案+人力资源SAAS软件服务商</p>
+        <p class="about_ms">致力于用科技推动中国人力资源管理的变革</p>
+    </div>
+</div>
+<div class="sub_nav">
+    <div class="w1002 sub_list">
+        <a href="about.html" title="人事人介绍" >人事人介绍</a>
+        <a href="dynamic.html" title="人事人动态">人事人动态</a>
+        <a href="dev_course.html" title="发展历程" class="on">发展历程</a>
+        <a href="media_list.html" title="媒体报道">媒体报道</a>
+    </div>
+</div>
+<div class="history w1002 clear">
+    <div class="his_con clear">
+        <i><img src="rsr_images/shebao_top.png" alt=""/></i>
+        <dl class="list_year clear">
+            <core></core>
+            <dt>2008</dt>
+            <dd>
+                <font class="dotes"></font>
+                <p>天津力晖成立</p>
+                <p>杭州欧凯人力成立</p>
+            </dd>
+        </dl>
+        <dl class="list_year clear lcl_con">
+            <core id="left_dote"></core>
+            <dt class="lcl">2009</dt>
+            <dd class="font_r">
+                <font  class="dotes_r"></font>
+                <p>天津力晖成立</p>
+            </dd>
+        </dl>
+        <dl class="list_year clear">
+            <core></core>
+            <dt>2011</dt>
+            <dd>
+                <font class="dotes"></font>
+                <p>人事人立项</p>
+            </dd>
+        </dl>
+        <dl class="list_year clear lcl_con">
+            <core id="left_dote"></core>
+            <dt class="lcl">2012</dt>
+            <dd class="font_r">
+                <font  class="dotes_r"></font>
+                <p>人事人立项</p>
+                <p>中锐上海，广州分公司成立</p>
+            </dd>
+        </dl>
+        <dl class="list_year clear">
+            <core></core>
+            <dt>2013</dt>
+            <dd>
+                <font class="dotes"></font>
+                <p>人事人立项</p>
+                <p>欧凯南京，宁波分公司成立</p>
+            </dd>
+        </dl>
+        <dl class="list_year clear lcl_con">
+            <core id="left_dote"></core>
+            <dt class="lcl">2015</dt>
+            <dd class="font_r">
+                <font  class="dotes_r"></font>
+                <p>人事人互联网平台成立</p>
+                <p>人事人（北京）科技有限公司成立</p>
+            </dd>
+        </dl>
+        <dl class="list_year clear">
+            <core></core>
+            <dt>2015年底</dt>
+            <dd>
+                <font class="dotes"></font>
+                <p>人事人主要人员架构搭建</p>
+                <p>SAAS产品定型</p>
+            </dd>
+        </dl>
+        <dl class="list_year clear lcl_con">
+            <core id="left_dote"></core>
+            <dt class="lcl">2016年初</dt>
+            <dd class="font_r">
+                <font  class="dotes_r"></font>
+                <p>人事人整合中锐，欧凯，力晖三家人力服务机构</p>
+            </dd>
+        </dl>
+        <div class="clear"></div>
+        <em><img src="rsr_images/shebao_bottom.png" alt=""/></em>
+    </div>
+</div>
+<!--footer-->
+<div class="footer">
+    <div class="foot">
+        <strong>人事人</strong> ——科技改变人力资源
+    </div>
+</div>
+<div class="footer_con">
+    <div class="address clear">
+        <div class="add_l">
+            <p>人事人集团</p>
+            <div class="add_title slideTxtBox">
+                <ul class="clear">
+                    <li id="one1" class="on" onmouseover="setTab('one',1,8)" ><a title="北京" href="javascript:;">北京</a></li>
+                    <li id="one2" onmouseover="setTab('one',2,8)" ><a title="天津" href="javascript:;">天津</a></li>
+                    <li id="one3" onmouseover="setTab('one',3,8)"><a title="上海" href="javascript:;">上海</a></li>
+                    <li id="one4" onmouseover="setTab('one',4,8)"><a title="杭州" href="javascript:;">杭州</a></li>
+                    <li id="one5" onmouseover="setTab('one',5,8)"><a title="宁波" href="javascript:;">宁波</a></li>
+                    <li id="one6" onmouseover="setTab('one',6,8)"><a title="广州" href="javascript:;">广州</a></li>
+                    <li id="one7" onmouseover="setTab('one',7,8)"><a title="南京" href="javascript:;">南京</a></li>
+                    <li id="one8" onmouseover="setTab('one',8,8)"><a title="贵州" href="javascript:;">贵州</a></li>
+                </ul>
+                <div class="add_con"  id="con_one_1">
+                    <p>人事人（北京）科技有限公司<br/>地址：朝阳区soho现代城A座3702</p>
+                    <p> 北京中锐博远人力资源顾问有限公司 <br/>地址：北京市朝阳区soho现代城a座3702</p>
+                </div>
+                <div class="add_con" style="display: none"  id="con_one_2">
+                    <p>人事人（北京）科技有限公司<br/>地址：天津市南开区鞍山西道265号时代广场2702</p>
+
+                </div>
+                <div class="add_con" style="display: none"  id="con_one_3">
+                    <p>人事人（上海）科技有限公司<br/>上海市闸北区恒通路360号一天下大厦19C10</p>
+
+                </div>
+                <div class="add_con" style="display: none"  id="con_one_4">
+                    <p>人事人（杭州）科技有限公司<br/>地址：杭州市西湖区万塘路252号计量大厦11层1108-1112</p>
+
+                </div>
+                <div class="add_con" style="display: none"  id="con_one_5">
+                    <p>人事人（宁波）科技有限公司<br/>地址：宁波市高新区江南路559号科技大厦4层406</p>
+
+                </div>
+                <div class="add_con" style="display: none"  id="con_one_6">
+                    <p>人事人（广州）科技有限公司<br/>地址：广州市天河区河北路559号太平洋保险大厦2301 A16</p>
+                </div>
+                <div class="add_con" style="display: none"  id="con_one_7">
+                    <p>人事人（南京）科技有限公司<br/>地址：南京市建邺区庐山路158号嘉业国际城2幢1903</p>
+
+                </div>
+                <div class="add_con" style="display: none"  id="con_one_8">
+                    <p>人事人（贵州）科技有限公司<br/></p>
+                </div>
+            </div>
+            <p class="sitemap">
+                <a href="#" title="站点地图">站点地图</a>
+                <a href="#" title="网站地图">网站地图</a>
+            </p>
+        </div>
+        <div class="add_r">
+            <dl class="server">
+                <dt>服务</dt>
+                <dd><a href="recruitment.html" title="加入我们">加入我们</a></dd>
+                <dd><a href="about.html" title="全国服务网络">全国服务网络</a></dd>
+                <dd><a href="ask.html" title="常见问答">常见问答</a></dd>
+                <dd><a href="privacy.html" title="用户协议">用户协议</a></dd>
+                <dd><a href="javascript:;" title="反馈" class="feedback">反馈</a></dd>
+            </dl>
+            <dl class="teamwork">
+                <dt>市场商务合作</dt>
+                <dd>座机：010-8589319转8016</dd>
+                <dd>Email：server@renshiren.com</dd>
+                <dd class="qr_code">
+                    <a href="javascript:;" title="微信"><img src="rsr_images/weixin.png" alt="人事人微信" width="107" height="107"/><br/>微信二维码</a>
+                    <a href="javascript:;" title="微博" class="e_webo"><img src="rsr_images/weibo.png" alt="人事人微博" width="107" height="107"/><br/>微博二维码</a>
+                </dd>
+            </dl>
+        </div>
+    </div>
+</div>
+<div class="link">
+    <div class="link_con clear">
+        <span><a title="友情链接">友情链接：</a></span>
+        <p>
+            <a href="#" title="北京中锐博远" target="_blank">北京中锐博远</a>
+            <a href="#" title="天津力晖" target="_blank">天津力晖</a>
+            <a href="#" title="上海锐播" target="_blank">上海锐播</a>
+            <a href="#" title="杭州欧凯" target="_blank">杭州欧凯</a>
+            <a href="#" title="浙江薪云" target="_blank">浙江薪云</a>
+        </p>
+    </div>
+</div>
+<div class="copy">
+    <div class="copy_con">
+        Copyright © 2015-2016 人事人（北京）科技有限公司(www.renshiren.com) 京ICP备15067691号
+    </div>
+</div>
+<div class="feed_back">
+    <div class="back_con">
+        <div class="tt">
+            <P>建议反馈</P>
+            <a class="close_box">×</a>
+        </div>
+        <div class="tt_con clear">
+            <p>
+                终于等到你，很高兴为您服务，您可以通过以下方式联系我们
+            </p>
+            <p><strong>北京服务中心</strong></p>
+            <p>地址:朝阳区soho现代城A座3702</p>
+            <p>电话: 400-888-0556</p>
+            <p>Email: <a href="mailto:severs@renshiren.com" target="_blank" class="e_Email">severs@renshiren.com</a></p>
+        </div>
+    </div>
+</div>
+<script type="text/javascript" src="rsr_js/jquery-1.11.3.min.js"></script>
+<script type="text/javascript" src="rsr_js/jquery.SuperSlide.2.1.1.js"></script>
+<script type="text/javascript" src="rsr_js/public.js"></script>
+<script type="text/javascript">
+    jQuery(".nav_con").slide({ type:"menu",  titCell:".m", targetCell:".nav_son", effect:"slideDown",delayTime:300, triggerTime:0,});
+</script>
+</body>
+</html>

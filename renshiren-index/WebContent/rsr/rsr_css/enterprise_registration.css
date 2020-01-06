@@ -1,0 +1,150 @@
+.reset_bg{
+    background: #f4f8f9;
+    padding-top: 110px;
+    padding-bottom: 160px;
+}
+
+.main {
+    margin: 0 auto;
+    width: 490px;
+    height: 400px;
+    background: #ffffff;
+    -moz-box-shadow:0px 0px 10px #f0f1f3, 2px 2px 5px #f0f1f3;
+    -webkit-box-shadow:0px 0px 10px #f0f1f3, 2px 2px 5px #f0f1f3;
+    -o-box-shadow:0px 0px 10px #f0f1f3, 2px 2px 5px #f0f1f3;
+    -ms-box-shadow:0px 0px 10px #f0f1f3, 2px 2px 5px #f0f1f3;
+    box-shadow:0px 0px 10px #f0f1f3, 2px 2px 5px #f0f1f3;
+}
+
+.main .contentBox {
+    width: 382px;
+    margin: 0 auto;
+}
+
+.contentBox .goBack {
+    display: block;
+    color: #3fbafd;
+    font-size: 14px;
+    padding-bottom: 5px;
+}
+
+.main .contentBox .title {
+    text-align: center;
+    font-size: 18px;
+    color: #3fbafd;
+    height: 98px;
+    line-height: 98px;
+    margin-bottom: 15px;
+}
+
+.contentBox .infoList {
+    width: 382px;
+}
+
+.contentBox .infoList li {
+    position: relative;
+    margin-bottom: 10px;
+}
+
+.contentBox .infoList li input {
+    width: 330px;
+    height: 48px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    padding-left: 50px;
+    font-size: 15px;
+    font-family: 'Microsoft YaHei', '微软雅黑';
+}
+.contentBox .infoList li span {
+    position: absolute;
+    left: 19px;
+    top: 13px;
+    display: block;
+    width: 25px;
+    height: 25px;
+    background: url("../rsr_images/icons.png") no-repeat -292px -36px;
+}
+
+.contentBox .infoList li:nth-child(2) span {
+    width: 25px;
+    height: 25px;
+    background: url("../rsr_images/icons.png") no-repeat -292px -81px;
+    float: left;
+}
+
+.contentBox .infoList li:nth-child(2) input {
+    width: 170px;
+}
+
+.contentBox .infoList li.getAuthCodeBox {
+    float: right;
+    width: 148px;
+    height: 48px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 18px;
+    line-height: 48px;
+    text-align: center;
+    color: #0788fd;
+    cursor: pointer;
+}
+
+.contentBox .infoList li:nth-child(3) span {
+    background: url("../rsr_images/icons.png") no-repeat -293px -124px;
+}
+.contentBox .infoList li:nth-child(4) span {
+    background: url("../rsr_images/icons.png") no-repeat -293px -124px;
+}
+.contentBox .infoList .btn {
+    margin-top: 58px;
+    width: 383px;
+    height: 50px;
+    background: #3fbafd;
+    border-radius: 4px;
+    border: none;
+    color: #fff;
+    font-size: 18px;
+    cursor: pointer;
+    font-family: "Microsoft YaHei", 微软雅黑;
+}
+
+.logo_box {
+    float: left;
+    width: 234px;
+    height: 570px;
+    background: #c1e5ff;
+}
+#getAuthCode{
+    float: right;
+    width: 148px;
+    height: 50px;
+    border: 1px solid #ccc;
+    border-radius: 4px;
+    font-size: 18px;
+    line-height: 50px;
+    text-align: center;
+    color: #3fbafd;
+    cursor: pointer;
+    padding: 0!important;
+    font-family: "Microsoft YaHei", 微软雅黑;
+    background: #fff;
+}
+
+
+.login_box{
+    height:120px;
+    width: 100%;
+    background: url("../rsr_images/hcm.png") no-repeat center #2d3137;
+}
+.w1002{
+    width:1002px;
+    margin: 0 auto;
+}
+.login_tt h2{
+    text-align: center;
+    font-size: 30px;
+    font-size: 24px;
+    color: #fff;
+    line-height: 120px;
+    letter-spacing: 1px;
+}

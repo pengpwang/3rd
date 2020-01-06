@@ -1,0 +1,172 @@
+
+.select_about {
+    color: #ff7b17 !important;
+}
+
+.join {
+    text-indent: -9999999em;
+    height: 300px;
+    width: 100%;
+    overflow: hidden;
+    background: url("../rsr_images/zhaopin.png") no-repeat center #a7abae;
+}
+
+.w1002 {
+    width: 1002px;
+    margin: 0px auto;
+}
+
+.join_con {
+    padding-top: 42px;
+    padding-bottom: 60px;
+}
+
+.join_con h3 {
+    font-size: 18px;
+    color: #979797;
+    font-weight: normal;
+    letter-spacing: 1px;
+    line-height: 40px;
+    cursor: pointer;
+    padding-left: 28px;
+    z-index: 99;
+}
+
+.join_con h3.on {
+    color: #fe7d1f;
+}
+
+.join_con h3 i {
+    font-style: normal;
+    font-size: 14px;
+}
+
+.join_us {
+    border: 1px solid #e4e4e4;
+    width: 938px;
+    position: relative;
+    margin: 20px auto;
+}
+
+.join_con ul {
+    display: none;
+}
+
+.join_us em {
+    background: #fff none repeat scroll 0 0;
+    border-bottom: 1px solid #c9e9c0;
+    border-right: 1px solid #c9e9c0;
+    top: -8px;
+    height: 13px;
+    left: 39px;
+    overflow: hidden;
+    position: absolute;
+    width: 13px;
+    -webkit-transform: rotate(-136deg);
+    -moz-transform: rotate(-136deg);
+    -o-transform: rotate(-136deg);
+    transform: rotate(-136deg);
+}
+
+.origin, .origin2, .origin3, .origin4, .origin5 {
+    height: 200px;
+    overflow: hidden;
+    position: relative;
+    padding: 17px;
+    height: 200px;
+}
+
+.fl {
+    float: left;
+}
+
+.fr {
+    float: right;
+}
+
+.jobs {
+    /*width: 287px;*/
+    padding-right: 30px;
+}
+
+.jobs strong {
+    font-size: 16px;
+    color: #333;
+    font-weight: normal;
+    padding-bottom: 12px;
+    display: block;
+}
+
+.jobs p {
+    font-size: 13px;
+    color: #5f5f61;
+    line-height: 26px;
+}
+
+.office {
+    width: 565px;
+}
+
+.office strong {
+    font-size: 16px;
+    color: #333;
+    font-weight: normal;
+    padding-bottom: 12px;
+    display: block;
+    padding-left: 25px;
+}
+
+.office p {
+    font-size: 13px;
+    color: #5f5f61;
+    line-height: 26px;
+    border-left: 1px dashed #ccc;
+    padding-left: 25px;
+    letter-spacing: 1px;
+}
+
+.nr {
+    padding-bottom: 20px;
+    padding-top: 30px;
+}
+
+.pb {
+    padding-bottom: 20px;
+}
+
+.origin2, .origin3, .origin4, .origin5 {
+    height: 200px;
+    overflow-y: auto;
+}
+
+.zUIpanelScrollBox, .zUIpanelScrollBar {
+    width: 10px;
+    top: 4px;
+    right: 0px;
+    border-radius: 5px;
+}
+
+.zUIpanelScrollBox {
+    background: #fff;
+    opacity: 0.1;
+    filter: alpha(opacity=10);
+}
+
+.zUIpanelScrollBar {
+    background: #333;
+    opacity: 0.8;
+    filter: alpha(opacity=80);
+}
+
+.linkman {
+    height: 90px;
+    background: #eee;
+    padding-top: 20px;
+    padding-left: 30px;
+}
+
+.linkman p {
+    color: #484848;
+    font-size: 16px;
+    line-height: 30px;
+}
