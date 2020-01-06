@@ -1,0 +1,38 @@
+/* pages/payselect/payselect.wxss */
+.p-o-infor{
+  background: #fdf5f5;
+  font-size:28rpx;
+  padding: 20rpx;
+  box-shadow: 3rpx 3rpx 3rpx #dedede;
+}
+.clr53{
+  display: inline-block;
+  color: red
+}
+.pad-top{
+  font-size: 26rpx;
+  padding-top: 10rpx
+}
+.p-o-method{
+  margin-top: 30rpx;
+  padding: 20rpx;
+  font-size: 30rpx;
+  position: relative;
+  border-bottom: 1px solid #ddd
+}
+.money{
+  position:absolute;
+  right: 20rpx;
+  top: 20rpx
+}
+.payBtn{
+  margin-top: 20rpx;
+  padding: 20rpx
+}
+.payBtn button{
+  background:#f25454;
+  color:#fff;
+  height: 70rpx;
+  line-height: 70rpx;
+  font-size: 30rpx
+}

@@ -1,0 +1,42 @@
+<!--pages/specificationParameter/specificationParameter.wxml-->
+<view class='specificationParameter common'>
+    <view class='top-head flex'>
+        <view class='head-item'>详细介绍</view>
+        <view class='head-item active'>规格参数</view>
+        <view class='head-item'>商品评价</view>
+        <view class='head-item'>商品咨询</view>
+    </view>
+    <view class='container-box'>
+        <!--规格参数-->
+        <view class='content' hidden>
+          <view class='content-item flex' wx:for='{{8}}'>
+              <view class='item-left'>商品编号</view>
+              <view class='item-right'>#999999</view>
+          </view>
+        </view>
+        <!--商品评价-->
+        <view class='evaluation'>
+            <view class='evaluation-tag flex'>
+                <view class='tag-item total'>全部</view>
+                <view class='tag-item'>很好用(161)</view>
+                <view class='tag-item'>真的很实惠(161)</view>
+                <view class='tag-item'>质量好(161)</view>
+            </view>
+            <view class='evaluation-list-con'>
+                <view class='evaluation-list' wx:for='{{5}}'>
+                    <view class='evaluation-top flex'>
+                        <image src='/images/index/swiper.png'></image>
+                        <view class='nickName overflow1'>wudidednnwudidednnwudidednnwudidednnwudidednnwudidednnwudidednnwudidednn</view>
+                        <view class='time'>2018-01-01</view>
+                    </view>
+                    <view class='evaluation-desc pad'>质量真的很好质量真的很好质量真的很好质量真的很好质量真的很好</view>
+                    <view class='evaluation-tagcon pad'>女款/套装/套装一</view>
+                    <view class='evaluation-img flex pad'>
+                        <image src='/images/index/swiper.png'></image>
+                        <image src='/images/index/swiper.png'></image>
+                    </view>
+                </view>
+            </view>
+        </view>
+    </view>
+</view>

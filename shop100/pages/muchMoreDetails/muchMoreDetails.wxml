@@ -1,0 +1,80 @@
+<!--pages/muchMoreDetails/muchMoreDetails.wxml-->
+<view class='muchMoreDetails common'>
+    <!-- 商品轮播 -->
+    <view class='top-swiper'>
+      <image mode="aspectFit" src="{{imageHost + data.actBidding.image}}" class="slide-image" width="355" height="150" />
+    </view>
+    <!-- 商品价格 -->
+    <view class='commodity-descon flex'>
+        <view class='priceCon flex'>
+            <view class='name'>首付款:</view>
+            <view class='price'>￥{{data.actBidding.firstPrice}}</view>
+        </view>
+        <view class='oldPrice'>市场价:￥{{data.actBidding.marketPrice}}</view>
+        <view wx:if="{{data.stageType == 1}}" class='time'>
+            <view>即将开始</view>
+        </view>
+        <view wx:elif="{{data.stageType == 2}}" class='time'>
+            <view>距离结束还剩：</view>
+            <view class='day'>{{timeStr}}</view>
+        </view>
+        <view wx:else class='time'>
+            <view>阶梯竞价已结束</view>
+        </view>
+    </view>
+    <!-- 商品名称等 -->
+    <view class='commodity-name commodity-pad'>
+        <view class='commodityNums'>{{data.actBidding.virtualSaleNum + data.actBidding.saleNum}}人已参团</view>
+        <view class='commodityName'>{{data.actBidding.productName}}</view>
+        <view class='commodityTag'>{{data.actBidding.name}}</view>
+    </view>
+    <!-- 尺寸选择 -->
+    <view wx:if="{{data.norms.length > 0}}" class='commodity-size pad33'>
+        <view class='has-item flex'>
+            <view class='name'>已选：</view>
+            <view class='hasBox flex'>
+                <view class='name-item'>{{normAttr0}}</view>
+                <view class='name-item'>{{normAttr1}}</view>
+                <view class='name-item'>{{amount}}</view>
+            </view>
+        </view>
+        <view wx:for="{{data.norms}}" wx:for-index="index0" class='color-item flex'>
+            <view class='name'>{{item.name}}：</view>
+            <view class='colorBox flex'>
+                <view bindtap="chooseAttr" data-name="{{item.name}}" data-i="{{item.id}}" data-index="{{index0}}" wx:for="{{item.attrList}}" class='box {{(index0==0 && normAttrId0==item.id)||(index0==1 && normAttrId1==item.id)?"active":""}}'>{{item.name}}</view>
+            </view>
+        </view>
+    </view>
+    <!-- 商品剩余 -->
+    <view class='commodity-has  pad33 commodity-border flex'>
+        <view class='numsName wid flex'>
+            <view class='name'>剩余库存:</view>
+            <view class='hasNums'>{{productStock}}</view>
+        </view>
+    </view>
+    <!-- 商品数量 -->
+    <view class='commodity-border' style="padding: 30rpx 0">
+      <view class='commodity-nums  pad33 flex'>
+          <view class='numsName'>数量</view>
+          <view bindtap="removeNum" class='numsBtn remove'>-</view>
+          <view class='numsVal'>{{amount}}</view>
+          <view bindtap="addNum" class='numsBtn add'>+</view>
+          <view class='numsName'>单次限购{{data.actBidding.purchase}}件</view>
+      </view>
+      <view wx:if="{{data.stageType==1}}" class="commodityTag pad33">活动开始时间：{{data.actBidding.startTime}}</view>
+      <view wx:elif="{{data.stageType==2}}" class="commodityTag pad33">活动结束时间：{{data.actBidding.endTime}}</view>
+      <view class="commodityTag pad33">订金截止时间：{{data.actBidding.firstEndTime}}</view>
+      <view class="commodityTag pad33">尾款截止时间：{{data.actBidding.lastEndTime}}</view>
+    </view>
+    <view class='foot-btn flex'>
+        <button bindtap="toDetail" data-i="{{data.actBidding.productId}}" class='btn btn1 opacity'>对比原商品</button>
+        <button wx:if="{{data.stageType == 1}}" class='btn opacity'>敬请期待</button>
+        <button bindtap="buyNow" wx:elif="{{data.stageType == 2}}" disabled="{{btnDisable}}" class='btn opacity'>立即抢购</button>
+        <button wx:else class='btn opacity'>阶梯竞价结束</button>
+    </view>
+    <view class='commodity-border' style="padding: 30rpx 0">
+      <view class="commodityTag pad33">初始价格： {{data.actBidding.price}}</view>
+      <view wx:for="{{data.actBiddingPrices}}" class="commodityTag pad33">{{item.saleNum}}人： ¥{{item.price}}</view>
+    </view>
+    <view class='commodity-border'>其它内容</view>
+</view>

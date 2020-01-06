@@ -1,0 +1,83 @@
+page{
+  background: #f5f6fb;
+  font-family:PingFang-SC-Medium;
+}
+
+.goods-pannel{
+  padding-left: 48rpx;
+  background: #fff;
+}
+
+.goods-item{
+  height: 216rpx;
+  padding-bottom: 10rpx;
+  padding-top: 10rpx;
+  border-bottom: 1px solid #E0E0E0;  
+  display: flex;
+  justify-content: space-between;
+  align-items: flex-end;
+}
+
+.goods-info{
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  height: 100%;
+}
+.goods-pic{
+  margin-right: 17rpx;
+  width: 208rpx;
+  height: 208rpx;
+}
+.goods-pic image{
+  width: 190rpx;
+  height: 180rpx;
+}
+
+.goods-addition{
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+  align-items: flex-start;
+  padding-top: 14rpx;
+  height: 100%;
+}
+
+.goods-name{
+  font-size: 26rpx;
+  color: #333;
+  margin-bottom: 26rpx;
+  width: 340rpx;
+}
+
+.goods-groupon-num{
+  font-size: 20rpx;
+  color: #999;
+}
+
+.goods-price{
+  font-size: 30rpx;
+  color: #EA2831;
+}
+
+.goods-price-symbol{
+  font-size: 18rpx;
+}
+
+.goods-cancel-c{
+  width: 130rpx;
+  height: 44rpx;
+  border: 1px solid #FF4648;
+  border-radius: 22rpx;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  color: #FF4648;
+  font-size: 20rpx;
+  margin-right: 30rpx;
+  margin-bottom: 22rpx;
+}
+
+.goods-item:last-child{
+  border-bottom: none;
+}

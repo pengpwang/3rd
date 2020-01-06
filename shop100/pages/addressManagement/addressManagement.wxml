@@ -1,0 +1,38 @@
+<view class="container">
+  <view class="add-wrap">
+    <radio-group bindchange="radioChange">
+      <view class="add-item" wx:for="{{ addressArr }}" wx:key="unique">
+        <view class="add-t">
+          <view class="add-name">
+            <text class="add-name-txt">{{ item.name }}</text>
+            <view class="add-seled" hidden="{{ !item.isDefault }}">默认</view>
+          </view>
+          <view class="add-info">
+            <view class="add-info-phone">{{ item.phoneNum }}</view>
+            <view class="add-info-add">{{ item.address }}</view>
+          </view>
+        </view>
+        <view class="add-l">
+          <image src="../../images/line-red-blue.png" class="add-line" />
+        </view>
+        <view class="add-b">
+          <label class="add-select">
+            <radio class="add-select-sel" checked="{{ item.isDefault }}" value="{{ item.id }}" color="#FF4648" />
+            <view class="add-moren-add">默认地址</view>
+          </label>
+          <view class="add-actions">
+            <view class="add-action-edit">
+              <image src="../../images/shoppingCar/icon-del.png" class="add-action-edit-icon" />
+              <view class="add-action-edit-txt">编辑</view>
+            </view>
+            <view class="add-action-del">
+              <image src="../../images/shoppingCar/icon-del.png" class="add-action-del-icon" />
+              <view class="add-action-del-txt">删除</view>
+            </view>
+          </view>
+        </view>
+      </view>
+    </radio-group>
+  </view>
+  <view class="add-addNew" hover-class="hover-opacity">添加新地址</view>
+</view>

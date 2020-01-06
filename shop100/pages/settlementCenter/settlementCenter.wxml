@@ -1,0 +1,73 @@
+<view class="container">
+  <view class="pannel-wrap">
+    <view class="expect-money-pannel">
+      <view class="exp-list-wrap">
+        <view class="exp-list-addtion">预计收入</view>
+        <view class="exp-lists">
+          <view class="exp-money">￥<text class="exp-money-num">10</text></view>
+          <view class="exp-list">
+            <icon type="success" class="icon-c" size="25rpx" />
+            <text class="success-txt">0单已完成购买</text>
+          </view>
+          <view class="exp-list-add-txt">满足以下条件可提现佣金</view>
+          <view class="exp-list">
+            <icon type="success" class="icon-c" size="25rpx" />
+            <text class="success-txt">客户满意</text>
+          </view>
+          <view class="exp-list">
+            <icon type="success" class="icon-c" size="25rpx" />
+            <text class="success-txt">订单完成</text>
+          </view>
+          <view class="exp-list">
+            <icon type="success" class="icon-c" size="25rpx" />
+            <text class="success-txt">无退换货问题且过期限</text>
+          </view>
+        </view>
+      </view>
+      <view class="exp-addtion">注：预计收入中的奖励明细在符合提现时，系统自动生成</view>
+    </view>
+    <view class="get-money-pannel">
+      <view class="get-money-addtion">可提现</view>
+      <view class="btn-get-money">提现</view>
+      <view class="other-wrap">
+        <view class="exp-money">￥<text class="exp-money-num">10</text></view>
+        <view class="get-money-tip">
+          <icon type="success" class="icon-c" size="25rpx" />
+          <text class="get-money-tip-txt">0单可提现</text>
+        </view>
+        <view class="get-m-line">
+          <view class="get-m-line-l">
+            <view class="get-m-line-l-money">¥3.08</view>
+            <view class="get-m-line-l-mtxt">提现中……</view>
+          </view>
+          <view class="get-money-status">
+            <icon type="waiting" class="icon-d" size="21rpx"  />
+            <text class="get-money-status-txt">1单正在审核结算中</text>
+          </view>
+        </view>
+        <view class="get-m-line mg-b">
+          <view class="get-m-line-l">
+            <view class="get-m-line-l-money">¥60.08</view>
+            <view class="get-m-line-l-mtxt">已提现</view>
+          </view>
+          <view class="get-money-status">
+            <icon type="waiting" class="icon-d" size="21rpx"  />
+            <text class="get-money-status-txt">29单已提现完毕</text>
+          </view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="query-result">
+    <view class="q-r-item" wx:for="{{ queryResultArr }}" wx:key="unique">
+      <view class="q-r-item-info">
+        <view class="q-r-item-person"><view class="q-r-item-person-s">姓名：</view><text class="q-r-item-person-name">{{ item.name }}</text></view>
+        <view class="q-r-if">是否打款：{{ item.isOk ? '是' : '否' }}</view>
+      </view>
+      <view class="q-r-item-time"><view class="q-r-item-person-s">身份证号：</view><text class="q-r-item-time-info">{{ item.idcard }}</text></view>
+      <view class="q-r-item-time"><view class="q-r-item-person-s">金额：</view><text class="q-r-item-time-info">¥{{ item.price }}</text></view>
+      <view class="q-r-item-time"><view class="q-r-item-person-s">取款时间：</view><text class="q-r-item-time-info">{{ item.time }}</text></view>
+      <view class="q-r-item-time"><view class="q-r-item-person-s">取款时间：</view><text class="q-r-item-time-info">{{ item.time }}</text></view>
+    </view>
+  </view>
+</view>

@@ -1,0 +1,54 @@
+<view class="container">
+  <view class="query-wrap">
+    <view class="query-item">
+      <view class="query-item-txt">当前状态</view>
+      <view class="kaitong-status">审核通过</view>
+    </view>
+    <view class="query-item">
+      <view class="query-item-txt">*证件类型</view>
+      <picker class="selector-picker" mode="selector" bindchange="bindIdCardPickerChange" range="{{ idcardArr }}" value="{{ idcardIndex }}">
+        <view class="selector-picker-txt flex">{{ idcardArr[idcardIndex] }}</view>
+      </picker>
+      <view class="selector-picker-cart"></view>
+    </view>
+    <view class="query-item">
+      <view class="query-item-txt">*证件号</view>
+      <view class="item-right-txt-zc">370683199006189210</view>
+    </view>
+    <view class="query-item">
+      <view class="query-item-txt">*开户银行</view>
+      <picker class="selector-picker" mode="selector" bindchange="bindBankPickerChange" range="{{ bankArr }}" value="{{ indexBank }}">
+        <view class="selector-picker-txt flex">{{ bankArr[indexBank] }}</view>
+      </picker>
+      <view class="selector-picker-cart"></view>
+    </view>
+    <view class="query-item">
+      <view class="query-item-txt">*银行卡号</view>
+      <view class="item-right-txt-zc">63023483199006145467</view>
+    </view>
+    <view class="query-item">
+      <view class="query-item-txt">*开会人姓名</view>
+      <view class="item-right-txt-zc">金振宇</view>
+    </view>
+    <view class="query-item">
+      <view class="query-item-txt">*开会人姓名</view>
+      <view class="item-right-txt-zc">金振宇</view>
+    </view>
+    <view class="query-item">
+      <view class="query-item-txt">*开会人地址</view>
+      <view class="item-right-txt-zc">北京工人体育馆</view>
+    </view>
+    <view class="query-item border-B-none bottom-footer-txt">
+      * (格式为: xx省，xx市/县，xx支行/分行； 用“，”隔开)
+    </view>
+  </view>
+  <view class="addition">
+    <view class="add-txt">温馨提示：</view>
+    <view class="add-txt">(1)请上传真实用户资料；</view>
+    <view class="add-txt">(2)我们会保护用户的隐私资料，绝不会向第三方透漏用户的个人资料；</view>
+    <view class="add-txt">(3)为确保结算安全，该项信息不能修改，如需变更，请联系客服，银行卡的户名必须同姓名一致；</view>
+    <view class="add-txt">(4)办理此银行卡时所用真实姓名，请与身份证保持一致；</view>
+    <view class="add-txt">(5)开户行地址格式为：xx省,xx市/县,xx支行/分行,请认真核对为确保结算安全，该项信息不能修改，如需变更，请联系客服；</view>
+    <view class="add-txt">(6)客服：QQ:43006111。</view>
+  </view>
+</view>

@@ -1,0 +1,46 @@
+/* pages/userInfo/userInfo.wxss */
+.container{
+  text-align: center
+}
+.button {
+    width: 80%;
+    margin: 98rpx auto;
+}
+
+.container {
+    padding: 0 0;
+}
+
+.img {
+    margin-top: 100rpx;
+}
+
+.logo {
+    width: 138rpx;
+    height: 138rpx;
+}
+
+.logo-name {
+    font-size: 36rpx;
+    color: #464646;
+    margin-top: 14rpx;
+}
+
+.line {
+    border-bottom: 2rpx solid #e7e7e7;
+    width: 80%;
+    margin-top: 58rpx;
+}
+
+.title {
+    margin-top: 58rpx;
+    font-size: 32rpx;
+    align-items: left;
+    color: #464646;
+}
+
+.sub-title {
+    font-size: 24rpx;
+    color: #838383;
+    margin-top: 44rpx;
+}

@@ -1,0 +1,72 @@
+<view class="container">
+  <view class="address">
+    <view class="add-info">
+      <view class="add-info-l">
+        <view class="add-info-name">{{ address.memberName }}</view>
+        <view class="add-info-moren">默认</view>
+      </view>
+      <view class="add-info-t">
+        <view class="add-info-t-phone">{{ address.mobile }}</view>
+        <view class="add-info-t-add overflow2">{{address.addAll}} {{ address.addressInfo }}</view>
+      </view>
+      <view bindtap="updateAddress" class="add-info-btn">
+        <image src="../../images/shoppingCar/icon-del.png" class="icon-edit" />
+        <view class="add-info-btn-txt">修改</view>
+      </view>
+    </view>
+    <view class="add-line">
+      <image src="../../images/line-red-blue.png"  class="add-line-pic"/>
+    </view>
+  </view>
+  <view class="product">
+    <view class="pro-header">
+      <image src="../../images/shoppingCar/icon-shopping.png" class="pro-header-icon" />
+      <view class="pro-icon-txt">{{data.seller.sellerName}}</view>
+    </view>
+    <view class="pro-item">
+      <view class="pro-i-img">
+        <image mode="aspectFit" src="{{ imageHost + data.actGroup.image }}" class="pro-i-img-txt" />
+      </view>
+      <view class="pro-i-t-wrap">
+        <view class="pro-i-t-name overflow2">{{ data.product.name1 + ' ' + data.productGoods.normName }}</view>
+        <!-- <view class="pro-i-t-gg"></view> -->
+        <view class="pro-i-t-pm">
+          <view class="pro-i-t-p">￥{{ data.actGroup.price }}</view>
+          <view class="pro-i-t-m">x{{ data.number }}</view>
+        </view>
+      </view>
+    </view>
+  </view>
+  <view class="price">
+    <view class="price-l">
+      <view class="price-l-name">商品金额（原价）</view>
+      <view class="price-l-price">¥{{data.actGroup.marketPrice * data.number}}</view>
+    </view>
+    <view class="price-l">
+      <view class="price-l-name">活动节省</view>
+      <view class="price-l-price">¥{{(data.actGroup.marketPrice - data.actGroup.price) * data.number}}</view>
+    </view>
+    <view class="price-l">
+      <view class="price-l-name">商品金额（团购）</view>
+      <view class="price-l-price">¥{{data.actGroup.price * data.number}}</view>
+    </view>
+    <view class="price-l">
+      <view class="price-l-name">运费</view>
+      <view class="price-l-price">¥{{data.transFee}}</view>
+    </view>
+  </view>
+  <view class="pay">
+    <view class="pay-header">支付方式</view>
+    <view class="pay-item">
+      <view class="pay-item-name">
+        <image src="../../images/shoppingCar/icon-shopping.png" class="pay-item-wx-logo" />
+        <view class="pay-item-wx-t">微信支付</view>
+      </view>
+      <radio checked="true" class="wx-radio radio" color="#FF4648" />
+    </view>
+  </view>
+  <view class="bar">
+    <view class="bar-money">实付款：<text class="bar-m-b">￥{{(data.actGroup.price * data.number) + data.transFee}}</text></view>
+    <button bindtap="toPay" class="bar-btn opacity">立即购买</button>
+  </view>
+</view>

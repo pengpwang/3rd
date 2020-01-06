@@ -1,0 +1,42 @@
+<!--pages/productList/productList.wxml-->
+<view class='productList common'>
+    <view class='top-tab flex'>
+        <view bindtap="filterSort" data-sort="0" class='tab-item {{data.sort==0?"active":""}}'>默认</view>
+        <view wx:if="{{data.sort==0||data.sort==1||data.sort==2}}" bindtap="filterSort" data-sort="3" class='tab-item flex'>
+            <view class='tabName'>价格</view>
+        </view>
+        <view wx:if="{{data.sort==3}}" bindtap="filterSort" data-sort="4" class='tab-item flex active'>
+            <view class='tabName'>价格</view>
+            <view class='tab-right'>
+                <image src='/images/top1_2.png'></image>
+                <image class='last' src='/images/top2_1.png'></image>
+            </view>
+        </view>
+        <view wx:if="{{data.sort==4}}" bindtap="filterSort" data-sort="3" class='tab-item flex active'>
+            <view class='tabName'>价格</view>
+            <view class='tab-right'>
+                <image style="transform:rotate(180deg)" src='/images/top2_1.png'></image>
+                <image style="transform:rotate(180deg)" class='last' src='/images/top1_2.png'></image>
+            </view>
+        </view>
+        <view bindtap="filterSort" data-sort="1" class='tab-item {{data.sort==1?"active":""}}'>销量</view>
+        <view bindtap="filterSort" data-sort="2" class='tab-item {{data.sort==2?"active":""}}'>评论</view>
+        <!-- <view class='tab-item'>筛选</view> -->
+    </view>
+    <view class='productList-list'>
+         <view class='list-item flex' wx:for='{{data.producListVOs}}' wx:for-item="producListVO">
+              <view bindtap="toDetail" data-i="{{producListVO.id}}" class='img imgbox'><image src='{{imageHost + producListVO.masterImg}}'/></view>
+            
+              <view class='list-right'>
+                   <view class='top-list overflow2 '>
+                        <view bindtap="toDetail" data-i="{{producListVO.id}}" class='list-title'><span wx:if="{{producListVO.productStock>0}}" class='list-tag'>有货</span><span wx:else class='list-tag noNum'>无货</span>{{producListVO.name1}}</view>
+                   </view>
+                   <view class='bot-list flex'>
+                        <view class='pirce'><span class='min1'>¥</span>{{producListVO.malMobilePrice}}</view>
+                        <!-- <view class='oldPirce'>¥{{producListVO.malMobilePrice}}</view> -->
+                        <view class='nums'>{{producListVO.commentsNumber}}条评价</view>
+                   </view>
+              </view> 
+         </view>
+    </view>
+</view>
