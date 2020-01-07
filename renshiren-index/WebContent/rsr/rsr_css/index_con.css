@@ -522,8 +522,27 @@
     background: #F6F6F6;
 }
 
-.n_expert-recommned_pannel{
+.w1040{
     width: 1040px;
+    margin: auto;
+}
+
+.w1279{
+    width: 1279px;
+    margin: auto;
+}
+
+.n_partner-pic_wrap{
+    margin-top: 56px;
+}
+
+.n_partner-pic{
+    width: 1279px;
+    height: 485px;
+}
+
+.n_expert-recommned_pannel{
+    /* width: 1040px; */
     height: 329px;
     margin: 85px auto 0px;
     position: relative;
@@ -552,7 +571,7 @@
 }
 
 .n_expert-item-wrap{
-    /* width: 1040px; */
+    width: 1070px;
     height: 329px;
     position: absolute;
     left: 0px;
@@ -560,16 +579,71 @@
     overflow: hidden;
 }
 
-.n_expert-item{
-    display: inline-block;
-    width: 324px;
-    height: 329px;
-    background: #fff;
-    border-radius:8px;
-    margin-right: 34px;
+.n_expert-recommned_pannel .tempWrap{
+    width: 1040px!important;
 }
 
+.n_expert-item{
+    display: inline-block;
+    width: 284px;
+    height: 281px;
+    background: #fff;
+    border-radius:8px;
+    margin-right: 32px;
+    padding: 48px 20px 0px;
+}
 
+.n_expert-item_name{
+    font-size:28px;
+    font-weight:bold;
+    color: #E37321;
+    text-align: center;
+    line-height: 1;
+    padding-bottom: 26px;
+}
+
+.n_expert-item_tips{
+    font-size:17px;
+    font-weight:bold;
+    color: #E37321;
+    text-align: center;
+    padding-bottom: 40px;
+}
+
+.n_expert-item_quote{
+    font-size:14px;
+    font-weight:bold;
+    color: #ABB1B4;
+}
+
+.n_join-us{
+    width:100%;
+    height: 240px;
+    background: url(../rsr_images/n_join-us.png) no-repeat center center;
+    background-size: cover;
+    text-align: center;
+    color: #fff;
+}
+
+.n_join-us_title{
+    padding-top: 49px;
+    padding-bottom: 32px;
+    font-size:32px;
+    line-height: 1;
+}
+
+.n_join-us_subtitle{
+    font-size:21px;
+    font-weight:normal;
+    line-height: 1;
+    padding-bottom: 17px;
+}
+
+.n_join-us_tel{
+    font-size:21px;
+    font-weight:normal;
+    line-height: 1;
+}
 
 
 
@@ -1191,4 +1265,25 @@ h2.w568{
     font-size: 20px;
     border-radius: 27px;
     margin:55px auto 0px;
+}
+
+
+
+/* n_footer */
+.n_footer{
+    width: 100%;
+    height: 332px;
+    background: #1A1A1A;
+    padding-top: 62px;
+    padding-bottom: 62px;
+}
+
+.w1200{
+    width: 1200px;
+    margin: auto;
+}
+
+.n_footer-t{
+   padding-bottom: 50px;
+   border-bottom: 1px solid #2E2E2E;
 }
