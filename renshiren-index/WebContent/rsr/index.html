@@ -312,9 +312,9 @@
 <!-- 网站底部内容 -->
 <div class="n_footer">
     <div class="w1200">
-        <div class="n_footer-t">
+        <div class="n_footer-t clear">
             <div class="n_footer-tl">
-                <a class="n_footer-tl_title" href="javascript:;">关于我们</a>
+                <span class="n_footer-tl_title" href="javascript:;">关于我们</span>
                 <a class="n_footer-tl_a" href="javascript:;">企业介绍</a>
                 <a class="n_footer-tl_a" href="javascript:;">企业文化</a>
                 <a class="n_footer-tl_a" href="javascript:;">企业愿景</a>
@@ -325,7 +325,7 @@
             <div class="n_footer-tm">
                 <div class="n_footer-tm-title">人事人集团</div>
                 <div class="n_footer-tm_sel-btn">
-                    <span>北京</span>
+                    <span class="n_footer-tm_sel-btn-active">北京</span>
                     <span>天津</span>
                     <span>石家庄</span>
                     <span>成都</span>
@@ -336,7 +336,7 @@
                     <span>苏州</span>
                 </div>
                 <div class="n_footer-tm_sel-content">
-                    <div class="n_footer-tm_sel-item">
+                    <div class="n_footer-tm_sel-item active">
                         <div class="n_footer-tm_sel-item_name">人事人（北京总部）科技有限公司</div>
                         <div class="n_footer-tm_sel-item_info">
                             <div class="n_footer-tm_sel-item_info-i">地址：北京市朝阳区建国路88号SOHO现代城B座1505室</div>
@@ -400,14 +400,14 @@
             </div>
             <div class="n_footer-tr">
                 <div class="n_footer-tr_title">商务合作</div>
-                <div class="n_footer-tr_media">
+                <div class="n_footer-tr_media clear">
                     <div class="n_footer-tr_media-item">
                         <div class="n_footer-tr_media-item_line">
                             <img class="n_footer-tr_media-item_icon" src="./rsr_images/n_footer-icon_weibo.png"/>
                             <span>微博二维码</span>
                         </div>
                         <div class="n_footer-tr_media-item_pic">
-                            <img class="n_footer-tr_media-item_pic" src="./rsr_images/n_footer-pic_weibo.png"/>
+                            <img class="n_footer-tr_media-item_pic" src="./rsr_images/weibo.png"/>
                         </div>
                     </div>
                     <div class="n_footer-tr_media-item">
@@ -416,21 +416,21 @@
                             <span>微信公众号</span>
                         </div>
                         <div class="n_footer-tr_media-item_pic">
-                            <img class="n_footer-tr_media-item_pic" src="./rsr_images/n_footer-pic_weixin.png"/>
+                            <img class="n_footer-tr_media-item_pic" src="./rsr_images/weixin.png"/>
                         </div>
                     </div>
                 </div>
                 <div class="n_footer-tr_contact">
-                    <img src="./rsr_images/n_footer-icon_tel.png"/>
+                    <img class="n_footer-tr_contact-tel" src="./rsr_images/n_footer-icon_tel.png"/>
                     <span>电话：010-85893191</span>
                 </div>
                 <div class="n_footer-tr_contact">
-                    <img src="./rsr_images/n_footer-icon_mail.png"/>
+                    <img class="n_footer-tr_contact-mail" src="./rsr_images/n_footer-icon_mail.png"/>
                     <span>邮箱：service@renshiren.com</span>
                 </div>
             </div>
         </div>
-        <div class="n_footer-b">
+        <div class="n_footer-b clear">
             <div class="n_footer-bl">
                 <a class="n_footer-bl_link" href="https://www.shebaotong.com/shebaotong/index">社保通</a>
                 <a class="n_footer-bl_link" href="http://xinzitong.com/">薪资通</a>
@@ -768,6 +768,15 @@
     $(".one").find("span").on("click",function (e) {
         e.preventDefault();
     });
+
+    // 底部 --footer--
+    $('.n_footer-tm_sel-btn span').hover(function(){
+        $('.n_footer-tm_sel-btn span').removeClass('n_footer-tm_sel-btn-active');
+        $('.n_footer-tm_sel-item').removeClass('active');
+        $('.n_footer-tm_sel-btn span').eq($(this).index()).addClass('n_footer-tm_sel-btn-active');
+        $('.n_footer-tm_sel-item').eq($(this).index()).addClass('active');
+    });
+
 </script>
 </body>
 </html>
