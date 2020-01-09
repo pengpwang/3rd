@@ -46,6 +46,13 @@
   color: #141718;
 }
 
+.n_ito-p1-l-info a:link,
+.n_ito-p1-l-info a:visited,
+.n_ito-p1-l-info a:hover,
+.n_ito-p1-l-info a:active{
+  color: #141718;
+}
+
 .n_ito-p1-l-info span{
   position: relative;
 }
