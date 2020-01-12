@@ -165,15 +165,19 @@
 }
 
 .n_pro-service_sel-pannel{
-  padding-top: 92px;
+  padding-top: 42px;
   text-align: center;
   /* height: 724px; */
 }
 
 .n_pro-service_sel-pannel-pic{
-  width: 942px;
-  height: 724px;
-  transform: scale(0.8);
+  width: 939px;
+  height: 841px;
+  transform: scale(0.9);
+  -webkit-transform: scale(0.9);
+  -moz-transform: scale(0.9);
+  -ms-transform: scale(0.9);
+  -o-transform: scale(0.9);
 }
 
 .n_bpo-phone{
