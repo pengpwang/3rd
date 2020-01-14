@@ -73,5 +73,7 @@ $(function(){
         $('.n_footer-tm_sel-btn span').eq($(this).index()).addClass('n_footer-tm_sel-btn-active');
         $('.n_footer-tm_sel-item').eq($(this).index()).addClass('active');
     });
+
+    $('')
 });
 
