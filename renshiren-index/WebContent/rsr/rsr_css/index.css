@@ -506,3 +506,43 @@ p.submit_btn button:hover{
 #cnzz_stat_icon_1262640505{
     display: none;
 }
+
+/* common */
+.n_infomation-banner{
+    width: 100%;
+    height: 400px;
+    background: url(../rsr_images/n_banner_news.png) no-repeat center center;
+    background-size: cover;
+  }
+  
+  .w1200{
+    width: 1200px;
+    margin: 0 auto;
+  }
+  
+  /* n_nav start */
+  .n_nav{
+    height: 67px;
+    position: relative;
+    top: -67px;
+    background:#fff;
+    opacity:0.6;
+  }
+  
+  .n_nav-item{
+    float: left;
+    width: 25%;
+    height: 100%;
+    color: #33373F;
+    font-size:16px;
+    font-weight:bold;
+    text-align: center;
+    line-height: 67px;
+  }
+  
+  .n_nav-item.active{
+    background: #E37321;
+    color: #fff;
+  }
+  
+  /* n_nav end */
