@@ -1,5 +1,142 @@
-﻿
+﻿var footer = `<div class="n_footer">
+<div class="w1200">
+    <div class="n_footer-t clear">
+        <div class="n_footer-tl">
+            <span class="n_footer-tl_title" href="javascript:;">关于我们</span>
+            <a class="n_footer-tl_a" href="./about_us.html#info">企业介绍</a>
+            <a class="n_footer-tl_a" href="./about_us.html#cultrue">企业文化</a>
+            <a class="n_footer-tl_a" href="./about_us.html#dream">企业愿景</a>
+            <a class="n_footer-tl_a" href="./about_us.html#process">企业发展历程</a>
+            <a class="n_footer-tl_a" href="./about_us.html#network">辐射网络</a>
+            <a class="n_footer-tl_a" href="./about_us.html#join_us">加入我们</a>
+        </div>
+        <div class="n_footer-tm">
+            <div class="n_footer-tm-title">人事人集团</div>
+            <div class="n_footer-tm_sel-btn">
+                <span class="n_footer-tm_sel-btn-active">北京</span>
+                <span>天津</span>
+                <span>石家庄</span>
+                <span>成都</span>
+                <span>上海</span>
+                <span>宁波</span>
+                <span>广州</span>
+                <span>深圳</span>
+                <span>苏州</span>
+            </div>
+            <div class="n_footer-tm_sel-content">
+                <div class="n_footer-tm_sel-item active">
+                    <div class="n_footer-tm_sel-item_name">人事人（北京总部）科技有限公司</div>
+                    <div class="n_footer-tm_sel-item_info">
+                        <div class="n_footer-tm_sel-item_info-i">地址：北京市朝阳区建国路88号SOHO现代城B座1505室</div>
+                        <div class="n_footer-tm_sel-item_info-i">Tel:010-85893191 /85806807</div>
+                        <div class="n_footer-tm_sel-item_info-i">Fax:010-85802857</div>
+                    </div>
+                </div>
+                <div class="n_footer-tm_sel-item">
+                    <div class="n_footer-tm_sel-item_name">人事人（天津）科技有限公司</div>
+                    <div class="n_footer-tm_sel-item_info">
+                        <div class="n_footer-tm_sel-item_info-i">地址：天津市南开区鞍山西道286号启航大厦18层1812-1816</div>
+                    </div>
+                </div>
+                <div class="n_footer-tm_sel-item">
+                    <div class="n_footer-tm_sel-item_name">石家庄力晖人力资源服务有限公司</div>
+                    <div class="n_footer-tm_sel-item_info">
+                        <div class="n_footer-tm_sel-item_info-i">地址：河北省石家庄市长安区谈南路63号睿和中心商业写字楼908室</div>
+                        <div class="n_footer-tm_sel-item_info-i">Tel:0311—66562472 / 66562473</div>
+                    </div>
+                </div>
+                <div class="n_footer-tm_sel-item">
+                    <div class="n_footer-tm_sel-item_name">人事人（成都）科技有限公司</div>
+                    <div class="n_footer-tm_sel-item_info">
+                        <div class="n_footer-tm_sel-item_info-i">地址：中国（四川）自由贸易试验区成都高新区天府大道中段530号2栋30层3012号</div>
+                    </div>
+                </div>
+                <div class="n_footer-tm_sel-item">
+                    <div class="n_footer-tm_sel-item_name">上海力晖人力资源管理有限公司</div>
+                    <div class="n_footer-tm_sel-item_info">
+                        <div class="n_footer-tm_sel-item_info-i">地址：上海市静安区天目西路218号嘉里不夜城一座1709</div>
+                        <div class="n_footer-tm_sel-item_info-i">Tel:021—52810811</div>
+                    </div>
+                </div>
+                <div class="n_footer-tm_sel-item">
+                    <div class="n_footer-tm_sel-item_name">人事人（宁波）科技有限公司</div>
+                    <div class="n_footer-tm_sel-item_info">
+                        <div class="n_footer-tm_sel-item_info-i">地址：浙江省宁波市鄞州区宝华街77号汇银国际大厦 501室</div>
+                        <div class="n_footer-tm_sel-item_info-i">Tel:0574—88312592</div>
+                    </div>
+                </div>
+                <div class="n_footer-tm_sel-item">
+                    <div class="n_footer-tm_sel-item_name">人事人（广州）科技有限公司</div>
+                    <div class="n_footer-tm_sel-item_info">
+                        <div class="n_footer-tm_sel-item_info-i">地址：广州市天河区体育东路122号羊城国贸中心907-908</div>
+                    </div>
+                </div>
+                <div class="n_footer-tm_sel-item">
+                    <div class="n_footer-tm_sel-item_name">人事人（深圳）科技有限公司</div>
+                    <div class="n_footer-tm_sel-item_info">
+                        <div class="n_footer-tm_sel-item_info-i">地址：深圳市福田区深南大道2008号中国凤凰大厦2栋25D</div>
+                        <div class="n_footer-tm_sel-item_info-i">Tel/Fax:0755—23945974</div>
+                    </div>
+                </div>
+                <div class="n_footer-tm_sel-item">
+                    <div class="n_footer-tm_sel-item_name">人事人（苏州）科技有限公司</div>
+                    <div class="n_footer-tm_sel-item_info">
+                        <div class="n_footer-tm_sel-item_info-i">地址：江苏省苏州市虎丘区狮山路22号人才大厦1602室）</div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="n_footer-tr">
+            <div class="n_footer-tr_title">商务合作</div>
+            <div class="n_footer-tr_media clear">
+                <div class="n_footer-tr_media-item">
+                    <div class="n_footer-tr_media-item_line">
+                        <img class="n_footer-tr_media-item_icon" src="./rsr_images/n_footer-icon_weibo.png"/>
+                        <span>微博二维码</span>
+                    </div>
+                    <div class="n_footer-tr_media-item_pic">
+                        <img class="n_footer-tr_media-item_pic" src="./rsr_images/weibo.png"/>
+                    </div>
+                </div>
+                <div class="n_footer-tr_media-item">
+                    <div class="n_footer-tr_media-item_line">
+                        <img class="n_footer-tr_media-item_icon" src="./rsr_images/n_footer-icon_weixin.png"/>
+                        <span>微信公众号</span>
+                    </div>
+                    <div class="n_footer-tr_media-item_pic">
+                        <img class="n_footer-tr_media-item_pic" src="./rsr_images/weixin.png"/>
+                    </div>
+                </div>
+            </div>
+            <div class="n_footer-tr_contact">
+                <img class="n_footer-tr_contact-tel" src="./rsr_images/n_footer-icon_tel.png"/>
+                <span>电话：010-85893191</span>
+            </div>
+            <div class="n_footer-tr_contact">
+                <img class="n_footer-tr_contact-mail" src="./rsr_images/n_footer-icon_mail.png"/>
+                <span>邮箱：service@renshiren.com</span>
+            </div>
+        </div>
+    </div>
+    <div class="n_footer-b clear">
+        <div class="n_footer-bl">
+            <a class="n_footer-bl_link" href="https://www.shebaotong.com/shebaotong/index">社保通</a>
+            <a class="n_footer-bl_link" href="http://xinzitong.com/">薪资通</a>
+            <a class="n_footer-bl_link" href="http://www.12333sb.com/">12333社保查询</a>
+            <a class="n_footer-bl_link" href="http://gjj.beijing.gov.cn/">北京公积金住房网</a>
+            <a class="n_footer-bl_link" href="http://www.mohrss.gov.cn/">中国人力资源和社会保障部</a>
+            <a class="n_footer-bl_link" href="http://www.newjobs.com.cn/">中国国家人才网</a>
+            <a class="n_footer-bl_link" href="http://rsj.beijing.gov.cn/">北京人力资源服务网</a>
+        </div>
+        <div class="n_footer-copyright">
+            <div class="n_footer-copyright_txt">Copyright © 2015-2018 人事人（北京）科技有限公司(www.renshiren.com) </div>
+            <div class="n_footer-copyright_txt">京ICP备15067691号</div>
+        </div>
+    </div>
+</div>
+</div>`;
 
+document.writeln(footer);
 
 
 

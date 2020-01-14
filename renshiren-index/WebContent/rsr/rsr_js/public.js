@@ -63,3 +63,15 @@ document.writeln("<a id=\"jsq\" href=\"calculator.html\" target=\"_blank\" title
     };
 };*/
 //
+
+
+// 底部 --footer--
+$(function(){
+    $('.n_footer-tm_sel-btn span').mouseover(function(){
+        $('.n_footer-tm_sel-btn span').removeClass('n_footer-tm_sel-btn-active');
+        $('.n_footer-tm_sel-item').removeClass('active');
+        $('.n_footer-tm_sel-btn span').eq($(this).index()).addClass('n_footer-tm_sel-btn-active');
+        $('.n_footer-tm_sel-item').eq($(this).index()).addClass('active');
+    });
+});
+
