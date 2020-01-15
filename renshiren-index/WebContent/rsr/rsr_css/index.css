@@ -1,4 +1,7 @@
-﻿/*头部样式*/
+﻿body{
+    font-family: "Hiragino Sans GB";
+}
+/*头部样式*/
 .font_s14{
     font-size: 14px;
     font-family:"Microsoft YaHei UI Light";
