@@ -956,3 +956,123 @@ p.submit_btn button:hover{
 .n_show2pannel:hover .n_show2pannel_1{
     display: block;
 }
+
+
+/* n_system */
+
+.n_system{
+    width: 100%;
+    height: 692px;
+    overflow: hidden;
+}
+
+.n_system_banner{
+    height: 692px;
+    padding-top: 123px;
+    box-sizing: border-box;
+}
+
+.n_system_fl{
+    float: left;
+}
+
+.n_system-title{
+    font-size:44px;
+    font-weight:bold;
+    font-style:italic;
+    color: #ED8335;
+    line-height: 1;
+    padding-top: 22px;
+    padding-bottom: 34px;
+}
+
+.n_system-p{
+    font-size:14px;
+    font-style:italic;
+    color: #3E4249;
+}
+
+.n_system-pannel{
+    padding-top: 51px;
+    padding-bottom: 51px;
+}
+
+.n_system-pannel_item{
+    float: left;
+    width: 65px;
+    margin-right: 86px;
+    text-align: center;
+}
+
+.n_system-pannel .n_system-pannel_item:last-child{
+    margin-right: 0px;
+}
+
+.n_system-pannel_item-pic{
+    width: 65px;
+    height: 65px;
+    margin-bottom: 28px;
+}
+
+.n_system-pannel_item-p{
+    font-size:16px;
+    color: #3E4249;
+}
+
+.n_system-link{
+    display: block;
+    width:253px;
+    height:64px;
+    background: #E37321;
+    border-radius:32px;
+    text-align: center;
+    line-height: 64px;
+    color: #fff;
+    font-size:26px;
+}
+
+.n_system_fr{
+    float: right;
+}
+
+.n_system_fr-cover{
+    width: 547px;
+    height: 411px;
+}  
+
+.n_system-faxin{
+    background: url(../rsr_images/n_system-faxin-cover.png) no-repeat center center;
+    background-size: cover;
+}
+
+.n_system-staff{
+    background: url(../rsr_images/n_system-staff-cover.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.n_system-lgb{
+    background: url(../rsr_images/n_system-lgb-cover.jpg) no-repeat center center;
+    background-size: cover;
+}
+
+.n_system_hd {
+    position: relative;
+    top: -63px;
+    width: 276px;
+    margin: 0 auto;
+}
+
+.n_system_hd ul li{
+    float: left;
+    width: 56px;
+    height: 6px;
+    background: #B9B9B9;
+    margin-right: 36px;
+    overflow: hidden;
+    color: rgba(0,0,0,0);
+    cursor: pointer;
+}
+
+.n_system_hd ul li.on{
+    background: #E37321;
+}

@@ -2,7 +2,7 @@
 <div class="n_header clear">
     <img class="n_header-logo" src="./rsr_images/n_header-logo.png" />
     <div class="n_header-item_wrap clear">
-        <div class="n_header-item_wrap-sel active">
+        <div class="n_header-item_wrap-sel">
             <a class="n_header-item" href="./index.html">首页</a>
         </div>
         <div class="n_header-item_wrap-sel n_show1pannel">
