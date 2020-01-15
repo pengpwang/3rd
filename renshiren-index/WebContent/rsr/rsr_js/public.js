@@ -74,6 +74,24 @@ $(function(){
         $('.n_footer-tm_sel-item').eq($(this).index()).addClass('active');
     });
 
-    $('')
+    var href = window.location.href;
+    $('.n_header-item_wrap .n_header-item_wrap-sel').removeClass('active')
+    if(href.indexOf('index.html') > 0){
+        $('.n_header-item_wrap .n_header-item_wrap-sel').eq(0).addClass('active');
+    }else if(href.indexOf('solution.html') > 0){
+        $('.n_header-item_wrap .n_header-item_wrap-sel').eq(2).addClass('active');
+    }else if(href.indexOf('honor.html') > 0){
+        $('.n_header-item_wrap .n_header-item_wrap-sel').eq(3).addClass('active');
+    }else if(href.indexOf('about_us.html') > 0){
+        $('.n_header-item_wrap .n_header-item_wrap-sel').eq(4).addClass('active');
+    }else{
+        if(href.indexOf('.html') > 0){
+            $('.n_header-item_wrap .n_header-item_wrap-sel').eq(1).addClass('active');
+        }else{
+            $('.n_header-item_wrap .n_header-item_wrap-sel').eq(0).addClass('active');
+        }
+    }
 });
+
+
 
