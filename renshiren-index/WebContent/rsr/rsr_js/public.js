@@ -65,8 +65,9 @@ document.writeln("<a id=\"jsq\" href=\"calculator.html\" target=\"_blank\" title
 //
 
 
-// 底部 --footer--
+
 $(function(){
+    // --footer--
     $('.n_footer-tm_sel-btn span').mouseover(function(){
         $('.n_footer-tm_sel-btn span').removeClass('n_footer-tm_sel-btn-active');
         $('.n_footer-tm_sel-item').removeClass('active');
@@ -85,7 +86,7 @@ $(function(){
         }
     }
 
-
+    // nav
     $('.n_header-item_wrap .n_header-item_wrap-sel').removeClass('active')
     if(href.indexOf('index.html') > 0){
         $('.n_header-item_wrap .n_header-item_wrap-sel').eq(0).addClass('active');

@@ -1076,3 +1076,56 @@ p.submit_btn button:hover{
 .n_system_hd ul li.on{
     background: #E37321;
 }
+
+.n_system-n_bpo{
+    box-sizing: border-box;
+    height: 692px;
+    background: url(../rsr_images/n_system-faxin-cover.png) no-repeat center center;
+    background-size: cover;
+}
+
+.n_system-n_bpo-banner .n_system_fr {
+    width: 547px;
+    height: 411px;
+    background: url(../rsr_images/icon/n_system-p2_coverbg.png) no-repeat center center;
+    background-size: cover;
+    position: relative;
+}
+
+.n_system-n_bpo-banner .n_system_fr-cover{
+    position: absolute;
+    left: 21px;
+    top: 20px;
+    width: 505px;
+    height: 258px;
+}
+
+.n_system-n_bpo-banner .n_system-pannel_item{
+    margin-right: 45px;
+}
+
+.n_system-n_bpo-banner .n_system-title{
+    padding-top: 85px;
+    padding-bottom: 10px;
+}
+
+.n_system-n_bpo .n_system_hd{
+    width: 460px;
+}
+
+#n_service-pannel-1 .n_system-title{
+    font-size:44px;
+    font-weight:bold;
+    font-style:italic;
+    color: #ED8335;
+    line-height: 1;
+    padding-top: 22px;
+    padding-bottom: 34px;
+}
+
+#n_service-pannel-1 .n_system-pannel_item{
+    float: left;
+    width: 65px;
+    margin-right: 86px;
+    text-align: center;
+}
