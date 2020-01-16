@@ -18,7 +18,7 @@
                     </div>
                 </div>
                 <a class="n_header-subitem" href="./financial_advice.html">财税咨询</a>
-                <a class="n_header-subitem" href="./service_platform.html">人事服务平台</a>
+                <a class="n_header-subitem" href="./service_platform.html">人事人服务平台</a>
                 <a class="n_header-subitem" href="./zs_platform.html">企业招商平台</a>
             </div>
         </div>
