@@ -1,0 +1,42 @@
+<html>
+<head>
+	<meta http-equiv="Content-Type" content="text/html; charset=utf-8" />
+	<meta name="viewport" content="initial-scale=1.0, user-scalable=no" />
+	<style type="text/css">
+		body, html,#allmap {width: 100%;height: 100%;overflow: hidden;margin:0;font-family:"微软雅黑";}
+	</style>
+	<script type="text/javascript" src="http://api.map.baidu.com/api?v=2.0&ak=xMbvXxwDGvLlRunsdc1SHCIePAGFbwS4"></script>
+	<title></title>
+</head>
+<body>
+	<div id="allmap"></div>
+	<!-- <div id="r-result">
+		经度: <input id="longitude" type="text" style="width:100px; margin-right:10px;" />
+		纬度: <input id="latitude" type="text" style="width:100px; margin-right:10px;" />
+		<input type="button" value="查询" onclick="theLocation()" />
+	</div> -->
+</body>
+</html>
+<script type="text/javascript">
+	// 百度地图API功能
+	var map = new BMap.Map("allmap");
+	map.centerAndZoom(new BMap.Point(116.331398,39.897445),20);
+  map.enableScrollWheelZoom(true);
+  
+  map.clearOverlays(); 
+  var new_point = new BMap.Point(116.48257,39.91242);
+  var marker = new BMap.Marker(new_point);  // 创建标注
+  map.addOverlay(marker);              // 将标注添加到地图中
+  var label = new BMap.Label("北京市朝阳区建国路88号soho现代城b座1505室",{offset:new BMap.Size(30,-10)});
+  label.setStyle({
+    color : "black",
+    fontSize : "16px",
+    height : "20px",
+    lineHeight : "20px",
+    fontFamily:"微软雅黑"
+  });
+  marker.setLabel(label);
+
+  map.panTo(new_point);     
+	
+</script>

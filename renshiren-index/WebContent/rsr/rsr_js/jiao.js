@@ -25,12 +25,14 @@
             </div>
             <div class="n_footer-tm_sel-content">
                 <div class="n_footer-tm_sel-item active">
-                    <div class="n_footer-tm_sel-item_name">人事人（北京总部）科技有限公司</div>
-                    <div class="n_footer-tm_sel-item_info">
-                        <div class="n_footer-tm_sel-item_info-i">地址：北京市朝阳区建国路88号SOHO现代城B座1505室</div>
-                        <div class="n_footer-tm_sel-item_info-i">Tel:010-85893191 /85806807</div>
-                        <div class="n_footer-tm_sel-item_info-i">Fax:010-85802857</div>
-                    </div>
+                    <a style="color:#999;" href="./baidu_map.html">
+                        <div class="n_footer-tm_sel-item_name">人事人（北京总部）科技有限公司</div>
+                        <div class="n_footer-tm_sel-item_info">
+                            <div class="n_footer-tm_sel-item_info-i">地址：北京市朝阳区建国路88号SOHO现代城B座1505室</div>
+                            <div class="n_footer-tm_sel-item_info-i">Tel:010-85893191 /85806807</div>
+                            <div class="n_footer-tm_sel-item_info-i">Fax:010-85802857</div>
+                        </div>
+                    </a>
                 </div>
                 <div class="n_footer-tm_sel-item">
                     <div class="n_footer-tm_sel-item_name">人事人（天津）科技有限公司</div>
