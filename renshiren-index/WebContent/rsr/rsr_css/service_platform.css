@@ -489,6 +489,45 @@
   cursor: pointer;
 }
 
+#n_service-pannel-2 .n_system-pannel_item{
+  margin-right: 86px;
+}
+
+#n_service-pannel-2 .n_system-pannel_item:last-child{
+  margin-right: 0px;
+}
+
+#n_service-pannel-1 .n_system-p{
+  font-size:26px;
+  font-style:italic;
+  color: #3E4249;
+  width: 437px;
+  margin-top: 22px;
+}
+
+#n_service-pannel-2 .n_system-p{
+  font-size:26px;
+  font-style:italic;
+  color: #3E4249;
+  width: 437px;
+  margin-top: 22px;
+}
+
+#n_service-pannel-2 .n_system-pannel{
+  padding-top: 40px;
+}
+
+#n_service-pannel-2 .n_system-title{
+  padding-top: 0px;
+}
+
+.n_system-n_lgb{
+  box-sizing: border-box;
+  height: 692px;
+  background: url(../rsr_images/n_system-n_lgb-cover.jpg) no-repeat center center;
+  background-size: cover;
+}
+
 
 
 
