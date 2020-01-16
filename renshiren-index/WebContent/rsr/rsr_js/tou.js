@@ -13,13 +13,13 @@
                     <a class="n_header-subitem" href="javascript:;">业务外包</a>
                     <div class="n_header-threeitem_pannel n_show2pannel_1">
                         <a class="n_header-threeitem" href="./n_bpo.html">BPO业务流程外包</a>
-                        <a class="n_header-threeitem" href="./ito.html">ITO信息技术外包</a>
                         <a class="n_header-threeitem" href="./rpo.html">RPO招聘流程外包</a>
+                        <a class="n_header-threeitem" href="./ito.html">ITO信息技术外包</a>
                     </div>
                 </div>
-                <a class="n_header-subitem" href="./zs_platform.html">企业招商平台</a>
-                <a class="n_header-subitem" href="./service_platform.html">人事服务平台</a>
                 <a class="n_header-subitem" href="./financial_advice.html">财税咨询</a>
+                <a class="n_header-subitem" href="./service_platform.html">人事服务平台</a>
+                <a class="n_header-subitem" href="./zs_platform.html">企业招商平台</a>
             </div>
         </div>
         <div class="n_header-item_wrap-sel">
