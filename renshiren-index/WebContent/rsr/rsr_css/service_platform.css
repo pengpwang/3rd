@@ -351,7 +351,7 @@
 .n_bpo-phone_r-title2{
   margin-top: 20px;
   font-size:26px;
-  font-weight:bold;
+  /* font-weight:bold; */
   /* font-style:italic; */
   color: #444;
   text-align: right;
