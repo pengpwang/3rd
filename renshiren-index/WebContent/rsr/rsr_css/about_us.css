@@ -376,6 +376,7 @@ dd.font_r{
   line-height: 1;
   padding-top: 40px;
   padding-bottom: 30px;
+  letter-spacing: 6px;
 }
 
 .n_tel, .n_mail, .n_address{

@@ -110,7 +110,7 @@
 
 .n_so-p1-msg{
   font-size:20px;
-  font-weight:bold;
+  /* font-weight:bold; */
   line-height:36px;
   color: #666666;
   margin-bottom: 60px;
@@ -130,7 +130,7 @@
 
 .n_so-p2_l-p{
   font-size:20px;
-  font-weight:bold;
+  /* font-weight:bold; */
   line-height:36px;
   color: #666666;
   margin-bottom: 50px;

@@ -982,7 +982,7 @@ p.submit_btn button:hover{
 .n_system-title{
     font-size:44px;
     font-weight:bold;
-    font-style:italic;
+    /* font-style:italic; */
     color: #ED8335;
     line-height: 1;
     padding-top: 22px;
@@ -991,7 +991,7 @@ p.submit_btn button:hover{
 
 .n_system-p{
     font-size:14px;
-    font-style:italic;
+    /* font-style:italic; */
     color: #3E4249;
 }
 
@@ -1119,7 +1119,7 @@ p.submit_btn button:hover{
 #n_service-pannel-1 .n_system-title{
     font-size:44px;
     font-weight:bold;
-    font-style:italic;
+    /* font-style:italic; */
     color: #ED8335;
     line-height: 1;
     padding-top: 22px;

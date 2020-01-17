@@ -162,7 +162,7 @@
 
 .form-item span{
   font-size:30px;
-  font-weight:bold;
+  /* font-weight:bold; */
   color: #000;
   display: inline-block;
   vertical-align: middle;
@@ -225,11 +225,13 @@
 .n_s-b_item-pic-2{
   width: 103px;
   height: 103px;
+  margin-top: -1px;
 }
 
 .n_s-b_item-pic-3{
   width: 103px;
   height: 106px;
+  margin-top: -5px;
 }
 
 .n_s-b_item-pic-4{
@@ -238,7 +240,7 @@
 }
 
 .n_s-b_item-txt{
-  font-size:28px;
+  font-size:22px;
   color: #141718;
   line-height:38px;
   margin-top: 50px;

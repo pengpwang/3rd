@@ -207,22 +207,22 @@
 
 .n_ito-p2_msg02-list-item{
   height: 30px;
-  padding: 20px 128px 20px 64px;
+  padding: 20px 12px 20px 64px;
   border-bottom: 1px solid #C1C1C1;
 }
 
 .n_ito-p2_msg02-list-item-name{
   float: left;
   font-size:28px;
-  font-weight:bold;
+  /* font-weight:bold; */
   color: #141718;
   width: 400px;
 }
 
 .n_ito-p2_msg02-list-item-info{
   float: left;
-  font-size:28px;
-  font-weight:bold;
+  font-size:26px;
+  /* font-weight:bold; */
   color: #141718;
 }
 
@@ -272,8 +272,9 @@
 }
 
 .n_ito-p3_msg00-item-txt{
-  font-size:30px;
+  font-size:28px;
   color: #000000;
+  font-weight: bold;
 }
 
 .n_ito-p3_msg01{

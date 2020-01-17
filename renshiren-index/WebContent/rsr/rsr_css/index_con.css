@@ -467,7 +467,7 @@
 
 .n_server-item_title{
     font-size:20px;
-    font-weight:bold;
+    /* font-weight:bold; */
     color: #fff;
     line-height: 1;
     margin-bottom: 14px;
@@ -618,7 +618,7 @@
 
 .n_expert-item_quote{
     font-size:14px;
-    font-weight:bold;
+    /* font-weight:bold; */
     color: #ABB1B4;
 }
 
@@ -636,6 +636,7 @@
     padding-bottom: 32px;
     font-size:32px;
     line-height: 1;
+    letter-spacing: 4px;
 }
 
 .n_join-us_subtitle{
@@ -643,12 +644,14 @@
     font-weight:normal;
     line-height: 1;
     padding-bottom: 17px;
+    letter-spacing: 4px;
 }
 
 .n_join-us_tel{
     font-size:21px;
     font-weight:normal;
     line-height: 1;
+    letter-spacing: 4px;
 }
 
 

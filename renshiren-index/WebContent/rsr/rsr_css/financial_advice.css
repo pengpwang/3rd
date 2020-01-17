@@ -106,7 +106,7 @@
 
 .n_fa-1-in_item-txt{
   font-size:30px;
-  font-weight:bold;
+  /* font-weight:bold; */
   color: #000;
   display: inline-block;
   vertical-align: middle;
@@ -201,6 +201,7 @@
   color: #000;
   line-height: 1;
   padding-bottom: 37px;
+  font-weight: bold;
 }
 
 .n_pro-g_pannel-i_txt{

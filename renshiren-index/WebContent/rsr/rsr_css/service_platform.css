@@ -214,7 +214,7 @@
   text-align: right;
   font-size:44px;
   font-weight:bold;
-  font-style:italic;
+  /* font-style:italic; */
   line-height:58px;
   color: #ED8335;
 }
@@ -306,7 +306,7 @@
 
 .n_pro-two-1_item-points{
   font-size:20px;
-  font-weight:bold;
+  /* font-weight:bold; */
   line-height:36px;
   color: #666;
   margin-bottom: 52px;
@@ -319,7 +319,7 @@
 
 .n_pro-two-1_item-point_n{
   float: left;
-  font-weight:bold;
+  /* font-weight:bold; */
   color: #fff;
   margin-bottom: 23px;
   font-size: 0;
@@ -499,7 +499,7 @@
 
 #n_service-pannel-1 .n_system-p{
   font-size:26px;
-  font-style:italic;
+  /* font-style:italic; */
   color: #3E4249;
   width: 437px;
   margin-top: 22px;
@@ -507,7 +507,7 @@
 
 #n_service-pannel-2 .n_system-p{
   font-size:26px;
-  font-style:italic;
+  /* font-style:italic; */
   color: #3E4249;
   width: 437px;
   margin-top: 22px;
