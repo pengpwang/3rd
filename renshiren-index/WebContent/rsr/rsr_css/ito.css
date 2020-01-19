@@ -231,6 +231,8 @@
 }
 
 .n_ito-p3_cover{
+  padding-top: 100px;
+  box-sizing: border-box;
   height: 858px;
   background: url(../rsr_images/n_ito_02-cover.jpg) no-repeat center center;
   background-size: cover;
